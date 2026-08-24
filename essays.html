@@ -178,14 +178,96 @@
             border-top: 1px solid #26334a;
             font-family: Arial, sans-serif;
             font-size: 12px;
-            color: #66748c;
-        }
+color: #66748c;
+}
 
-        @media (max-width: 700px) {
 
-            .hero {
-                padding: 90px 0 80px;
-            }
+/* ===== ESSAY LIBRARY ===== */
+
+.page-intro {
+    padding: 100px 0 80px;
+    border-bottom: 1px solid #26334a;
+}
+
+.page-intro h1 {
+    font-size: clamp(52px, 8vw, 90px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.page-intro p {
+    max-width: 650px;
+    font-size: 20px;
+    color: #aeb8c8;
+}
+
+.essay-list {
+    padding: 20px 0 100px;
+}
+
+.essay-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 35px;
+    padding: 55px 0;
+    border-bottom: 1px solid #26334a;
+}
+
+.essay-number {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #66748c;
+}
+
+.essay-category {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #7185a6;
+    margin-bottom: 18px;
+}
+
+.essay-content h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.essay-content p {
+    max-width: 650px;
+    color: #aeb8c8;
+    font-size: 17px;
+}
+
+.read-link {
+    display: inline-block;
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #7185a6;
+    padding-bottom: 5px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+
+    .essay-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 90px 0 80px;
+    }
+       
 
             .essay {
                 grid-template-columns: 1fr;
