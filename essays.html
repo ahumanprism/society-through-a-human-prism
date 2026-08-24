@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Essays — Hewwy Huynh</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -61,13 +64,13 @@
         }
 
         .hero {
-            padding: 110px 0 90px;
+            padding: 120px 0 100px;
             max-width: 800px;
         }
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #7185a6;
@@ -75,11 +78,11 @@
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 82px);
+            font-size: clamp(52px, 8vw, 88px);
             font-weight: normal;
-            line-height: 1;
+            line-height: 0.98;
             letter-spacing: -3px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .intro {
@@ -95,7 +98,7 @@
 
         .section-title {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #7185a6;
@@ -104,10 +107,9 @@
 
         .essay {
             display: grid;
-            grid-template-columns: 90px 1fr auto;
+            grid-template-columns: 80px 1fr;
             gap: 35px;
-            align-items: start;
-            padding: 35px 0;
+            padding: 40px 0;
             border-top: 1px solid #26334a;
         }
 
@@ -119,39 +121,48 @@
             font-family: Arial, sans-serif;
             font-size: 12px;
             letter-spacing: 2px;
+            color: #66748c;
+        }
+
+        .tags {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1.5px;
             color: #7185a6;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .essay h2 {
-            font-size: 34px;
+            font-size: 38px;
             font-weight: normal;
             line-height: 1.15;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .description {
             color: #aeb8c8;
-            font-size: 16px;
-            max-width: 600px;
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 20px;
         }
 
-        .tags {
-            margin-top: 18px;
+        .meta {
             font-family: Arial, sans-serif;
             font-size: 10px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             color: #66748c;
         }
 
         .read {
+            display: inline-block;
+            margin-top: 25px;
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #9eabc0;
             border-bottom: 1px solid #7185a6;
             padding-bottom: 5px;
-            white-space: nowrap;
         }
 
         .read:hover {
@@ -169,27 +180,27 @@
         @media (max-width: 700px) {
 
             .hero {
-                padding: 80px 0 70px;
+                padding: 90px 0 80px;
             }
 
             .essay {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 10px;
             }
 
             .essay h2 {
-                font-size: 29px;
+                font-size: 32px;
             }
 
-            .read {
-                display: inline-block;
-                width: fit-content;
-            }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -212,9 +223,13 @@
 </header>
 
 
+
 <main>
 
     <div class="container">
+
+
+        <!-- HERO -->
 
         <section class="hero" style="border-top: none;">
 
@@ -223,21 +238,25 @@
             </div>
 
             <h1>
-                Essays & Ideas
+                Thoughts,<br>
+                examined.
             </h1>
 
             <p class="intro">
-                Reflections on society, philosophy, psychology,
-                culture, and the strange business of being human.
+                Essays on society, philosophy, psychology, culture,
+                and the strange business of being human.
             </p>
 
         </section>
 
 
+
+        <!-- ESSAY ARCHIVE -->
+
         <section>
 
             <div class="section-title">
-                Published & In Progress
+                Archive
             </div>
 
 
@@ -251,27 +270,32 @@
 
                 <div>
 
+                    <div class="tags">
+                        Philosophy · Society
+                    </div>
+
                     <h2>
                         The Things We Believe
                     </h2>
 
                     <p class="description">
-                        An exploration of belief, certainty, and the
-                        ideas we accept as true without always asking why.
+                        An examination of the beliefs we inherit,
+                        construct, defend, and sometimes mistake
+                        for truth.
                     </p>
 
-                    <div class="tags">
-                        PHILOSOPHY · SOCIETY
+                    <div class="meta">
+                        AUGUST 2026 · ESSAY
                     </div>
+
+                    <a class="read" href="essay-01.html">
+                        Read essay →
+                    </a>
 
                 </div>
 
-                <a class="read"
-                   href="essay-things-we-believe.html">
-                    Read →
-                </a>
-
             </article>
+
 
 
             <!-- ESSAY 02 -->
@@ -284,41 +308,89 @@
 
                 <div>
 
+                    <div class="tags">
+                        Psychology · Society
+                    </div>
+
                     <h2>
-                        Coming Soon
+                        An Essay Yet to Be Written
                     </h2>
 
                     <p class="description">
-                        Another essay will eventually live here.
+                        Another examination of human behaviour
+                        will eventually live here.
                     </p>
 
-                    <div class="tags">
-                        IN PROGRESS
+                    <div class="meta">
+                        COMING SOON · ESSAY
                     </div>
+
+                    <a class="read" href="#">
+                        Coming soon →
+                    </a>
 
                 </div>
 
-                <a class="read" href="#">
-                    Soon
-                </a>
+            </article>
+
+
+
+            <!-- ESSAY 03 -->
+
+            <article class="essay">
+
+                <div class="number">
+                    03
+                </div>
+
+                <div>
+
+                    <div class="tags">
+                        Culture · Philosophy
+                    </div>
+
+                    <h2>
+                        Untitled
+                    </h2>
+
+                    <p class="description">
+                        A future essay will eventually occupy
+                        this space.
+                    </p>
+
+                    <div class="meta">
+                        COMING SOON · ESSAY
+                    </div>
+
+                    <a class="read" href="#">
+                        Coming soon →
+                    </a>
+
+                </div>
 
             </article>
 
 
         </section>
 
+
     </div>
 
 </main>
 
 
+
 <footer>
 
     <div class="container">
+
         © 2026 Hewwy Huynh
+
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
