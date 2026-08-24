@@ -33,6 +33,7 @@
             margin: 0 auto;
         }
 
+
         /* ===== HEADER ===== */
 
         header {
@@ -57,6 +58,21 @@
         .logo:hover {
             color: #ffffff;
         }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #7185a6;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
 
         /* ===== PAGE INTRO ===== */
 
@@ -87,6 +103,7 @@
             font-size: 20px;
             color: #aeb8c8;
         }
+
 
         /* ===== ESSAY LIST ===== */
 
@@ -146,6 +163,7 @@
             color: #ffffff;
         }
 
+
         /* ===== FOOTER ===== */
 
         footer {
@@ -156,9 +174,19 @@
             color: #66748c;
         }
 
+
         /* ===== MOBILE ===== */
 
         @media (max-width: 700px) {
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+                font-size: 10px;
+            }
 
             .page-intro {
                 padding: 90px 0 70px;
@@ -197,6 +225,22 @@
             <a class="logo" href="index.html">
                 Home
             </a>
+
+            <div class="nav-links">
+
+                <a href="essays.html">
+                    Essays
+                </a>
+
+                <a href="literature.html">
+                    Literature
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
 
         </nav>
 
