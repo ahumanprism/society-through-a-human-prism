@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Literature — Society Through a Human Prism</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b1220;
+            color: #e7eaf0;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1000px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 32px 0;
+            border-bottom: 1px solid #26334a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9eabc0;
+        }
+
+        .back {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #7185a6;
+        }
+
+        .back:hover {
+            color: #ffffff;
+        }
+
+        main {
+            padding: 110px 0 140px;
+        }
+
+        .eyebrow {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(52px, 8vw, 90px);
+            font-weight: normal;
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 35px;
+        }
+
+        .intro {
+            max-width: 700px;
+            font-size: 21px;
+            color: #aeb8c8;
+            margin-bottom: 90px;
+        }
+
+        section {
+            padding: 65px 0;
+            border-top: 1px solid #26334a;
+        }
+
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 40px;
+        }
+
+        .library {
+            display: grid;
+            gap: 1px;
+            background: #26334a;
+        }
+
+        .work {
+            background: #0b1220;
+            padding: 35px;
+            transition: background 0.2s ease;
+        }
+
+        .work:hover {
+            background: #101a2d;
+        }
+
+        .work-number {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #7185a6;
+            margin-bottom: 18px;
+        }
+
+        .work h2 {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .work p {
+            max-width: 650px;
+            color: #aeb8c8;
+            font-size: 17px;
+        }
+
+        .tags {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            color: #66748c;
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid #26334a;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #66748c;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                padding: 80px 0 100px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .work {
+                padding: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Hewwy Huynh</div>
+
+            <a class="back" href="index.html">
+                ← Back to publication
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Literature & Fiction
+        </div>
+
+        <h1>
+            Your Fiction<br>
+            Library
+        </h1>
+
+        <p class="intro">
+            Original fiction, literary experiments, and stories written
+            through the same human prism.
+        </p>
+
+
+        <section>
+
+            <div class="section-title">
+                Fiction
+            </div>
+
+            <div class="library">
+
+                <div class="work">
+                    <div class="work-number">01</div>
+
+                    <h2>
+                        Story Title
+                    </h2>
+
+                    <p>
+                        A short description of the story will go here.
+                    </p>
+
+                    <div class="tags">
+                        FICTION · ROMANCE · BL · ORIGINAL WORK
+                    </div>
+                </div>
+
+
+                <div class="work">
+                    <div class="work-number">02</div>
+
+                    <h2>
+                        Another Story
+                    </h2>
+
+                    <p>
+                        A short description of another literary work.
+                    </p>
+
+                    <div class="tags">
+                        FICTION · ORIGINAL WORK
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <div class="section-title">
+                Literary Experiments
+            </div>
+
+            <p class="intro">
+                Fragments, experiments, unfinished pieces, and other forms
+                of writing that do not quite belong anywhere else.
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        © 2026 Hewwy Huynh
+    </div>
+</footer>
+
+</body>
+</html>
