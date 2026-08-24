@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Literature & Fiction — Hewwy Huynh</title>
+    <title>Literature & fiction — Hewwy Huynh</title>
 
     <style>
 
@@ -42,17 +42,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 13px;
             letter-spacing: 2px;
-            text-transform: uppercase;
             color: #9eabc0;
         }
 
         .logo:hover {
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #9eabc0;
+        }
+
+        .nav-links a:hover {
             color: #ffffff;
         }
 
@@ -63,9 +75,8 @@
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -91,9 +102,8 @@
 
         .section-title {
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2.5px;
             color: #7185a6;
             margin-bottom: 40px;
         }
@@ -122,7 +132,6 @@
             font-size: 10px;
             letter-spacing: 1.5px;
             color: #7185a6;
-            text-transform: uppercase;
             margin-bottom: 12px;
         }
 
@@ -145,8 +154,7 @@
             margin-top: 25px;
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             border-bottom: 1px solid #7185a6;
             padding-bottom: 5px;
         }
@@ -164,6 +172,11 @@
         }
 
         @media (max-width: 700px) {
+
+            .nav-links {
+                gap: 12px;
+                font-size: 11px;
+            }
 
             .hero {
                 padding: 90px 0 80px;
@@ -198,6 +211,26 @@
                 Home
             </a>
 
+            <div class="nav-links">
+
+                <a href="essays.html">
+                    Essays
+                </a>
+
+                <a href="literature.html">
+                    Literature
+                </a>
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
+
         </nav>
 
     </div>
@@ -210,12 +243,10 @@
     <div class="container">
 
 
-        <!-- HERO -->
-
         <section class="hero" style="border-top: none;">
 
             <div class="eyebrow">
-                Literature & Fiction
+                Literature & fiction
             </div>
 
             <h1>
@@ -231,16 +262,12 @@
         </section>
 
 
-        <!-- LIBRARY -->
-
         <section>
 
             <div class="section-title">
                 Works
             </div>
 
-
-            <!-- STORY 01 -->
 
             <article class="story">
 
@@ -251,7 +278,7 @@
                 <div>
 
                     <div class="tags">
-                        Fiction · Romance · BL · Original Work
+                        Fiction · Romance · BL · Original work
                     </div>
 
                     <h2>
@@ -272,8 +299,6 @@
             </article>
 
 
-            <!-- STORY 02 -->
-
             <article class="story">
 
                 <div class="number">
@@ -283,7 +308,7 @@
                 <div>
 
                     <div class="tags">
-                        Fiction · Literary Experiment
+                        Fiction · Literary experiment
                     </div>
 
                     <h2>
@@ -303,8 +328,6 @@
             </article>
 
 
-            <!-- STORY 03 -->
-
             <article class="story">
 
                 <div class="number">
@@ -314,7 +337,7 @@
                 <div>
 
                     <div class="tags">
-                        Fiction · Original Work
+                        Fiction · Original work
                     </div>
 
                     <h2>
