@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +34,8 @@
             margin: 0 auto;
         }
 
+        /* header */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -48,7 +51,6 @@
             font-family: Arial, sans-serif;
             font-size: 13px;
             letter-spacing: 2px;
-            text-transform: uppercase;
             color: #9eabc0;
         }
 
@@ -67,36 +69,41 @@
             color: #ffffff;
         }
 
-        main {
-            padding: 110px 0 120px;
+        /* chapter header */
+
+        article {
+            padding: 110px 0 100px;
         }
 
-        .chapter-label {
+        .story-title {
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 3px;
-            text-transform: uppercase;
             color: #7185a6;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 76px);
+            font-size: clamp(48px, 8vw, 78px);
             font-weight: normal;
             line-height: 1;
             letter-spacing: -3px;
             margin-bottom: 25px;
         }
 
-        .story-title {
-            font-size: 17px;
+        .chapter-meta {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
             color: #66748c;
-            margin-bottom: 50px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid #26334a;
         }
 
+        /* story */
+
         .story {
-            border-top: 1px solid #26334a;
-            padding-top: 55px;
+            padding-top: 60px;
         }
 
         .story p {
@@ -106,10 +113,10 @@
         }
 
         .story h2 {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: normal;
             line-height: 1.2;
-            margin: 65px 0 25px;
+            margin: 65px 0 28px;
         }
 
         .story blockquote {
@@ -121,21 +128,21 @@
             font-style: italic;
         }
 
+        /* chapter navigation */
+
         .chapter-navigation {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
             margin-top: 100px;
-            padding-top: 40px;
+            padding-top: 35px;
             border-top: 1px solid #26334a;
         }
 
         .navigation-link {
-            padding: 20px 0;
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: #7185a6;
         }
 
@@ -143,19 +150,7 @@
             color: #ffffff;
         }
 
-        .navigation-link.next {
-            text-align: right;
-        }
-
-        .chapter-count {
-            display: block;
-            margin-top: 8px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 15px;
-            letter-spacing: 0;
-            text-transform: none;
-            color: #9eabc0;
-        }
+        /* footer */
 
         footer {
             padding: 50px 0;
@@ -165,10 +160,12 @@
             color: #66748c;
         }
 
+        /* mobile */
+
         @media (max-width: 700px) {
 
-            main {
-                padding: 80px 0 100px;
+            article {
+                padding: 80px 0;
             }
 
             h1 {
@@ -180,11 +177,7 @@
             }
 
             .chapter-navigation {
-                grid-template-columns: 1fr;
-            }
-
-            .navigation-link.next {
-                text-align: left;
+                gap: 20px;
             }
 
         }
@@ -207,8 +200,8 @@
                 Home
             </a>
 
-            <a class="back" href="story-01.html">
-                ← Back to story
+            <a class="back" href="literature.html">
+                ← Back to fiction library
             </a>
 
         </nav>
@@ -220,92 +213,93 @@
 
 <main>
 
-    <div class="container">
+    <article>
+
+        <div class="container">
 
 
-        <div class="chapter-label">
-            Chapter 01
-        </div>
+            <div class="story-title">
+                The First Story
+            </div>
 
-        <h1>
-            Chapter One
-        </h1>
+            <h1>
+                Chapter One
+            </h1>
 
-        <div class="story-title">
-            The First Story
-        </div>
-
-
-        <article class="story">
-
-            <p>
-                Your story begins here.
-            </p>
-
-            <p>
-                Replace this paragraph with the actual opening
-                of your story.
-            </p>
-
-            <p>
-                Each paragraph can be added normally. The page is
-                intentionally kept simple so the reader can focus
-                on the writing.
-            </p>
-
-
-            <h2>
-                A Section Heading
-            </h2>
-
-            <p>
-                Your story continues here.
-            </p>
-
-            <p>
-                Another paragraph goes here.
-            </p>
-
-
-            <blockquote>
-                A line of dialogue, a thought, or a sentence
-                you want the reader to remember.
-            </blockquote>
-
-
-            <p>
-                Continue writing here whenever you are ready.
-            </p>
-
-
-            <div class="chapter-navigation">
-
-                <a class="navigation-link" href="story-01.html">
-                    ← Back to story
-
-                    <span class="chapter-count">
-                        Chapter list
-                    </span>
-
-                </a>
-
-
-                <a class="navigation-link next" href="story-01-chapter-02.html">
-                    Next chapter →
-
-                    <span class="chapter-count">
-                        Chapter Two
-                    </span>
-
-                </a>
-
+            <div class="chapter-meta">
+                Hewwy Huynh · 2026
             </div>
 
 
-        </article>
+            <div class="story">
 
 
-    </div>
+                <p>
+                    Your story begins here.
+                </p>
+
+                <p>
+                    Replace this paragraph with the opening of
+                    your first chapter.
+                </p>
+
+
+                <p>
+                    Continue writing your story here. Each paragraph
+                    will automatically follow the same typography
+                    and spacing.
+                </p>
+
+
+                <h2>
+                    Your section heading
+                </h2>
+
+
+                <p>
+                    Continue the chapter here.
+                </p>
+
+                <p>
+                    Add as many paragraphs as you need.
+                </p>
+
+
+                <blockquote>
+                    A line of dialogue, a thought, or a passage
+                    you want to give particular weight to.
+                </blockquote>
+
+
+                <p>
+                    Continue the story here.
+                </p>
+
+
+                <p>
+                    The chapter can end naturally wherever
+                    the story calls for it.
+                </p>
+
+
+                <div class="chapter-navigation">
+
+                    <a class="navigation-link" href="story-01.html">
+                        ← Back to story
+                    </a>
+
+                    <a class="navigation-link" href="story-01-chapter-02.html">
+                        Next chapter →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </article>
 
 </main>
 
@@ -322,3 +316,4 @@
 </body>
 
 </html>
+```
