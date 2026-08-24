@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A Story Yet to Be Written — Hewwy Huynh</title>
+    <title>The First Story — Hewwy Huynh</title>
 
     <style>
 
@@ -20,7 +20,7 @@
             background: #0b1220;
             color: #e7eaf0;
             font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         a {
@@ -29,7 +29,7 @@
         }
 
         .container {
-            width: min(760px, 90%);
+            width: min(850px, 90%);
             margin: 0 auto;
         }
 
@@ -42,13 +42,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 13px;
             letter-spacing: 2px;
+            text-transform: uppercase;
             color: #9eabc0;
         }
 
@@ -67,20 +67,21 @@
             color: #ffffff;
         }
 
-        article {
-            padding: 120px 0 140px;
+        main {
+            padding: 110px 0 130px;
         }
 
-        .eyebrow {
+        .category {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2.5px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             color: #7185a6;
             margin-bottom: 25px;
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 78px);
+            font-size: clamp(48px, 8vw, 82px);
             font-weight: normal;
             line-height: 1;
             letter-spacing: -3px;
@@ -88,10 +89,10 @@
         }
 
         .subtitle {
+            max-width: 680px;
             font-size: 21px;
             color: #aeb8c8;
-            max-width: 650px;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .meta {
@@ -103,61 +104,53 @@
             border-bottom: 1px solid #26334a;
         }
 
-        .story {
+        .chapters {
             padding-top: 60px;
         }
 
-        .story p {
-            font-size: 19px;
-            color: #c2c9d5;
-            margin-bottom: 28px;
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 30px;
         }
 
-        .story h2 {
-            font-size: 34px;
-            font-weight: normal;
-            line-height: 1.2;
-            margin: 70px 0 28px;
-        }
-
-        .story h3 {
-            font-size: 25px;
-            font-weight: normal;
-            line-height: 1.3;
-            margin: 50px 0 20px;
-        }
-
-        .story blockquote {
-            margin: 45px 0;
-            padding-left: 30px;
-            border-left: 2px solid #7185a6;
-            color: #aeb8c8;
-            font-size: 21px;
-            font-style: italic;
-        }
-
-        .divider {
-            margin: 70px 0;
-            text-align: center;
-            color: #66748c;
-            letter-spacing: 8px;
-        }
-
-        .ending {
-            margin-top: 100px;
-            padding-top: 40px;
+        .chapter {
+            display: grid;
+            grid-template-columns: 70px 1fr 30px;
+            gap: 25px;
+            align-items: center;
+            padding: 28px 0;
             border-top: 1px solid #26334a;
         }
 
-        .ending a {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #7185a6;
+        .chapter:last-child {
+            border-bottom: 1px solid #26334a;
         }
 
-        .ending a:hover {
+        .chapter-number {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #66748c;
+        }
+
+        .chapter-title {
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .chapter:hover .chapter-title {
             color: #ffffff;
+        }
+
+        .arrow {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #7185a6;
+            text-align: right;
         }
 
         footer {
@@ -170,20 +163,21 @@
 
         @media (max-width: 700px) {
 
-            article {
-                padding: 90px 0 100px;
+            main {
+                padding: 80px 0 100px;
             }
 
             h1 {
                 letter-spacing: -2px;
             }
 
-            .story p {
-                font-size: 18px;
+            .chapter {
+                grid-template-columns: 50px 1fr 20px;
+                gap: 15px;
             }
 
-            nav {
-                align-items: flex-start;
+            .chapter-title {
+                font-size: 21px;
             }
 
         }
@@ -207,7 +201,7 @@
             </a>
 
             <a class="back" href="literature.html">
-                ← Back to fiction library
+                ← Back to Fiction Library
             </a>
 
         </nav>
@@ -219,97 +213,310 @@
 
 <main>
 
-    <article>
-
-        <div class="container">
+    <div class="container">
 
 
-            <div class="eyebrow">
-                Fiction · Romance · BL · Original work
-            </div>
-
-            <h1>
-                A Story Yet to Be Written
-            </h1>
-
-            <p class="subtitle">
-                A short subtitle or description of the story can live here.
-            </p>
-
-            <div class="meta">
-                Hewwy Huynh · August 2026
-            </div>
-
-
-            <div class="story">
-
-
-                <h2>
-                    Chapter I
-                </h2>
-
-                <p>
-                    This is where the story begins.
-                </p>
-
-                <p>
-                    Replace this text with your own writing whenever
-                    you are ready.
-                </p>
-
-                <p>
-                    You can have as many paragraphs as you want.
-                    The page will automatically format them for you.
-                </p>
-
-
-                <blockquote>
-                    A quotation, line of dialogue, or passage you want
-                    to give particular weight can appear like this.
-                </blockquote>
-
-
-                <h2>
-                    Chapter II
-                </h2>
-
-                <p>
-                    Your second chapter begins here.
-                </p>
-
-                <p>
-                    More writing goes here.
-                </p>
-
-
-                <div class="divider">
-                    · · ·
-                </div>
-
-
-                <h2>
-                    Chapter III
-                </h2>
-
-                <p>
-                    And so the story continues.
-                </p>
-
-
-                <div class="ending">
-
-                    <a href="literature.html">
-                        ← Back to fiction library
-                    </a>
-
-                </div>
-
-
-            </div>
-
+        <div class="category">
+            Fiction · Romance · BL
         </div>
 
-    </article>
+        <h1>
+            The First Story
+        </h1>
+
+        <p class="subtitle">
+            An original work of fiction written through the same
+            human prism.
+        </p>
+
+        <div class="meta">
+            HEWWY HUYNH · 2026 · 16 CHAPTERS
+        </div>
+
+
+        <section class="chapters">
+
+            <div class="section-title">
+                Chapters
+            </div>
+
+
+            <a class="chapter" href="story-01-chapter-01.html">
+
+                <div class="chapter-number">
+                    01
+                </div>
+
+                <div class="chapter-title">
+                    Chapter One
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-02.html">
+
+                <div class="chapter-number">
+                    02
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Two
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-03.html">
+
+                <div class="chapter-number">
+                    03
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Three
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-04.html">
+
+                <div class="chapter-number">
+                    04
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Four
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-05.html">
+
+                <div class="chapter-number">
+                    05
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Five
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-06.html">
+
+                <div class="chapter-number">
+                    06
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Six
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-07.html">
+
+                <div class="chapter-number">
+                    07
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Seven
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-08.html">
+
+                <div class="chapter-number">
+                    08
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Eight
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-09.html">
+
+                <div class="chapter-number">
+                    09
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Nine
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-10.html">
+
+                <div class="chapter-number">
+                    10
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Ten
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-11.html">
+
+                <div class="chapter-number">
+                    11
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Eleven
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-12.html">
+
+                <div class="chapter-number">
+                    12
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Twelve
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-13.html">
+
+                <div class="chapter-number">
+                    13
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Thirteen
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-14.html">
+
+                <div class="chapter-number">
+                    14
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Fourteen
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-15.html">
+
+                <div class="chapter-number">
+                    15
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Fifteen
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a class="chapter" href="story-01-chapter-16.html">
+
+                <div class="chapter-number">
+                    16
+                </div>
+
+                <div class="chapter-title">
+                    Chapter Sixteen
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+        </section>
+
+
+    </div>
 
 </main>
 
@@ -317,9 +524,7 @@
 <footer>
 
     <div class="container">
-
         © 2026 Hewwy Huynh
-
     </div>
 
 </footer>
