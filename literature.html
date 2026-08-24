@@ -7,6 +7,7 @@
     <title>Literature & Fiction — Hewwy Huynh</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -39,7 +40,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 30px;
         }
 
         .logo {
@@ -62,13 +62,13 @@
         }
 
         .hero {
-            padding: 110px 0 90px;
+            padding: 120px 0 100px;
             max-width: 800px;
         }
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #7185a6;
@@ -76,11 +76,11 @@
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 82px);
+            font-size: clamp(52px, 8vw, 88px);
             font-weight: normal;
-            line-height: 1;
+            line-height: 0.98;
             letter-spacing: -3px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .intro {
@@ -96,7 +96,7 @@
 
         .section-title {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 12px;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #7185a6;
@@ -105,10 +105,9 @@
 
         .story {
             display: grid;
-            grid-template-columns: 90px 1fr auto;
+            grid-template-columns: 80px 1fr;
             gap: 35px;
-            align-items: start;
-            padding: 35px 0;
+            padding: 40px 0;
             border-top: 1px solid #26334a;
         }
 
@@ -120,50 +119,44 @@
             font-family: Arial, sans-serif;
             font-size: 12px;
             letter-spacing: 2px;
-            color: #7185a6;
+            color: #66748c;
         }
 
         .story h2 {
-            font-size: 34px;
+            font-size: 38px;
             font-weight: normal;
             line-height: 1.15;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .story-description {
             color: #aeb8c8;
-            font-size: 16px;
-            max-width: 600px;
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 20px;
         }
 
         .tags {
-            margin-top: 18px;
             font-family: Arial, sans-serif;
             font-size: 10px;
             letter-spacing: 1.5px;
-            color: #66748c;
+            color: #7185a6;
+            text-transform: uppercase;
         }
 
         .read {
+            display: inline-block;
+            margin-top: 25px;
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #9eabc0;
             border-bottom: 1px solid #7185a6;
             padding-bottom: 5px;
-            white-space: nowrap;
         }
 
         .read:hover {
             color: #ffffff;
-        }
-
-        .note {
-            padding: 55px 0 100px;
-            color: #66748c;
-            font-size: 15px;
-            max-width: 650px;
         }
 
         footer {
@@ -177,44 +170,53 @@
         @media (max-width: 700px) {
 
             .hero {
-                padding: 80px 0 70px;
+                padding: 90px 0 80px;
             }
 
             .story {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 10px;
             }
 
             .story h2 {
-                font-size: 29px;
+                font-size: 32px;
             }
 
-            .read {
-                display: inline-block;
-                width: fit-content;
-            }
         }
+
     </style>
 </head>
+
 
 <body>
 
 <header>
+
     <div class="container">
+
         <nav>
-            <div class="logo">Hewwy Huynh</div>
+
+            <div class="logo">
+                Hewwy Huynh
+            </div>
 
             <a class="back" href="index.html">
                 ← Back to publication
             </a>
+
         </nav>
+
     </div>
+
 </header>
 
 
 <main>
 
     <div class="container">
+
+
+        <!-- HERO -->
 
         <section class="hero" style="border-top: none;">
 
@@ -223,16 +225,19 @@
             </div>
 
             <h1>
-                Your Fiction Library
+                Your Fiction<br>
+                Library
             </h1>
 
             <p class="intro">
-                Original fiction, literary experiments, and stories
-                written through the same human prism.
+                Original fiction, literary experiments, fragments,
+                and stories written through the same human prism.
             </p>
 
         </section>
 
+
+        <!-- LIBRARY -->
 
         <section>
 
@@ -251,24 +256,24 @@
 
                 <div>
 
+                    <div class="tags">
+                        Fiction · Romance · BL · Original Work
+                    </div>
+
                     <h2>
-                        The First Story
+                        A Story Yet to Be Written
                     </h2>
 
                     <p class="story-description">
-                        A placeholder for an original work of fiction.
-                        The description of the story will live here.
+                        A placeholder for the first fictional work
+                        published through Society Through a Human Prism.
                     </p>
 
-                    <div class="tags">
-                        FICTION · ROMANCE · BL · ORIGINAL WORK
-                    </div>
+                    <a class="read" href="story-01.html">
+                        Read story →
+                    </a>
 
                 </div>
-
-                <a class="read" href="fiction-first-story.html">
-                    Read →
-                </a>
 
             </article>
 
@@ -283,37 +288,60 @@
 
                 <div>
 
+                    <div class="tags">
+                        Fiction · Literary Experiment
+                    </div>
+
                     <h2>
                         Another Story
                     </h2>
 
                     <p class="story-description">
-                        A second work can be added here later.
-                        Each story will have its own dedicated page.
+                        Another fictional work will eventually live here.
                     </p>
 
-                    <div class="tags">
-                        FICTION · LITERARY
-                    </div>
+                    <a class="read" href="story-02.html">
+                        Read story →
+                    </a>
 
                 </div>
 
-                <a class="read" href="#">
-                    Read →
-                </a>
+            </article>
+
+
+            <!-- STORY 03 -->
+
+            <article class="story">
+
+                <div class="number">
+                    03
+                </div>
+
+                <div>
+
+                    <div class="tags">
+                        Fiction · Original Work
+                    </div>
+
+                    <h2>
+                        Untitled
+                    </h2>
+
+                    <p class="story-description">
+                        A space reserved for another story.
+                    </p>
+
+                    <a class="read" href="story-03.html">
+                        Read story →
+                    </a>
+
+                </div>
 
             </article>
 
 
         </section>
 
-
-        <div class="note">
-
-            This library is a growing collection of fiction,
-            experiments, and stories written over time.
-
-        </div>
 
     </div>
 
@@ -323,7 +351,9 @@
 <footer>
 
     <div class="container">
+
         © 2026 Hewwy Huynh
+
     </div>
 
 </footer>
