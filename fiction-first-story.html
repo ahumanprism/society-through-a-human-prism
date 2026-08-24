@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>The First Story — Hewwy Huynh</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -26,7 +29,7 @@
         }
 
         .container {
-            width: min(850px, 90%);
+            width: min(760px, 90%);
             margin: 0 auto;
         }
 
@@ -49,6 +52,10 @@
             color: #9eabc0;
         }
 
+        .logo:hover {
+            color: #ffffff;
+        }
+
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
@@ -61,7 +68,7 @@
         }
 
         article {
-            padding: 110px 0 130px;
+            padding: 120px 0 140px;
         }
 
         .eyebrow {
@@ -74,7 +81,7 @@
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 80px);
+            font-size: clamp(48px, 8vw, 78px);
             font-weight: normal;
             line-height: 1;
             letter-spacing: -3px;
@@ -84,8 +91,8 @@
         .subtitle {
             font-size: 21px;
             color: #aeb8c8;
-            max-width: 680px;
-            margin-bottom: 35px;
+            max-width: 650px;
+            margin-bottom: 40px;
         }
 
         .meta {
@@ -111,7 +118,7 @@
             font-size: 34px;
             font-weight: normal;
             line-height: 1.2;
-            margin: 65px 0 25px;
+            margin: 70px 0 28px;
         }
 
         .story blockquote {
@@ -119,19 +126,27 @@
             padding-left: 30px;
             border-left: 2px solid #7185a6;
             color: #aeb8c8;
-            font-size: 22px;
+            font-size: 21px;
             font-style: italic;
         }
 
         .end {
-            margin-top: 80px;
-            padding-top: 35px;
+            margin-top: 100px;
+            padding-top: 40px;
             border-top: 1px solid #26334a;
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #66748c;
+        }
+
+        .end a {
+            color: #7185a6;
+        }
+
+        .end a:hover {
+            color: #ffffff;
         }
 
         footer {
@@ -145,7 +160,7 @@
         @media (max-width: 700px) {
 
             article {
-                padding: 80px 0 100px;
+                padding: 90px 0 100px;
             }
 
             h1 {
@@ -155,11 +170,16 @@
             .story p {
                 font-size: 18px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -167,12 +187,12 @@
 
         <nav>
 
-            <div class="logo">
-                Hewwy Huynh
-            </div>
+            <a class="logo" href="index.html">
+                Home
+            </a>
 
             <a class="back" href="literature.html">
-                ← Back to literature
+                ← Back to Fiction Library
             </a>
 
         </nav>
@@ -188,6 +208,9 @@
 
         <div class="container">
 
+
+            <!-- STORY HEADER -->
+
             <div class="eyebrow">
                 Fiction · Romance · BL
             </div>
@@ -201,9 +224,11 @@
             </p>
 
             <div class="meta">
-                Hewwy Huynh · 2026
+                HEWWY HUYNH · 2026
             </div>
 
+
+            <!-- STORY -->
 
             <div class="story">
 
@@ -242,9 +267,16 @@
                 </p>
 
 
+                <!-- END -->
+
                 <div class="end">
-                    End
+
+                    <a href="literature.html">
+                        ← Back to Fiction Library
+                    </a>
+
                 </div>
+
 
             </div>
 
@@ -258,10 +290,14 @@
 <footer>
 
     <div class="container">
+
         © 2026 Hewwy Huynh
+
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
