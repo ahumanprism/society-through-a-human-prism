@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Society Through a Human Prism — Hewwy Huynh</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b1220;
+            color: #e7eaf0;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 32px 0;
+            border-bottom: 1px solid #26334a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9eabc0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #9eabc0;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            padding: 130px 0 120px;
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 92px);
+            font-weight: normal;
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 35px;
+        }
+
+        .intro {
+            max-width: 680px;
+            font-size: 21px;
+            color: #aeb8c8;
+        }
+
+        .author {
+            margin-top: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #7185a6;
+        }
+
+        section {
+            padding: 80px 0;
+            border-top: 1px solid #26334a;
+        }
+
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 45px;
+        }
+
+        .featured {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: end;
+        }
+
+        .featured h2 {
+            font-size: clamp(32px, 5vw, 58px);
+            font-weight: normal;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .featured p {
+            color: #aeb8c8;
+            font-size: 17px;
+            max-width: 650px;
+        }
+
+        .read-link {
+            display: inline-block;
+            margin-top: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #7185a6;
+            padding-bottom: 5px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #26334a;
+        }
+
+        .category {
+            background: #0b1220;
+            padding: 35px 25px;
+            font-size: 20px;
+        }
+
+        .category span {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #7185a6;
+            margin-bottom: 12px;
+        }
+
+        .fiction {
+            padding: 45px;
+            border: 1px solid #26334a;
+        }
+
+        .fiction h2 {
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .fiction p {
+            color: #aeb8c8;
+            max-width: 650px;
+        }
+
+        .tags {
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #7185a6;
+        }
+
+        .about {
+            max-width: 700px;
+        }
+
+        .about p {
+            font-size: 22px;
+            color: #c2c9d5;
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid #26334a;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #66748c;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 700px) {
+            .nav-links {
+                gap: 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 90px 0;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .fiction {
+                padding: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Hewwy Huynh</div>
+
+            <div class="nav-links">
+                <a href="#essays">Essays</a>
+                <a href="#literature">Literature</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+
+        <section class="hero" style="border-top: none;">
+            <div class="eyebrow">An independent publication by Hewwy Huynh</div>
+
+            <h1>
+                Society Through<br>
+                a Human Prism
+            </h1>
+
+            <p class="intro">
+                An attempt to examine society, literature, philosophy,
+                culture, and human experience through one particular
+                human perspective.
+            </p>
+
+            <div class="author">
+                HEWWY HUYNH
+            </div>
+        </section>
+
+
+        <section id="essays">
+
+            <div class="section-title">Featured Essay</div>
+
+            <div class="featured">
+
+                <div>
+                    <h2>
+                        The Things We Believe
+                    </h2>
+
+                    <p>
+                        A placeholder for the first essay published
+                        through Society Through a Human Prism.
+                        Ideas will eventually live here.
+                    </p>
+
+                    <a class="read-link" href="#">
+                        Read essay →
+                    </a>
+                </div>
+
+                <div class="eyebrow">
+                    Philosophy · Society
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <div class="section-title">Explore</div>
+
+            <div class="categories">
+
+                <div class="category">
+                    <span>01</span>
+                    Society
+                </div>
+
+                <div class="category">
+                    <span>02</span>
+                    Philosophy
+                </div>
+
+                <div class="category">
+                    <span>03</span>
+                    Psychology
+                </div>
+
+                <div class="category">
+                    <span>04</span>
+                    Literature
+                </div>
+
+                <div class="category">
+                    <span>05</span>
+                    Culture
+                </div>
+
+                <div class="category">
+                    <span>06</span>
+                    Personal
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="literature">
+
+            <div class="section-title">Literature & Fiction</div>
+
+            <div class="fiction">
+
+                <h2>Your Fiction Library</h2>
+
+                <p>
+                    Original fiction, literary experiments, and stories
+                    written through the same human prism.
+                </p>
+
+                <div class="tags">
+                    FICTION · ROMANCE · BL · ORIGINAL WORK
+                </div>
+
+                <a class="read-link" href="#">
+                    Enter the library →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="about">
+
+            <div class="section-title">About</div>
+
+            <div class="about">
+
+                <p>
+                    No view from nowhere.
+                    <br><br>
+                    Society Through a Human Prism is a personal
+                    publication by Hewwy Huynh — a space for examining
+                    the world through literature, philosophy, society,
+                    culture, and ordinary human experience.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        © 2026 Hewwy Huynh
+    </div>
+</footer>
+
+</body>
+</html>
