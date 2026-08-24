@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter One — The First Story</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b1220;
+            color: #e7eaf0;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 32px 0;
+            border-bottom: 1px solid #26334a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9eabc0;
+        }
+
+        .logo:hover {
+            color: #ffffff;
+        }
+
+        .back {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #7185a6;
+        }
+
+        .back:hover {
+            color: #ffffff;
+        }
+
+        main {
+            padding: 110px 0 120px;
+        }
+
+        .chapter-label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7185a6;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 76px);
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .story-title {
+            font-size: 17px;
+            color: #66748c;
+            margin-bottom: 50px;
+        }
+
+        .story {
+            border-top: 1px solid #26334a;
+            padding-top: 55px;
+        }
+
+        .story p {
+            font-size: 19px;
+            color: #c2c9d5;
+            margin-bottom: 28px;
+        }
+
+        .story h2 {
+            font-size: 30px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin: 65px 0 25px;
+        }
+
+        .story blockquote {
+            margin: 45px 0;
+            padding-left: 30px;
+            border-left: 2px solid #7185a6;
+            color: #aeb8c8;
+            font-size: 21px;
+            font-style: italic;
+        }
+
+        .chapter-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #26334a;
+        }
+
+        .navigation-link {
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #7185a6;
+        }
+
+        .navigation-link:hover {
+            color: #ffffff;
+        }
+
+        .navigation-link.next {
+            text-align: right;
+        }
+
+        .chapter-count {
+            display: block;
+            margin-top: 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            letter-spacing: 0;
+            text-transform: none;
+            color: #9eabc0;
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid #26334a;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #66748c;
+        }
+
+        @media (max-width: 700px) {
+
+            main {
+                padding: 80px 0 100px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .story p {
+                font-size: 18px;
+            }
+
+            .chapter-navigation {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation-link.next {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <a class="back" href="story-01.html">
+                ← Back to story
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container">
+
+
+        <div class="chapter-label">
+            Chapter 01
+        </div>
+
+        <h1>
+            Chapter One
+        </h1>
+
+        <div class="story-title">
+            The First Story
+        </div>
+
+
+        <article class="story">
+
+            <p>
+                Your story begins here.
+            </p>
+
+            <p>
+                Replace this paragraph with the actual opening
+                of your story.
+            </p>
+
+            <p>
+                Each paragraph can be added normally. The page is
+                intentionally kept simple so the reader can focus
+                on the writing.
+            </p>
+
+
+            <h2>
+                A Section Heading
+            </h2>
+
+            <p>
+                Your story continues here.
+            </p>
+
+            <p>
+                Another paragraph goes here.
+            </p>
+
+
+            <blockquote>
+                A line of dialogue, a thought, or a sentence
+                you want the reader to remember.
+            </blockquote>
+
+
+            <p>
+                Continue writing here whenever you are ready.
+            </p>
+
+
+            <div class="chapter-navigation">
+
+                <a class="navigation-link" href="story-01.html">
+                    ← Back to story
+
+                    <span class="chapter-count">
+                        Chapter list
+                    </span>
+
+                </a>
+
+
+                <a class="navigation-link next" href="story-01-chapter-02.html">
+                    Next chapter →
+
+                    <span class="chapter-count">
+                        Chapter Two
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 Hewwy Huynh
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
