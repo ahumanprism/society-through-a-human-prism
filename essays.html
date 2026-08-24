@@ -10,10 +10,6 @@
 
     <style>
 
-        .logo:hover {
-            color: #ffffff;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -37,6 +33,8 @@
             margin: 0 auto;
         }
 
+        /* ===== HEADER ===== */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -56,19 +54,14 @@
             color: #9eabc0;
         }
 
-        .back {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #7185a6;
-        }
-
-        .back:hover {
+        .logo:hover {
             color: #ffffff;
         }
 
-        .hero {
-            padding: 120px 0 100px;
+        /* ===== PAGE INTRO ===== */
+
+        .page-intro {
+            padding: 120px 0 90px;
             max-width: 800px;
         }
 
@@ -81,84 +74,64 @@
             margin-bottom: 25px;
         }
 
-        h1 {
-            font-size: clamp(52px, 8vw, 88px);
+        .page-intro h1 {
+            font-size: clamp(52px, 8vw, 90px);
             font-weight: normal;
-            line-height: 0.98;
+            line-height: 1;
             letter-spacing: -3px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
-        .intro {
-            font-size: 21px;
+        .page-intro p {
+            max-width: 650px;
+            font-size: 20px;
             color: #aeb8c8;
-            max-width: 680px;
         }
 
-        section {
-            padding: 70px 0;
+        /* ===== ESSAY LIST ===== */
+
+        .essay-list {
             border-top: 1px solid #26334a;
+            padding-bottom: 100px;
         }
 
-        .section-title {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #7185a6;
-            margin-bottom: 40px;
-        }
-
-        .essay {
+        .essay-card {
             display: grid;
             grid-template-columns: 80px 1fr;
             gap: 35px;
-            padding: 40px 0;
-            border-top: 1px solid #26334a;
-        }
-
-        .essay:last-child {
+            padding: 55px 0;
             border-bottom: 1px solid #26334a;
         }
 
-        .number {
+        .essay-number {
             font-family: Arial, sans-serif;
             font-size: 12px;
             letter-spacing: 2px;
             color: #66748c;
         }
 
-        .tags {
+        .essay-category {
             font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 1.5px;
+            font-size: 11px;
+            letter-spacing: 2px;
             color: #7185a6;
-            text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
 
-        .essay h2 {
-            font-size: 38px;
+        .essay-content h2 {
+            font-size: clamp(30px, 5vw, 48px);
             font-weight: normal;
-            line-height: 1.15;
-            margin-bottom: 15px;
+            line-height: 1.1;
+            margin-bottom: 18px;
         }
 
-        .description {
+        .essay-content p {
+            max-width: 650px;
             color: #aeb8c8;
             font-size: 17px;
-            max-width: 650px;
-            margin-bottom: 20px;
         }
 
-        .meta {
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 1px;
-            color: #66748c;
-        }
-
-        .read {
+        .read-link {
             display: inline-block;
             margin-top: 25px;
             font-family: Arial, sans-serif;
@@ -169,112 +142,39 @@
             padding-bottom: 5px;
         }
 
-        .read:hover {
+        .read-link:hover {
             color: #ffffff;
         }
+
+        /* ===== FOOTER ===== */
 
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
             font-family: Arial, sans-serif;
             font-size: 12px;
-color: #66748c;
-}
+            color: #66748c;
+        }
 
+        /* ===== MOBILE ===== */
 
-/* ===== ESSAY LIBRARY ===== */
+        @media (max-width: 700px) {
 
-.page-intro {
-    padding: 100px 0 80px;
-    border-bottom: 1px solid #26334a;
-}
-
-.page-intro h1 {
-    font-size: clamp(52px, 8vw, 90px);
-    font-weight: normal;
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-bottom: 30px;
-}
-
-.page-intro p {
-    max-width: 650px;
-    font-size: 20px;
-    color: #aeb8c8;
-}
-
-.essay-list {
-    padding: 20px 0 100px;
-}
-
-.essay-card {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 35px;
-    padding: 55px 0;
-    border-bottom: 1px solid #26334a;
-}
-
-.essay-number {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #66748c;
-}
-
-.essay-category {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #7185a6;
-    margin-bottom: 18px;
-}
-
-.essay-content h2 {
-    font-size: clamp(30px, 5vw, 48px);
-    font-weight: normal;
-    line-height: 1.1;
-    margin-bottom: 18px;
-}
-
-.essay-content p {
-    max-width: 650px;
-    color: #aeb8c8;
-    font-size: 17px;
-}
-
-.read-link {
-    display: inline-block;
-    margin-top: 25px;
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #7185a6;
-    padding-bottom: 5px;
-}
-
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 700px) {
-
-    .essay-card {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .hero {
-        padding: 90px 0 80px;
-    }
-       
-
-            .essay {
-                grid-template-columns: 1fr;
-                gap: 10px;
+            .page-intro {
+                padding: 90px 0 70px;
             }
 
-            .essay h2 {
+            .page-intro h1 {
+                letter-spacing: -2px;
+            }
+
+            .essay-card {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 45px 0;
+            }
+
+            .essay-content h2 {
                 font-size: 32px;
             }
 
@@ -309,25 +209,30 @@ color: #66748c;
 
     <div class="container">
 
-        <div class="page-intro">
+
+        <section class="page-intro">
 
             <div class="eyebrow">
                 Essays
             </div>
 
             <h1>
-                Essays
+                Thoughts,<br>
+                examined.
             </h1>
 
             <p>
-                Reflections on society, philosophy, psychology,
-                culture, and the things that make us human.
+                Essays on society, philosophy, psychology,
+                culture, and the strange business of being human.
             </p>
 
-        </div>
+        </section>
 
 
         <section class="essay-list">
+
+
+            <!-- ESSAY 01 -->
 
             <article class="essay-card">
 
@@ -338,7 +243,7 @@ color: #66748c;
                 <div class="essay-content">
 
                     <div class="essay-category">
-                        PHILOSOPHY · SOCIETY
+                        Philosophy · Society
                     </div>
 
                     <h2>
@@ -346,9 +251,9 @@ color: #66748c;
                     </h2>
 
                     <p>
-                        An exploration of belief, certainty,
-                        and the ways human beings make sense
-                        of the world around them.
+                        An examination of the beliefs we inherit,
+                        construct, defend, and sometimes mistake
+                        for truth.
                     </p>
 
                     <a class="read-link" href="essay-01.html">
@@ -360,6 +265,8 @@ color: #66748c;
             </article>
 
 
+            <!-- ESSAY 02 -->
+
             <article class="essay-card">
 
                 <div class="essay-number">
@@ -369,19 +276,52 @@ color: #66748c;
                 <div class="essay-content">
 
                     <div class="essay-category">
-                        PSYCHOLOGY · SOCIETY
+                        Psychology · Society
                     </div>
 
                     <h2>
-                        Coming Soon
+                        An Essay Yet to Be Written
                     </h2>
 
                     <p>
-                        Another examination of human experience.
+                        Another examination of human behaviour
+                        will eventually live here.
                     </p>
 
                     <a class="read-link" href="#">
-                        Read essay →
+                        Coming soon →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ESSAY 03 -->
+
+            <article class="essay-card">
+
+                <div class="essay-number">
+                    03
+                </div>
+
+                <div class="essay-content">
+
+                    <div class="essay-category">
+                        Culture · Philosophy
+                    </div>
+
+                    <h2>
+                        Untitled
+                    </h2>
+
+                    <p>
+                        A future essay will eventually occupy
+                        this space.
+                    </p>
+
+                    <a class="read-link" href="#">
+                        Coming soon →
                     </a>
 
                 </div>
@@ -391,15 +331,16 @@ color: #66748c;
 
         </section>
 
+
     </div>
+
+</main>
 
 
 <footer>
 
     <div class="container">
-
         © 2026 Hewwy Huynh
-
     </div>
 
 </footer>
