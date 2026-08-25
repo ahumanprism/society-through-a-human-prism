@@ -33,6 +33,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -42,13 +46,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: #9eabc0;
         }
 
@@ -59,7 +63,6 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 1px;
             color: #7185a6;
         }
 
@@ -67,15 +70,18 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Story header
+        ========================= */
+
         main {
             padding: 110px 0 130px;
         }
 
-        .category {
+        .type {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -98,11 +104,15 @@
         .meta {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: #66748c;
             padding-bottom: 45px;
             border-bottom: 1px solid #26334a;
         }
+
+        /* =========================
+           Chapters
+        ========================= */
 
         .chapters {
             padding-top: 60px;
@@ -111,8 +121,7 @@
         .section-title {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 30px;
         }
@@ -133,7 +142,7 @@
         .chapter-number {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: #66748c;
         }
 
@@ -153,6 +162,10 @@
             text-align: right;
         }
 
+        /* =========================
+           Footer
+        ========================= */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
@@ -160,6 +173,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -178,6 +195,10 @@
 
             .chapter-title {
                 font-size: 21px;
+            }
+
+            nav {
+                align-items: flex-start;
             }
 
         }
@@ -201,7 +222,7 @@
             </a>
 
             <a class="back" href="literature.html">
-                ← Back to Fiction Library
+                ← Back to literature
             </a>
 
         </nav>
@@ -216,22 +237,25 @@
     <div class="container">
 
 
-        <div class="category">
-            Fiction · Romance · BL
+        <div class="type">
+            Short story
         </div>
+
 
         <h1>
             The First Story
         </h1>
+
 
         <p class="subtitle">
             An original work of fiction written through the same
             human prism.
         </p>
 
-        <div class="meta">
-            HEWWY HUYNH · 2026 · 16 CHAPTERS
-        </div>
+
+       <div class="meta">
+            Hewwy Huynh · 2026 · 16 chapters
+       </div>
 
 
         <section class="chapters">
