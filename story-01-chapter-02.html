@@ -33,6 +33,9 @@
             margin: 0 auto;
         }
 
+
+        /* ===== HEADER ===== */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -58,6 +61,7 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
+            letter-spacing: 1px;
             color: #7185a6;
         }
 
@@ -65,16 +69,19 @@
             color: #ffffff;
         }
 
+
+        /* ===== CHAPTER HEADER ===== */
+
         article {
-            padding: 120px 0 100px;
+            padding: 110px 0 100px;
         }
 
-        .eyebrow {
+        .story-title {
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 3px;
             color: #7185a6;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -82,17 +89,16 @@
             font-weight: normal;
             line-height: 1;
             letter-spacing: -3px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .subtitle {
-            font-size: 21px;
+            font-size: 20px;
             color: #aeb8c8;
-            max-width: 650px;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
-        .meta {
+        .chapter-meta {
             font-family: Arial, sans-serif;
             font-size: 11px;
             letter-spacing: 1px;
@@ -100,6 +106,9 @@
             padding-bottom: 45px;
             border-bottom: 1px solid #26334a;
         }
+
+
+        /* ===== STORY ===== */
 
         .story {
             padding-top: 60px;
@@ -112,10 +121,10 @@
         }
 
         .story h2 {
-            font-size: 34px;
+            font-size: 32px;
             font-weight: normal;
             line-height: 1.2;
-            margin: 70px 0 28px;
+            margin: 65px 0 28px;
         }
 
         .story blockquote {
@@ -126,6 +135,9 @@
             font-size: 21px;
             font-style: italic;
         }
+
+
+        /* ===== CHAPTER NAVIGATION ===== */
 
         .chapter-navigation {
             display: flex;
@@ -139,13 +151,16 @@
         .navigation-link {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: #7185a6;
         }
 
         .navigation-link:hover {
             color: #ffffff;
         }
+
+
+        /* ===== FOOTER ===== */
 
         footer {
             padding: 50px 0;
@@ -155,10 +170,13 @@
             color: #66748c;
         }
 
+
+        /* ===== MOBILE ===== */
+
         @media (max-width: 700px) {
 
             article {
-                padding: 90px 0 80px;
+                padding: 80px 0;
             }
 
             h1 {
@@ -170,11 +188,7 @@
             }
 
             .chapter-navigation {
-                gap: 15px;
-            }
-
-            .navigation-link {
-                font-size: 10px;
+                gap: 20px;
             }
 
         }
@@ -183,7 +197,9 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -195,9 +211,9 @@
                 Home
             </a>
 
-            <span class="back">
-                The First Story
-            </span>
+            <a class="back" href="story-01-chapter-01.html">
+                ← Previous chapter
+            </a>
 
         </nav>
 
@@ -212,8 +228,11 @@
 
         <div class="container">
 
-            <div class="eyebrow">
-                Fiction · Romance · BL
+
+            <!-- CHAPTER HEADER -->
+
+            <div class="story-title">
+                One life, one love, forever
             </div>
 
             <h1>
@@ -221,48 +240,414 @@
             </h1>
 
             <p class="subtitle">
-                Your chapter subtitle goes here.
+                12 June 2007
             </p>
 
-            <div class="meta">
-                HEWWY HUYNH · 2026
+            <div class="chapter-meta">
+                THE FIRST STORY
             </div>
 
+
+            <!-- STORY -->
 
             <div class="story">
 
                 <p>
-                    Your chapter begins here.
+                    These summer days, it seemed to get hotter and hotter,
+                    but compared with my hometown, the hot climate here in
+                    Southampton was bearable. I was sitting in the cabin
+                    drawing to refresh the mind. My artistic sensibility
+                    remarkably changed since primary school. I meant it was
+                    not as extraordinarily sublime as that of world-famous
+                    figures, such as Leonardo da Vinci, Vincent van Gogh,
+                    or Claude Monet. Basically, it was good-looking, not too
+                    awful nor too marvellous, to drive people madly intrigued.
                 </p>
 
                 <p>
-                    Write the actual story here.
+                    Pedro came in and saw me mesmerised with my own affair.
+                    He said nothing, simply sitting opposite to me and
+                    lighting the fag. Recently, he appeared to keep
+                    conversing with me, which could have been considered a
+                    lengthy annal. I knew that he had no company that were
+                    around his age, but it was unfortunate for him that I
+                    had no interest in making male friends or, more precisely,
+                    male peers. Perhaps, it was because I was downcast,
+                    antisocial, and tedious, so I did not desire to communicate
+                    with human beings.
                 </p>
-
-                <h2>
-                    A Section Heading
-                </h2>
 
                 <p>
-                    Continue the chapter here.
+                    He was the inverse. He kept talking, though he was not
+                    quite a talkative person, but most conversations between
+                    us, he outtalked me. Besides, I noticed that his face
+                    invariably glistened with youthful joy. I did not know,
+                    but that happy face sometimes prompted me to feel jealous.
+                    I wondered how people could wear such a jubilant mask
+                    during a very long time. I could barely do so.
                 </p>
-
-                <blockquote>
-                    A line from the story can go here.
-                </blockquote>
 
                 <p>
-                    Continue writing your chapter here.
+                    And as previous times, he probably did not stand this
+                    overwhelming atmosphere like military enlistment, so his
+                    mouth finally moved.
                 </p>
 
+                <p>
+                    “Your drawing is cool.”
+                </p>
+
+                <p>
+                    “Thank you.”
+                </p>
+
+                <p>
+                    After that, he suddenly lowered his voice and asked:
+                    “You hate me?”
+                </p>
+
+                <p>
+                    I looked at him in amazement and said:
+                    “No. What’s wrong?”
+                </p>
+
+                <p>
+                    “Nothing,” he replied and soon turned away.
+                    “Sometimes, I feel that you’re trying to avoid me.”
+                </p>
+
+                <p>
+                    “I am not.” He, by chance, touched a raw nerve,
+                    which made me uneasy.
+                </p>
+
+                <p>
+                    “Then hang out with me after work. Us, cigarettes,
+                    beers, shit talk, that sort of thing.”
+                </p>
+
+                <p>
+                    “Sí, sí, señor.” Reluctantly, I accepted his offer,
+                    whilst he grinned. I supposed that there was nothing
+                    fun to laugh at.
+                </p>
+
+                <p>
+                    It was seven right now. Streetlights showed up by turns
+                    as luminescent mushrooms in the twilight. I combed my
+                    hair and adjusted my outfit for the walk with Pedro.
+                    Looking at my reflection in the mirror, I saw myself
+                    changed in an unrecognisable way. It was indisputable
+                    that change is constant, but I seemed to become another
+                    version of that man. I hate him, but I could not negate
+                    the fact that flesh and blood within my body were moulded
+                    by him. Even the face, the jawline, or the facial features
+                    of me were granted by him. Apparently, I did not dare to
+                    repudiate such gifts.
+                </p>
+
+                <p>
+                    Because of the slight coolness, I simply wore a pair of
+                    shorts and a black shirt embroidered with alternate white
+                    seam lines. Despite being a man, I hardly found a strand
+                    of body hair. In other words, except for that part, the
+                    proportion of hair of my body was sparse, even when it
+                    came to the beard.
+                </p>
+
+                <p>
+                    But my physique stood out most. I got bigger and more
+                    muscular since high school. It must have been hard work
+                    and strict diet that made the change inevitably normal.
+                    Yet, I felt sorry for myself and other people, for we
+                    were under judgement of society. At the bottom of my heart,
+                    I would love to be a little boy so as to be shielded by
+                    my husband. Would he love me and this body? Or was it
+                    because of my oversensitivity with everything?
+                </p>
+
+                <p>
+                    I arrived at the park nearby as promised and noticed
+                    that Pedro was waiting for me. I wondered how long he
+                    had been sitting there. As soon as seeing me, he started
+                    his catchphrase.
+                </p>
+
+                <p>
+                    “Hola amigo!”
+                </p>
+
+                <p>
+                    I looked at him and said nothing. His outfit was seemingly
+                    intended for a runaway fashion show. It was all simple,
+                    like a pair of navy skinny leg jeans, a plain white shirt,
+                    and a black coat. In fact, his face was the centre of
+                    attention, which could have convinced the others that he
+                    was attending some couture presentations. He was of typical
+                    Spanish countenance that I had always perceived, with a
+                    sharp nose, thick eyebrows and eyelashes, brown eyes and,
+                    in particular, a rather chic moustache.
+                </p>
+
+                <p>
+                    His body was what I got fed up with. When we were in the
+                    sea, he was often bare-chested, which revealed his hefty
+                    physique. Compared to his, mine was nothing. I was not
+                    quite sure if it was the epitome of masculinity, but I
+                    believed that it was his discipline and effort that
+                    turned him into a massive person, through which I
+                    truthfully admired and was impressed to a certain extent.
+                </p>
+
+                <p>
+                    We walked along the beach, each of us having our own beer
+                    and fag. The air here was much better than we were on the
+                    ship. The temperature and the stars altogether embellished
+                    the surrounding landscape, which somewhat ameliorated my
+                    languid mood. I plopped down on the white sand and gazed
+                    at those blinking pearls in the sky, attempting to seize
+                    the moment.
+                </p>
+
+                <p>
+                    Pedro sat right next to me. He stared at the dark horizon
+                    from a distance and contemplated. Although we were bodily
+                    present, our soul drifted elsewhere. One minded their own
+                    business without minding the other’s.
+                </p>
+
+                <p>
+                    A shooting star from nowhere flashed through the sky.
+                    I quietly prayed for my peaceful nation, my happy family,
+                    and self-peace.
+                </p>
+
+                <p>
+                    “Self-peace? I wonder if I could have it in my lifetime…”
+                </p>
+
+                <p>
+                    Unexpectedly, Pedro turned to me, and he pressed his face
+                    right up against mine. Our faces were so close that our
+                    lips could have collided.
+                </p>
+
+                <p>
+                    Startled, I shouted:
+                    “What the fuck!”
+                </p>
+
+                <p>
+                    “I’m helping you to go back to reality.” He grinned.
+                </p>
+
+                <p>
+                    I calmly regulated my breathing. Earlier, that was so
+                    inconceivable to me. Normally, he looked quite serious,
+                    but sometimes acted weird, comporting himself with
+                    unprecedented silliness.
+                </p>
+
+                <p>
+                    Then I stubbed out the fag in the sand and reached out
+                    a beer prepared beforehand. Taking a sip, I tried to
+                    regain my composure. He, nevertheless, was reasonable.
+                    I maybe ought to live in the real world. Fantasy might
+                    contain no suffering, but mere monotony. Reality, by
+                    contrast, might have earthly aesthetics, but lacked
+                    placidity.
+                </p>
+
+                <p>
+                    I was grateful for what he did. He, in the meantime,
+                    apologised for unsettling me. Reading between the lines,
+                    I found that he was not that shallow compared to those
+                    I had met before. At times, his manner stirred my
+                    yearnings, which I extinguished all in the end, or else
+                    I would have been the person tormented by my absurd thought.
+                </p>
+
+                <p>
+                    He turned to me, frowning, and said with his wistful eyes:
+                    “You got any plan for the future? Or just keep working here?”
+                </p>
+
+                <p>
+                    “I’m going to study at a university this September.”
+                    At first, I planned to tell the captain about my next
+                    journey, but it seemed man proposed, but God disposed.
+                </p>
+
+                <p>
+                    “Really?” he stuttered. “You… I’m a bit surprised.”
+                </p>
+
+                <p>
+                    “I’m quite reserved, so no one knows about this until now,
+                    except you.”
+                </p>
+
+                <p>
+                    “You’re fucking cool.”
+                </p>
+
+                <p>
+                    “Thanks.”
+                </p>
+
+                <p>
+                    “What are you studying?”
+                </p>
+
+                <p>
+                    “English Literature.”
+                </p>
+
+                <p>
+                    “You love Literature?”
+                </p>
+
+                <p>
+                    I nodded. Love was not enough, but worship. It was what
+                    I often leant on whenever I faced hardships in life, and
+                    it was what allowed me to bury myself in fictitious,
+                    deceptive stories. Albeit unreal, they at least made me
+                    less empty. Unless the world was void of language, I
+                    would carry on leaving literary works for posterity.
+                </p>
+
+                <p>
+                    To sate my curiosity, I took advantage of the situation
+                    and enquired:
+                </p>
+
+                <p>
+                    “And you? What’s your plan?”
+                </p>
+
+                <p>
+                    He shrugged. “Maybe, I’d keep working here, save up some
+                    money, and settle down.”
+                </p>
+
+                <p>
+                    “How simple.” His dream was apparently what many people
+                    desired. Having a stable life, a stable job, and a stable
+                    home sounded simple. Still, not everyone could achieve it
+                    and had the ability to obtain such a dream. I personally
+                    wanted to build my own home. Deep down in my heart, there
+                    had always been a wife waiting for his husband to return
+                    home. It had been a long time since I thought of it.
+                </p>
+
+                <p>
+                    “But it’d be hard, you know.” He took a puff and continued:
+                    “I mean I’m young and dumb, and I’m afraid I can’t take
+                    care of people I love. That’s why I don’t think much of it.
+                    I just take it as motivation to keep going.”
+                </p>
+
+                <p>
+                    He concealed his disappointment behind a faint smile,
+                    but my sensibility did not let him pull the wool over my
+                    eyes.
+                </p>
+
+                <p>
+                    “You have dreams and free will. I believe you can get what
+                    you deserve.” I reassured him with soothing words that I
+                    had been longing for being listened. “I think your dream
+                    may be simple, but it’s not insignificant at all. You said
+                    you’re not mature enough, but you have plenty of time ahead,
+                    and we’ve got a lot to learn. It’s just that if you feel
+                    under pressure, have a rest instead. Don’t be so harsh on
+                    yourself. Pride comes before a fall, you know.”
+                </p>
+
+                <p>
+                    “Thank you.” He let out a beam that I had not ever seen
+                    since I met him. Unconsciously, I felt I was the one
+                    making him proud, and that made me proud of myself too.
+                </p>
+
+                <p>
+                    “Good luck with the studies.”
+                </p>
+
+                <p>
+                    “Gracias, señor.”
+                </p>
+
+                <p>
+                    “I mean it. I really admire your diligence. I dropped out
+                    when I finished secondary school, so I’m impressed by
+                    studious people like you.”
+                </p>
+
+                <p>
+                    “Did something happen?”
+                </p>
+
+                <p>
+                    “Back then, my family was poor, and the high school fee
+                    was clearly too much for us, so I told my mother that I
+                    wanted to pack it in to help her make ends meet. I also
+                    have a younger sister. I thought leaving school was for
+                    her sake.”
+                </p>
+
+                <p>
+                    His eyes fell on the distant raging waves.
+                </p>
+
+                <p>
+                    “I’m so sorry to hear that.”
+                </p>
+
+                <p>
+                    “It’s alright. It’s long gone. I feel very happy now.”
+                </p>
+
+                <p>
+                    Literally, I was rather astounded. The first thing that
+                    amazed me was his mannerism. If he had not mentioned his
+                    early school leave, I would have never been aware of his
+                    academic background, as I had supposed he owned a bachelor’s
+                    degree or something. I mean he did look daft sometimes,
+                    but he proved himself an educated man, not some street thug
+                    he confessed. Until then, he had been a kind person to me.
+                </p>
+
+                <p>
+                    “You’ll definitely be a man that everyone can rely on.
+                    I believe so,” I said.
+                </p>
+
+                <p>
+                    We simply sat there and rambled until late evening, and
+                    we parted ways after that. He even suggested escorting me
+                    home by his motorbike, but I bluntly turned him down and
+                    said that if he kept following me, I would fall out with him.
+                </p>
+
+                <p>
+                    The moon was bright like the other days. I looked out of
+                    the window to marvel at the stars reigning in the darkness.
+                    That being said, unlike the other days, today I smiled a lot.
+                </p>
+
+
+                <!-- CHAPTER NAVIGATION -->
 
                 <div class="chapter-navigation">
 
-                    <a class="navigation-link" href="story-01-chapter-01.html">
+                    <a class="navigation-link"
+                       href="story-01-chapter-01.html">
                         ← Previous chapter
                     </a>
 
-                    <a class="navigation-link" href="story-01-chapter-03.html">
+                    <a class="navigation-link"
+                       href="story-01-chapter-03.html">
                         Next chapter →
                     </a>
 
@@ -284,6 +669,7 @@
     </div>
 
 </footer>
+
 
 </body>
 
