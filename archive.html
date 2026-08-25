@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +34,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -42,6 +47,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
@@ -59,14 +65,17 @@
             display: flex;
             gap: 28px;
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #7185a6;
+            font-size: 13px;
+            color: #9eabc0;
         }
 
         .nav-links a:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           Page introduction
+        ========================= */
 
         .page-intro {
             padding: 120px 0 90px;
@@ -75,8 +84,8 @@
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 3px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -95,6 +104,10 @@
             color: #aeb8c8;
         }
 
+        /* =========================
+           Archive
+        ========================= */
+
         .archive {
             border-top: 1px solid #26334a;
             padding-bottom: 100px;
@@ -107,7 +120,7 @@
         .year-title {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 3px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 10px;
         }
@@ -130,8 +143,8 @@
 
         .entry-type {
             font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
+            font-size: 11px;
+            letter-spacing: 1px;
             color: #7185a6;
             margin-bottom: 10px;
         }
@@ -151,8 +164,8 @@
 
         .entry-link {
             font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
+            font-size: 11px;
+            letter-spacing: 1px;
             color: #7185a6;
             text-align: right;
             padding-top: 5px;
@@ -162,6 +175,10 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Footer
+        ========================= */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
@@ -170,11 +187,15 @@
             color: #66748c;
         }
 
+        /* =========================
+           Mobile
+        ========================= */
+
         @media (max-width: 700px) {
 
             .nav-links {
                 gap: 12px;
-                font-size: 10px;
+                font-size: 11px;
             }
 
             .page-intro {
@@ -206,7 +227,9 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -244,9 +267,15 @@
 
 </header>
 
+
 <main>
 
     <div class="container">
+
+
+        <!-- =========================
+             Introduction
+        ========================= -->
 
         <section class="page-intro">
 
@@ -260,11 +289,16 @@
             </h1>
 
             <p class="intro">
-                Essays, fiction, reflections, and fragments
-                collected over time.
+                Essays, literature, and other works collected
+                over time.
             </p>
 
         </section>
+
+
+        <!-- =========================
+             Archive entries
+        ========================= -->
 
         <section class="archive">
 
@@ -273,6 +307,7 @@
                 <div class="year-title">
                     2026
                 </div>
+
 
                 <article class="entry">
 
@@ -283,7 +318,7 @@
                     <div>
 
                         <div class="entry-type">
-                            Essay · Philosophy · Society
+                            Essay
                         </div>
 
                         <h2>
@@ -298,11 +333,15 @@
 
                     </div>
 
-                    <a class="entry-link" href="essay-the-things-we-believe.html">
+                    <a
+                        class="entry-link"
+                        href="essay-the-things-we-believe.html"
+                    >
                         Read →
                     </a>
 
                 </article>
+
 
                 <article class="entry">
 
@@ -313,7 +352,7 @@
                     <div>
 
                         <div class="entry-type">
-                            Fiction · Romance · BL
+                            Short story
                         </div>
 
                         <h2>
@@ -327,11 +366,15 @@
 
                     </div>
 
-                    <a class="entry-link" href="story-01.html">
+                    <a
+                        class="entry-link"
+                        href="story-01.html"
+                    >
                         Read →
                     </a>
 
                 </article>
+
 
                 <article class="entry">
 
@@ -342,7 +385,7 @@
                     <div>
 
                         <div class="entry-type">
-                            Reflection
+                            Essay
                         </div>
 
                         <h2>
@@ -362,13 +405,16 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
+
     </div>
 
 </main>
+
 
 <footer>
 
@@ -378,6 +424,8 @@
 
 </footer>
 
+
 </body>
 
 </html>
+```
