@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Literature & fiction — Hewwy Huynh</title>
+    <title>Literature — Hewwy Huynh</title>
 
     <style>
 
@@ -32,6 +33,10 @@
             width: min(1000px, 90%);
             margin: 0 auto;
         }
+
+        /* =========================
+           Header
+        ========================= */
 
         header {
             padding: 32px 0;
@@ -68,6 +73,10 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Hero
+        ========================= */
+
         .hero {
             padding: 120px 0 100px;
             max-width: 800px;
@@ -75,8 +84,8 @@
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 2.5px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -95,6 +104,10 @@
             max-width: 680px;
         }
 
+        /* =========================
+           Sections
+        ========================= */
+
         section {
             padding: 70px 0;
             border-top: 1px solid #26334a;
@@ -102,13 +115,17 @@
 
         .section-title {
             font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 2.5px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 40px;
         }
 
-        .story {
+        /* =========================
+           Works
+        ========================= */
+
+        .work {
             display: grid;
             grid-template-columns: 80px 1fr;
             gap: 35px;
@@ -116,33 +133,33 @@
             border-top: 1px solid #26334a;
         }
 
-        .story:last-child {
+        .work:last-child {
             border-bottom: 1px solid #26334a;
         }
 
         .number {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #66748c;
         }
 
-        .tags {
+        .form {
             font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 1.5px;
+            font-size: 11px;
+            letter-spacing: 1px;
             color: #7185a6;
             margin-bottom: 12px;
         }
 
-        .story h2 {
+        .work h2 {
             font-size: 38px;
             font-weight: normal;
             line-height: 1.15;
             margin-bottom: 15px;
         }
 
-        .story-description {
+        .work-description {
             color: #aeb8c8;
             font-size: 17px;
             max-width: 650px;
@@ -154,7 +171,7 @@
             margin-top: 25px;
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             border-bottom: 1px solid #7185a6;
             padding-bottom: 5px;
         }
@@ -163,6 +180,10 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Footer
+        ========================= */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
@@ -170,6 +191,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -182,12 +207,12 @@
                 padding: 90px 0 80px;
             }
 
-            .story {
+            .work {
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
 
-            .story h2 {
+            .work h2 {
                 font-size: 32px;
             }
 
@@ -243,24 +268,31 @@
     <div class="container">
 
 
+        <!-- =========================
+             Hero
+        ========================= -->
+
         <section class="hero" style="border-top: none;">
 
             <div class="eyebrow">
-                Literature & fiction
+                Literature
             </div>
 
             <h1>
-                Your Fiction<br>
-                Library
+                Literature
             </h1>
 
             <p class="intro">
-                Original fiction, literary experiments, fragments,
-                and stories written through the same human prism.
+                Stories, poems, and longer works written through
+                the same human prism. No particular genre required.
             </p>
 
         </section>
 
+
+        <!-- =========================
+             Works
+        ========================= -->
 
         <section>
 
@@ -269,7 +301,7 @@
             </div>
 
 
-            <article class="story">
+            <article class="work">
 
                 <div class="number">
                     01
@@ -277,21 +309,21 @@
 
                 <div>
 
-                    <div class="tags">
-                        Fiction · Romance · BL · Original work
+                    <div class="form">
+                        Short story
                     </div>
 
                     <h2>
                         A Story Yet to Be Written
                     </h2>
 
-                    <p class="story-description">
-                        A placeholder for the first fictional work
+                    <p class="work-description">
+                        A placeholder for the first literary work
                         published through Society Through a Human Prism.
                     </p>
 
                     <a class="read" href="story-01.html">
-                        Read story →
+                        Read →
                     </a>
 
                 </div>
@@ -299,7 +331,7 @@
             </article>
 
 
-            <article class="story">
+            <article class="work">
 
                 <div class="number">
                     02
@@ -307,20 +339,20 @@
 
                 <div>
 
-                    <div class="tags">
-                        Fiction · Literary experiment
+                    <div class="form">
+                        Novella
                     </div>
 
                     <h2>
-                        Another Story
+                        Another Work
                     </h2>
 
-                    <p class="story-description">
-                        Another fictional work will eventually live here.
+                    <p class="work-description">
+                        A longer work will eventually live here.
                     </p>
 
                     <a class="read" href="story-02.html">
-                        Read story →
+                        Read →
                     </a>
 
                 </div>
@@ -328,7 +360,7 @@
             </article>
 
 
-            <article class="story">
+            <article class="work">
 
                 <div class="number">
                     03
@@ -336,20 +368,20 @@
 
                 <div>
 
-                    <div class="tags">
-                        Fiction · Original work
+                    <div class="form">
+                        Poetry
                     </div>
 
                     <h2>
                         Untitled
                     </h2>
 
-                    <p class="story-description">
-                        A space reserved for another story.
+                    <p class="work-description">
+                        A space reserved for another literary work.
                     </p>
 
                     <a class="read" href="story-03.html">
-                        Read story →
+                        Read →
                     </a>
 
                 </div>
@@ -379,3 +411,4 @@
 </body>
 
 </html>
+```
