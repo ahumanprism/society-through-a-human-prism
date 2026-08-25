@@ -33,6 +33,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -42,6 +46,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
@@ -58,13 +63,16 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 0.5px;
             color: #7185a6;
         }
 
         .back:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           Main
+        ========================= */
 
         main {
             padding: 110px 0 130px;
@@ -73,7 +81,7 @@
         .eyebrow {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -93,6 +101,10 @@
             margin-bottom: 70px;
         }
 
+        /* =========================
+           Sections
+        ========================= */
+
         section {
             padding-top: 55px;
             border-top: 1px solid #26334a;
@@ -102,7 +114,7 @@
         .section-title {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 30px;
         }
@@ -114,6 +126,10 @@
             margin-bottom: 25px;
         }
 
+        /* =========================
+           Statement
+        ========================= */
+
         .statement {
             margin: 70px 0;
             padding-left: 30px;
@@ -123,21 +139,9 @@
             color: #c2c9d5;
         }
 
-        .topics {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .topic {
-            border: 1px solid #26334a;
-            padding: 10px 15px;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1px;
-            color: #7185a6;
-        }
+        /* =========================
+           Footer
+        ========================= */
 
         footer {
             padding: 50px 0;
@@ -146,6 +150,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -163,6 +171,7 @@
 
             .statement {
                 font-size: 24px;
+                padding-left: 22px;
             }
 
         }
@@ -173,6 +182,7 @@
 
 
 <body>
+
 
 <header>
 
@@ -199,6 +209,7 @@
 
     <div class="container">
 
+
         <div class="eyebrow">
             About
         </div>
@@ -210,8 +221,8 @@
 
         <p class="lead">
             Society Through a Human Prism is an independent publication
-            by Hewwy Huynh — an attempt to examine the world from one
-            particular human perspective.
+            by Hewwy Huynh — an attempt to look at the world through
+            one particular human perspective.
         </p>
 
 
@@ -222,16 +233,19 @@
             </div>
 
             <p>
-                This is a space for essays, fiction, reflections,
-                and observations about the things that make up
-                human experience.
+                This is a place for things I write.
             </p>
 
             <p>
-                Society, philosophy, psychology, literature, culture,
-                and ordinary life often overlap in ways that are
-                difficult to separate. This publication exists to
-                explore those intersections.
+                Some of them take the form of essays. Some become
+                stories, poems, or longer works. Others may simply
+                begin as an idea that I want to examine more closely.
+            </p>
+
+            <p>
+                There is no particular discipline this publication
+                belongs to, and no particular category every piece
+                needs to fit into.
             </p>
 
         </section>
@@ -250,28 +264,18 @@
             </div>
 
             <p>
-                Essays that question assumptions.
+                Essays that question things I once took for granted.
             </p>
 
             <p>
-                Fiction that explores people and relationships.
+                Fiction about people, relationships, and whatever
+                else a story happens to become.
             </p>
 
             <p>
-                Thoughts that do not necessarily fit neatly
-                into one category.
+                Poems, fragments, observations, and ideas that may
+                not need to belong anywhere else.
             </p>
-
-            <div class="topics">
-
-                <div class="topic">Society</div>
-                <div class="topic">Philosophy</div>
-                <div class="topic">Psychology</div>
-                <div class="topic">Literature</div>
-                <div class="topic">Culture</div>
-                <div class="topic">Personal</div>
-
-            </div>
 
         </section>
 
@@ -288,10 +292,17 @@
             </p>
 
             <p>
-                More about the author will eventually live here.
+                There is not much more to explain.
+            </p>
+
+            <p>
+                This publication is simply one person's attempt to
+                understand, question, imagine, and write about the
+                world as they encounter it.
             </p>
 
         </section>
+
 
     </div>
 
