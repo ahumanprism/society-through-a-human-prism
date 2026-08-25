@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chapter One — One Life, One Love, Forever</title>
+    <title>One Life, One Love, Forever — Hewwy Huynh</title>
 
     <style>
 
@@ -34,9 +33,6 @@
             margin: 0 auto;
         }
 
-
-        /* ===== HEADER ===== */
-
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -46,12 +42,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 13px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #9eabc0;
         }
 
@@ -62,7 +59,6 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 1px;
             color: #7185a6;
         }
 
@@ -70,18 +66,14 @@
             color: #ffffff;
         }
 
-
-        /* ===== CHAPTER HEADER ===== */
-
         article {
             padding: 110px 0 100px;
         }
 
-        .story-title {
+        .story-type {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 20px;
         }
@@ -94,17 +86,20 @@
             margin-bottom: 25px;
         }
 
+        .chapter-title {
+            font-size: 26px;
+            font-weight: normal;
+            color: #aeb8c8;
+            margin-bottom: 30px;
+        }
+
         .chapter-meta {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 1px;
             color: #66748c;
             padding-bottom: 45px;
             border-bottom: 1px solid #26334a;
         }
-
-
-        /* ===== STORY ===== */
 
         .story {
             padding-top: 60px;
@@ -132,9 +127,6 @@
             font-style: italic;
         }
 
-
-        /* ===== CHAPTER NAVIGATION ===== */
-
         .chapter-navigation {
             display: flex;
             justify-content: space-between;
@@ -148,17 +140,12 @@
         .navigation-link {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 1.5px;
             color: #7185a6;
-            text-transform: uppercase;
         }
 
         .navigation-link:hover {
             color: #ffffff;
         }
-
-
-        /* ===== FOOTER ===== */
 
         footer {
             padding: 50px 0;
@@ -167,9 +154,6 @@
             font-size: 12px;
             color: #66748c;
         }
-
-
-        /* ===== MOBILE ===== */
 
         @media (max-width: 700px) {
 
@@ -181,6 +165,10 @@
                 letter-spacing: -2px;
             }
 
+            .chapter-title {
+                font-size: 23px;
+            }
+
             .story p {
                 font-size: 18px;
             }
@@ -189,15 +177,17 @@
                 gap: 15px;
             }
 
+            nav {
+                align-items: flex-start;
+            }
+
         }
 
     </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -210,7 +200,7 @@
             </a>
 
             <a class="back" href="literature.html">
-                ← Back to fiction library
+                ← Back to literature
             </a>
 
         </nav>
@@ -219,30 +209,27 @@
 
 </header>
 
-
 <main>
 
     <article>
 
         <div class="container">
 
-
-            <!-- CHAPTER HEADER -->
-
-            <div class="story-title">
-                One life, one love, forever
+            <div class="story-type">
+                Short story
             </div>
 
             <h1>
-                Chapter One
+                One Life, One Love, Forever
             </h1>
 
-            <div class="chapter-meta">
-                19 March 2007
+            <div class="chapter-title">
+                Chapter One
             </div>
 
-
-            <!-- STORY -->
+            <div class="chapter-meta">
+                Hewwy Huynh · 19 March 2007
+            </div>
 
             <div class="story">
 
@@ -565,9 +552,6 @@
                     a deep puff, my eyes heavily steeped in the tangle of that day.
                 </p>
 
-
-                <!-- CHAPTER NAVIGATION -->
-
                 <div class="chapter-navigation">
 
                     <a class="navigation-link" href="story-01.html">
@@ -580,7 +564,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -588,7 +571,6 @@
     </article>
 
 </main>
-
 
 <footer>
 
@@ -598,8 +580,6 @@
 
 </footer>
 
-
 </body>
 
 </html>
-```
