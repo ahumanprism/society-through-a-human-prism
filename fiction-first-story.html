@@ -33,6 +33,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -59,7 +63,6 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 1px;
             color: #7185a6;
         }
 
@@ -67,14 +70,18 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Article
+        ========================= */
+
         article {
             padding: 120px 0 140px;
         }
 
-        .eyebrow {
+        .type {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2.5px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -103,6 +110,10 @@
             border-bottom: 1px solid #26334a;
         }
 
+        /* =========================
+           Story
+        ========================= */
+
         .story {
             padding-top: 60px;
         }
@@ -129,6 +140,10 @@
             font-style: italic;
         }
 
+        /* =========================
+           End
+        ========================= */
+
         .end {
             margin-top: 100px;
             padding-top: 40px;
@@ -138,13 +153,17 @@
         .end a {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             color: #7185a6;
         }
 
         .end a:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           Footer
+        ========================= */
 
         footer {
             padding: 50px 0;
@@ -153,6 +172,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -170,6 +193,15 @@
 
             nav {
                 align-items: flex-start;
+            }
+
+            .story h2 {
+                font-size: 30px;
+            }
+
+            .story blockquote {
+                padding-left: 22px;
+                font-size: 20px;
             }
 
         }
@@ -193,7 +225,7 @@
             </a>
 
             <a class="back" href="literature.html">
-                ← Back to fiction library
+                ← Back to literature
             </a>
 
         </nav>
@@ -209,17 +241,21 @@
 
         <div class="container">
 
-            <div class="eyebrow">
-                Fiction · Romance · BL
+
+            <div class="type">
+                Short story
             </div>
+
 
             <h1>
                 The First Story
             </h1>
 
+
             <p class="subtitle">
                 A placeholder for an original work of fiction.
             </p>
+
 
             <div class="meta">
                 Hewwy Huynh · 2026
@@ -266,12 +302,14 @@
                 <div class="end">
 
                     <a href="literature.html">
-                        ← Back to fiction library
+                        ← Back to literature
                     </a>
 
                 </div>
 
+
             </div>
+
 
         </div>
 
