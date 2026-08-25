@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +34,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -42,6 +47,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
@@ -59,14 +65,17 @@
             display: flex;
             gap: 28px;
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #7185a6;
+            font-size: 13px;
+            color: #9eabc0;
         }
 
         .nav-links a:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           Page introduction
+        ========================= */
 
         .page-intro {
             padding: 120px 0 90px;
@@ -76,7 +85,7 @@
         .eyebrow {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 3px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -95,6 +104,10 @@
             color: #aeb8c8;
         }
 
+        /* =========================
+           Essay list
+        ========================= */
+
         .essay-list {
             border-top: 1px solid #26334a;
             padding-bottom: 100px;
@@ -111,14 +124,14 @@
         .essay-number {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #66748c;
         }
 
-        .essay-category {
+        .essay-type {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #7185a6;
             margin-bottom: 18px;
         }
@@ -141,7 +154,7 @@
             margin-top: 25px;
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             border-bottom: 1px solid #7185a6;
             padding-bottom: 5px;
         }
@@ -149,6 +162,10 @@
         .read-link:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           Footer
+        ========================= */
 
         footer {
             padding: 50px 0;
@@ -158,6 +175,10 @@
             color: #66748c;
         }
 
+        /* =========================
+           Mobile
+        ========================= */
+
         @media (max-width: 700px) {
 
             nav {
@@ -166,7 +187,7 @@
 
             .nav-links {
                 gap: 12px;
-                font-size: 10px;
+                font-size: 11px;
             }
 
             .page-intro {
@@ -193,7 +214,9 @@
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -227,9 +250,11 @@
 
 </header>
 
+
 <main>
 
     <div class="container">
+
 
         <section class="page-intro">
 
@@ -243,13 +268,16 @@
             </h1>
 
             <p>
-                Essays on society, philosophy, psychology,
-                culture, and the strange business of being human.
+                Essays on society, ideas, culture,
+                human experience, and the strange business
+                of being human.
             </p>
 
         </section>
 
+
         <section class="essay-list">
+
 
             <article class="essay-card">
 
@@ -259,8 +287,8 @@
 
                 <div class="essay-content">
 
-                    <div class="essay-category">
-                        Philosophy · Society
+                    <div class="essay-type">
+                        Essay
                     </div>
 
                     <h2>
@@ -273,13 +301,17 @@
                         for truth.
                     </p>
 
-                    <a class="read-link" href="essay-the-things-we-believe.html">
+                    <a
+                        class="read-link"
+                        href="essay-the-things-we-believe.html"
+                    >
                         Read essay →
                     </a>
 
                 </div>
 
             </article>
+
 
             <article class="essay-card">
 
@@ -289,8 +321,8 @@
 
                 <div class="essay-content">
 
-                    <div class="essay-category">
-                        Psychology · Society
+                    <div class="essay-type">
+                        Essay
                     </div>
 
                     <h2>
@@ -298,8 +330,8 @@
                     </h2>
 
                     <p>
-                        Another examination of human behaviour
-                        will eventually live here.
+                        Another attempt to make sense of something
+                        human will eventually live here.
                     </p>
 
                     <a class="read-link" href="#">
@@ -310,6 +342,7 @@
 
             </article>
 
+
             <article class="essay-card">
 
                 <div class="essay-number">
@@ -318,8 +351,8 @@
 
                 <div class="essay-content">
 
-                    <div class="essay-category">
-                        Culture · Philosophy
+                    <div class="essay-type">
+                        Essay
                     </div>
 
                     <h2>
@@ -339,11 +372,14 @@
 
             </article>
 
+
         </section>
+
 
     </div>
 
 </main>
+
 
 <footer>
 
@@ -353,6 +389,8 @@
 
 </footer>
 
+
 </body>
 
 </html>
+```
