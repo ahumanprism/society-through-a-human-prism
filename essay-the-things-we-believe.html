@@ -33,6 +33,10 @@
             margin: 0 auto;
         }
 
+        /* =========================
+           Header
+        ========================= */
+
         header {
             padding: 32px 0;
             border-bottom: 1px solid #26334a;
@@ -42,6 +46,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
@@ -58,7 +63,6 @@
         .back {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 1px;
             color: #7185a6;
         }
 
@@ -66,14 +70,18 @@
             color: #ffffff;
         }
 
+        /* =========================
+           Article header
+        ========================= */
+
         article {
             padding: 110px 0 140px;
         }
 
-        .category {
+        .type {
             font-family: Arial, sans-serif;
             font-size: 11px;
-            letter-spacing: 3px;
+            letter-spacing: 1.5px;
             color: #7185a6;
             margin-bottom: 25px;
         }
@@ -102,6 +110,10 @@
             border-bottom: 1px solid #26334a;
         }
 
+        /* =========================
+           Essay body
+        ========================= */
+
         .essay {
             padding-top: 55px;
         }
@@ -128,6 +140,10 @@
             font-style: italic;
         }
 
+        /* =========================
+           Footer
+        ========================= */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
@@ -135,6 +151,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -150,13 +170,24 @@
                 font-size: 18px;
             }
 
+            .essay h2 {
+                font-size: 30px;
+            }
+
+            .essay blockquote {
+                padding-left: 22px;
+                font-size: 20px;
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -178,28 +209,34 @@
 
 </header>
 
+
 <main>
 
     <article>
 
         <div class="container">
 
-            <div class="category">
-                Philosophy · Society
+
+            <div class="type">
+                Essay
             </div>
+
 
             <h1>
                 The Things We Believe
             </h1>
 
+
             <p class="subtitle">
-                An essay about belief, perception, and the ways human beings
-                construct meaning.
+                An examination of belief, perception, and the ways
+                we come to make sense of the world around us.
             </p>
+
 
             <div class="meta">
                 By Hewwy Huynh · 2026
             </div>
+
 
             <div class="essay">
 
@@ -209,8 +246,10 @@
 
                 <p>
                     This is a placeholder for the opening paragraph.
-                    Replace this text with your own writing whenever you are ready.
+                    Replace this text with your own writing whenever
+                    you are ready.
                 </p>
+
 
                 <h2>
                     A Section Heading
@@ -221,14 +260,16 @@
                 </p>
 
                 <p>
-                    Another paragraph goes here. You can keep adding paragraphs
-                    as the essay develops.
+                    Another paragraph goes here. You can keep adding
+                    paragraphs as the essay develops.
                 </p>
 
+
                 <blockquote>
-                    A quotation, reflection, or sentence you want to give
-                    particular weight to can go here.
+                    A quotation, reflection, or sentence you want to
+                    give particular weight to can go here.
                 </blockquote>
+
 
                 <h2>
                     Another Section
@@ -245,11 +286,13 @@
 
             </div>
 
+
         </div>
 
     </article>
 
 </main>
+
 
 <footer>
 
@@ -258,6 +301,7 @@
     </div>
 
 </footer>
+
 
 </body>
 
