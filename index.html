@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="google-site-verification" content="DtcVo3vkh4i0Acg-yDinHgq_wv_f4Y40Tn4t2OZpFGU" />
-    
+
+    <meta
+        name="description"
+        content="Society Through a Human Prism — an independent publication by Hewwy Huynh."
+    >
+
     <title>Society Through a Human Prism — Hewwy Huynh</title>
 
     <style>
@@ -34,6 +40,10 @@
             width: min(1100px, 90%);
             margin: 0 auto;
         }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             padding: 32px 0;
@@ -65,6 +75,10 @@
         .nav-links a:hover {
             color: #ffffff;
         }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             padding: 130px 0 120px;
@@ -101,6 +115,10 @@
             color: #7185a6;
         }
 
+        /* =========================
+           SECTIONS
+        ========================= */
+
         section {
             padding: 80px 0;
             border-top: 1px solid #26334a;
@@ -113,6 +131,10 @@
             color: #7185a6;
             margin-bottom: 45px;
         }
+
+        /* =========================
+           FEATURED ESSAY
+        ========================= */
 
         .featured {
             display: grid;
@@ -134,6 +156,13 @@
             max-width: 650px;
         }
 
+        .work-type {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #7185a6;
+        }
+
         .read-link {
             display: inline-block;
             margin-top: 30px;
@@ -148,20 +177,70 @@
             color: #ffffff;
         }
 
-        .categories {
+        /* =========================
+           WRITINGS
+        ========================= */
+
+        .writing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 1px;
             background: #26334a;
         }
 
-        .category {
+        .writing-item {
             background: #0b1220;
-            padding: 35px 25px;
-            font-size: 20px;
+            padding: 40px 30px;
         }
 
-        .category span {
+        .writing-item span {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #7185a6;
+            margin-bottom: 15px;
+        }
+
+        .writing-item h3 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .writing-item p {
+            color: #aeb8c8;
+            font-size: 16px;
+            max-width: 500px;
+        }
+
+        /* =========================
+           LITERATURE
+        ========================= */
+
+        .literature-intro {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .literature-intro p {
+            font-size: 19px;
+            color: #aeb8c8;
+        }
+
+        .literature-forms {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #26334a;
+        }
+
+        .literature-form {
+            background: #0b1220;
+            padding: 30px 22px;
+        }
+
+        .literature-form span {
             display: block;
             font-family: Arial, sans-serif;
             font-size: 11px;
@@ -170,29 +249,35 @@
             margin-bottom: 12px;
         }
 
-        .fiction {
-            padding: 45px;
-            border: 1px solid #26334a;
-        }
-
-        .fiction h2 {
-            font-size: 38px;
+        .literature-form h3 {
+            font-size: 22px;
             font-weight: normal;
-            margin-bottom: 15px;
         }
 
-        .fiction p {
+        /* =========================
+           BOOKS
+        ========================= */
+
+        .books {
+            max-width: 800px;
+        }
+
+        .books h2 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: normal;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .books p {
             color: #aeb8c8;
+            font-size: 18px;
             max-width: 650px;
         }
 
-        .tags {
-            margin-top: 25px;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1px;
-            color: #7185a6;
-        }
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             max-width: 700px;
@@ -203,6 +288,10 @@
             color: #c2c9d5;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid #26334a;
@@ -210,6 +299,10 @@
             font-size: 12px;
             color: #66748c;
         }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -227,12 +320,16 @@
                 gap: 30px;
             }
 
-            .categories {
+            .writing-grid {
                 grid-template-columns: 1fr;
             }
 
-            .fiction {
-                padding: 30px;
+            .literature-forms {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .books h2 {
+                font-size: 38px;
             }
 
         }
@@ -287,6 +384,10 @@
     <div class="container">
 
 
+        <!-- =========================
+             HERO
+        ========================= -->
+
         <section class="hero" style="border-top: none;">
 
             <div class="eyebrow">
@@ -311,10 +412,14 @@
         </section>
 
 
+        <!-- =========================
+             FEATURED ESSAY
+        ========================= -->
+
         <section id="essays">
 
             <div class="section-title">
-                Featured essay
+                Featured
             </div>
 
             <div class="featured">
@@ -326,98 +431,249 @@
                     </h2>
 
                     <p>
-                        A placeholder for the first essay published
-                        through Society Through a Human Prism.
-                        Ideas will eventually live here.
+                        A personal essay on belief, certainty,
+                        and the ways human beings make sense
+                        of the world around them.
                     </p>
 
-                    <a class="read-link" href="essay-the-things-we-believe.html">
+                    <a
+                        class="read-link"
+                        href="essay-the-things-we-believe.html"
+                    >
                         Read essay →
                     </a>
 
                 </div>
 
-                <div class="eyebrow">
-                    Philosophy · Society
+                <div class="work-type">
+                    Personal Essay
                 </div>
 
             </div>
 
         </section>
 
+
+        <!-- =========================
+             WRITINGS
+        ========================= -->
 
         <section>
 
             <div class="section-title">
-                Explore
+                Writings
             </div>
 
-            <div class="categories">
+            <div class="writing-grid">
 
-                <div class="category">
-                    <span>01</span>
-                    Society
-                </div>
+                <a class="writing-item" href="essays.html">
 
-                <div class="category">
-                    <span>02</span>
-                    Philosophy
-                </div>
+                    <span>
+                        01
+                    </span>
 
-                <div class="category">
-                    <span>03</span>
-                    Psychology
-                </div>
+                    <h3>
+                        Essays
+                    </h3>
 
-                <div class="category">
-                    <span>04</span>
-                    Literature
-                </div>
+                    <p>
+                        Personal essays, reflections, observations,
+                        and attempts to understand the things
+                        that surround us.
+                    </p>
 
-                <div class="category">
-                    <span>05</span>
-                    Culture
-                </div>
-
-                <div class="category">
-                    <span>06</span>
-                    Personal
-                </div>
-
-            </div>
-
-        </section>
+                </a>
 
 
-        <section id="literature">
+                <a class="writing-item" href="literature.html">
 
-            <div class="section-title">
-                Literature & Fiction
-            </div>
+                    <span>
+                        02
+                    </span>
 
-            <div class="fiction">
+                    <h3>
+                        Literature
+                    </h3>
 
-                <h2>
-                    Your Fiction Library
-                </h2>
+                    <p>
+                        Stories, poems, and longer works of fiction
+                        written without the need for a particular
+                        label.
+                    </p>
 
-                <p>
-                    Original fiction, literary experiments, and stories
-                    written through the same human prism.
-                </p>
+                </a>
 
-                <div class="tags">
-                    Fiction · Romance · BL · Original work
-                </div>
 
-                <a class="read-link" href="literature.html">
-                    Enter the library →
+                <a class="writing-item" href="books.html">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Books
+                    </h3>
+
+                    <p>
+                        Longer works that may eventually grow beyond
+                        the boundaries of individual essays and stories.
+                    </p>
+
+                </a>
+
+
+                <a class="writing-item" href="archive.html">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Archive
+                    </h3>
+
+                    <p>
+                        A record of everything written,
+                        published, and collected here.
+                    </p>
+
                 </a>
 
             </div>
 
         </section>
 
+
+        <!-- =========================
+             LITERATURE
+        ========================= -->
+
+        <section id="literature">
+
+            <div class="section-title">
+                Literature
+            </div>
+
+            <div class="literature-intro">
+
+                <p>
+                    Fiction and poetry, in whatever form the work
+                    happens to take. No genre required.
+                </p>
+
+            </div>
+
+
+            <div class="literature-forms">
+
+
+                <a
+                    class="literature-form"
+                    href="literature.html#short-stories"
+                >
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Short Stories
+                    </h3>
+
+                </a>
+
+
+                <a
+                    class="literature-form"
+                    href="literature.html#novellas"
+                >
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Novellas
+                    </h3>
+
+                </a>
+
+
+                <a
+                    class="literature-form"
+                    href="literature.html#novels"
+                >
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Novels
+                    </h3>
+
+                </a>
+
+
+                <a
+                    class="literature-form"
+                    href="literature.html#poetry"
+                >
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Poetry
+                    </h3>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BOOKS
+        ========================= -->
+
+        <section>
+
+            <div class="section-title">
+                Books
+            </div>
+
+            <div class="books">
+
+                <h2>
+                    Works in longer form.
+                </h2>
+
+                <p>
+                    Books and longer projects will live here as they
+                    take shape. Some may begin as essays, some as
+                    stories, and some may begin without knowing what
+                    they are yet.
+                </p>
+
+                <a
+                    class="read-link"
+                    href="books.html"
+                >
+                    Explore books →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
 
         <section id="about">
 
@@ -430,10 +686,19 @@
                 <p>
                     No view from nowhere.
                     <br><br>
+
                     Society Through a Human Prism is a personal
                     publication by Hewwy Huynh — a space for examining
                     the world through literature, philosophy, society,
                     culture, and ordinary human experience.
+                    <br><br>
+
+                    There is no claim to speak for a discipline,
+                    a school of thought, or anyone beyond the person
+                    writing here.
+                    <br><br>
+
+                    Just one human perspective, looking outward.
                 </p>
 
             </div>
@@ -458,3 +723,4 @@
 </body>
 
 </html>
+```
