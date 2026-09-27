@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -70,11 +71,12 @@
             --grey: #888884;
             --grey-dark: #555552;
 
-            --line: #333331;
-
             --header-white: #ffffff;
             --header-black: #111111;
             --header-line: #dddddd;
+
+            --scroll-light: #deded8;
+            --scroll-dark: #999994;
         }
 
 
@@ -202,7 +204,7 @@
         ========================= */
 
         .hero {
-            padding: 150px 0 95px;
+            padding: 145px 0 55px;
 
             max-width: 950px;
 
@@ -227,108 +229,168 @@
             letter-spacing: -2px;
 
             color: var(--white);
+
+            margin-bottom: 38px;
+        }
+
+
+        .subtitle {
+            max-width: 700px;
+
+            font-family:
+                "Courier Prime",
+                "Courier New",
+                monospace;
+
+            font-size: 18px;
+
+            line-height: 1.85;
+
+            color: var(--white-soft);
         }
 
 
         /* =========================
-           QUOTE
+           QUOTE SCROLL
         ========================= */
 
-        .quote {
-            padding: 0 0 95px;
+        .quote-wrap {
+            display: flex;
 
-            text-align: center;
+            justify-content: center;
+
+            padding: 70px 0 110px;
 
             animation:
-                fadeUp 1s ease 0.45s both;
+                fadeUp 1s ease 0.4s both;
         }
 
 
-        .quote p {
+        .quote-scroll {
+            position: relative;
+
+            width: min(700px, 90%);
+
+            padding: 48px 65px;
+
+            text-align: center;
+
+            color: #171717;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #eeeeea 0%,
+                    var(--scroll-light) 50%,
+                    #d4d4ce 100%
+                );
+
+            border-top:
+                1px solid #b8b8b2;
+
+            border-bottom:
+                1px solid #a6a6a0;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.18);
+
+            transform: rotate(-0.25deg);
+        }
+
+
+        /*
+           Rolled top and bottom edges
+        */
+
+        .quote-scroll::before,
+        .quote-scroll::after {
+            content: "";
+
+            position: absolute;
+
+            left: -14px;
+            right: -14px;
+
+            height: 13px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #b7b7b1,
+                    #e5e5df,
+                    #b2b2ac
+                );
+
+            border:
+                1px solid #a5a59f;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .quote-scroll::before {
+            top: -7px;
+        }
+
+
+        .quote-scroll::after {
+            bottom: -7px;
+        }
+
+
+        .quote-scroll p {
             font-family:
                 "Cormorant Infant",
                 Georgia,
                 serif;
 
             font-size:
-                clamp(22px, 3vw, 30px);
+                clamp(25px, 4vw, 36px);
 
             font-style: italic;
 
             font-weight: 400;
 
-            color: var(--white-soft);
+            line-height: 1.2;
 
             letter-spacing: 0.2px;
         }
 
 
         /* =========================
-           SECTIONS
+           WRITING LIST
         ========================= */
 
-        section {
-            border-top:
-                1px solid var(--line);
-
-            padding: 80px 0;
-        }
-
-
-        .section-title {
-            margin-bottom: 45px;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 11px;
-
-            letter-spacing: 3px;
-
-            color: var(--grey);
-        }
-
-
-        /* =========================
-           WRITINGS
-        ========================= */
-
-        .writing-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 1px;
-
-            background: var(--line);
+        .writing-list {
+            padding: 0 0 100px;
         }
 
 
         .writing-item {
-            display: block;
+            display: grid;
 
-            background: var(--black);
+            grid-template-columns:
+                100px minmax(0, 1fr);
 
-            padding: 42px 30px;
+            gap: 45px;
+
+            padding: 42px 0;
 
             transition:
-                background 0.35s ease,
                 transform 0.35s ease;
         }
 
 
-        .writing-item:hover {
-            background: var(--black-soft);
-
-            transform:
-                translateY(-2px);
+        .writing-item + .writing-item {
+            margin-top: 5px;
         }
 
 
-        .writing-item span {
-            display: block;
-
-            margin-bottom: 15px;
+        .writing-number {
+            padding-top: 8px;
 
             font-family: Arial, sans-serif;
 
@@ -340,30 +402,56 @@
         }
 
 
-        .writing-item h3 {
-            margin-bottom: 14px;
+        .writing-content {
+            max-width: 760px;
+        }
+
+
+        .writing-content h2 {
+            margin-bottom: 12px;
 
             font-family:
                 "Cormorant Infant",
                 Georgia,
                 serif;
 
-            font-size: 34px;
+            font-size:
+                clamp(42px, 6vw, 68px);
 
             font-weight: 500;
 
-            line-height: 1;
+            line-height: 0.95;
 
             color: var(--white);
+
+            transition:
+                transform 0.35s ease,
+                color 0.35s ease;
         }
 
 
-        .writing-item p {
-            max-width: 500px;
+        .writing-content p {
+            max-width: 620px;
 
             font-size: 15px;
 
+            line-height: 1.85;
+
             color: var(--white-soft);
+        }
+
+
+        .writing-item:hover {
+            transform:
+                translateX(8px);
+        }
+
+
+        .writing-item:hover h2 {
+            color: #ffffff;
+
+            transform:
+                translateX(4px);
         }
 
 
@@ -373,6 +461,22 @@
 
         .about {
             max-width: 700px;
+
+            padding:
+                40px 0 110px;
+        }
+
+
+        .about-label {
+            margin-bottom: 38px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: var(--grey);
         }
 
 
@@ -391,9 +495,6 @@
 
         footer {
             padding: 50px 0;
-
-            border-top:
-                1px solid var(--line);
 
             font-family: Arial, sans-serif;
 
@@ -459,7 +560,8 @@
 
 
             .hero {
-                padding: 100px 0 70px;
+                padding:
+                    100px 0 40px;
             }
 
 
@@ -471,25 +573,52 @@
             }
 
 
-            .quote {
-                padding-bottom: 70px;
+            .subtitle {
+                font-size: 16px;
             }
 
 
-            .quote p {
-                font-size: 23px;
-
-                padding: 0 15px;
+            .quote-wrap {
+                padding:
+                    55px 0 80px;
             }
 
 
-            .writing-grid {
-                grid-template-columns: 1fr;
+            .quote-scroll {
+                width: 88%;
+
+                padding:
+                    40px 30px;
             }
 
 
-            .writing-item h3 {
-                font-size: 31px;
+            .quote-scroll p {
+                font-size: 26px;
+            }
+
+
+            .writing-item {
+                grid-template-columns:
+                    45px minmax(0, 1fr);
+
+                gap: 20px;
+
+                padding: 35px 0;
+            }
+
+
+            .writing-content h2 {
+                font-size: 45px;
+            }
+
+
+            .writing-content p {
+                font-size: 14px;
+            }
+
+
+            .about {
+                padding-bottom: 80px;
             }
 
         }
@@ -556,10 +685,6 @@
                     Literature
                 </a>
 
-                <a href="archive.html">
-                    Archive
-                </a>
-
                 <a href="about.html">
                     About
                 </a>
@@ -583,7 +708,7 @@
 
 
         <!-- =========================
-             TITLE
+             TITLE + SUBTITLE
         ========================== -->
 
         <section
@@ -596,6 +721,13 @@
                 a Human Prism
             </h1>
 
+
+            <p class="subtitle">
+                An attempt to examine society, literature, philosophy,
+                culture, and human experience through one particular
+                human perspective.
+            </p>
+
         </section>
 
 
@@ -603,11 +735,15 @@
              QUOTE
         ========================== -->
 
-        <div class="quote">
+        <div class="quote-wrap">
 
-            <p>
-                Sometimes nothing is thing
-            </p>
+            <div class="quote-scroll">
+
+                <p>
+                    Sometimes nothing is thing
+                </p>
+
+            </div>
 
         </div>
 
@@ -616,28 +752,24 @@
              WRITINGS
         ========================== -->
 
-        <section>
-
-            <div class="section-title">
-                Writings
-            </div>
+        <div class="writing-list">
 
 
-            <div class="writing-grid">
+            <a
+                class="writing-item"
+                href="essays.html"
+            >
+
+                <div class="writing-number">
+                    01
+                </div>
 
 
-                <a
-                    class="writing-item"
-                    href="essays.html"
-                >
+                <div class="writing-content">
 
-                    <span>
-                        01
-                    </span>
-
-                    <h3>
+                    <h2>
                         Essays
-                    </h3>
+                    </h2>
 
                     <p>
                         Personal essays, reflections, observations,
@@ -645,21 +777,26 @@
                         that surround us.
                     </p>
 
-                </a>
+                </div>
+
+            </a>
 
 
-                <a
-                    class="writing-item"
-                    href="literature.html"
-                >
+            <a
+                class="writing-item"
+                href="literature.html"
+            >
 
-                    <span>
-                        02
-                    </span>
+                <div class="writing-number">
+                    02
+                </div>
 
-                    <h3>
+
+                <div class="writing-content">
+
+                    <h2>
                         Literature
-                    </h3>
+                    </h2>
 
                     <p>
                         Stories, poems, and longer works of fiction
@@ -667,68 +804,55 @@
                         label.
                     </p>
 
-                </a>
+                </div>
+
+            </a>
 
 
-                <a
-                    class="writing-item"
-                    href="books.html"
-                >
+            <a
+                class="writing-item"
+                href="books.html"
+            >
 
-                    <span>
-                        03
-                    </span>
+                <div class="writing-number">
+                    03
+                </div>
 
-                    <h3>
+
+                <div class="writing-content">
+
+                    <h2>
                         Books
-                    </h3>
+                    </h2>
 
                     <p>
                         Longer works that may eventually grow beyond
                         the boundaries of individual essays and stories.
                     </p>
 
-                </a>
+                </div>
+
+            </a>
 
 
-                <a
-                    class="writing-item"
-                    href="archive.html"
-                >
-
-                    <span>
-                        04
-                    </span>
-
-                    <h3>
-                        Archive
-                    </h3>
-
-                    <p>
-                        A record of everything written,
-                        published, and collected here.
-                    </p>
-
-                </a>
-
-
-            </div>
-
-        </section>
+        </div>
 
 
         <!-- =========================
              ABOUT
         ========================== -->
 
-        <section id="about">
-
-            <div class="section-title">
-                About
-            </div>
-
+        <section
+            id="about"
+            style="border-top: none;"
+        >
 
             <div class="about">
+
+                <div class="about-label">
+                    About
+                </div>
+
 
                 <p>
 
