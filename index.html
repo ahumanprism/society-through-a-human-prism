@@ -321,7 +321,7 @@
 
 
         /* =========================
-           QUOTE
+           QUOTE SCROLL
         ========================== */
 
         .quote-wrap {
@@ -343,10 +343,6 @@
         }
 
 
-        /*
-           SVG scroll itself
-        */
-
         .quote-scroll {
 
             position:
@@ -366,15 +362,6 @@
 
             justify-content:
                 center;
-
-            color:
-                var(--black);
-
-            /*
-               The SVG is deliberately very
-               light so that it blends into
-               the black background.
-            */
 
             background:
                 transparent;
@@ -404,30 +391,31 @@
 
 
         /*
-           Organic manuscript shape
+           Transparent scroll:
+           ONLY the outline is visible.
         */
 
         .scroll-paper {
 
             fill:
-                #ddddD7;
+                none;
 
             stroke:
                 #f2f2ed;
 
             stroke-width:
-                1.2;
+                1.4;
 
             stroke-linejoin:
                 round;
 
             opacity:
-                0.96;
+                0.92;
         }
 
 
         /*
-           Slightly imperfect inner line
+           Inner hand-drawn line
         */
 
         .scroll-inner {
@@ -436,18 +424,18 @@
                 none;
 
             stroke:
-                #999994;
+                #f2f2ed;
 
             stroke-width:
                 0.7;
 
             opacity:
-                0.6;
+                0.55;
         }
 
 
         /*
-           Decorative rolled ends
+           Rolled / twisted ends
         */
 
         .scroll-detail {
@@ -456,13 +444,16 @@
                 none;
 
             stroke:
-                #777773;
+                #f2f2ed;
 
             stroke-width:
-                0.8;
+                1.1;
+
+            stroke-linecap:
+                round;
 
             opacity:
-                0.7;
+                0.9;
         }
 
 
@@ -501,7 +492,7 @@
                 0.2px;
 
             color:
-                #171717;
+                var(--white);
 
             transform:
                 translateY(-1px);
@@ -509,13 +500,25 @@
 
 
         /* =========================
-           WRITING LIST
+           WRITING LINKS
         ========================== */
 
         .writing-list {
 
             padding:
-                0 0 100px;
+                20px 0 120px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
         }
 
 
@@ -524,8 +527,11 @@
             display:
                 block;
 
+            width:
+                fit-content;
+
             padding:
-                42px 0;
+                34px 0;
 
             transition:
                 transform 0.35s ease;
@@ -542,7 +548,7 @@
         .writing-content h2 {
 
             margin-bottom:
-                12px;
+                14px;
 
             font-family:
                 "Cormorant Infant",
@@ -550,7 +556,7 @@
                 serif;
 
             font-size:
-                clamp(42px, 6vw, 68px);
+                clamp(50px, 7vw, 78px);
 
             font-weight:
                 500;
@@ -572,6 +578,9 @@
             max-width:
                 620px;
 
+            margin:
+                0 auto;
+
             font-size:
                 15px;
 
@@ -586,7 +595,7 @@
         .writing-item:hover {
 
             transform:
-                translateX(8px);
+                translateY(-4px);
         }
 
 
@@ -596,7 +605,7 @@
                 #ffffff;
 
             transform:
-                translateX(4px);
+                translateY(-2px);
         }
 
 
@@ -656,6 +665,9 @@
             padding:
                 50px 0;
 
+            background:
+                #ffffff;
+
             border-top:
                 1px solid var(--header-line);
 
@@ -667,7 +679,7 @@
                 11px;
 
             color:
-                var(--grey-dark);
+                #111111;
         }
 
 
@@ -730,7 +742,7 @@
             .nav-links {
 
                 gap:
-                    12px;
+                    16px;
 
                 font-size:
                     10px;
@@ -788,17 +800,24 @@
             }
 
 
+            .writing-list {
+
+                padding-bottom:
+                    90px;
+            }
+
+
             .writing-item {
 
                 padding:
-                    35px 0;
+                    28px 0;
             }
 
 
             .writing-content h2 {
 
                 font-size:
-                    45px;
+                    50px;
             }
 
 
@@ -806,6 +825,9 @@
 
                 font-size:
                     14px;
+
+                padding:
+                    0 15px;
             }
 
 
@@ -871,14 +893,6 @@
 
             <div class="nav-links">
 
-                <a href="essays.html">
-                    Essays
-                </a>
-
-                <a href="literature.html">
-                    Literature
-                </a>
-
                 <a href="archive.html">
                     Archive
                 </a>
@@ -916,9 +930,10 @@
 
             <p class="subtitle">
 
-                An attempt to examine society, literature,
-                philosophy, culture, and human experience
-                through one particular human perspective.
+                An attempt to examine society,
+                literature, philosophy, culture,
+                and human experience through
+                one particular human perspective.
 
             </p>
 
@@ -935,128 +950,182 @@
             <div class="quote-scroll">
 
 
-                <!--
-                    Organic monochrome scroll.
-                    The shape is intentionally irregular.
-                -->
-
                 <svg
                     viewBox="0 0 900 260"
                     preserveAspectRatio="none"
                     aria-hidden="true"
                 >
 
-                    <!-- Main paper -->
+
+                    <!-- =====================
+                         MAIN OUTLINE
+                    ====================== -->
 
                     <path
                         class="scroll-paper"
                         d="
                             M 82 35
-                            C 65 31, 55 38, 48 50
-                            C 40 63, 45 77, 54 87
-                            C 61 95, 62 104, 56 114
-                            C 48 128, 48 143, 58 153
-                            C 66 161, 65 171, 56 182
-                            C 48 192, 51 207, 64 216
-                            C 72 222, 82 225, 96 224
 
-                            C 250 232, 390 221, 450 226
-                            C 530 231, 655 222, 804 225
+                            C 68 31, 55 38, 49 51
+                            C 43 63, 47 76, 57 86
 
-                            C 820 226, 832 219, 840 208
-                            C 848 196, 844 184, 835 175
-                            C 826 166, 827 155, 837 145
-                            C 848 134, 848 119, 838 108
-                            C 830 99, 830 88, 839 77
-                            C 848 65, 844 51, 833 42
-                            C 823 33, 812 31, 797 34
+                            C 67 96, 68 105, 58 116
 
-                            C 630 27, 535 38, 450 32
-                            C 345 25, 208 33, 82 35
+                            C 47 128, 47 142, 58 153
+
+                            C 68 163, 67 173, 57 184
+
+                            C 48 195, 53 210, 67 218
+
+                            C 76 224, 86 226, 98 224
+
+                            C 220 231, 345 221, 450 226
+
+                            C 565 231, 680 220, 802 225
+
+                            C 818 226, 831 219, 840 207
+
+                            C 849 195, 845 183, 835 173
+
+                            C 825 163, 826 153, 837 142
+
+                            C 848 130, 848 116, 838 105
+
+                            C 828 95, 829 84, 839 73
+
+                            C 849 61, 845 48, 834 40
+
+                            C 824 32, 812 31, 798 34
+
+                            C 665 28, 558 37, 450 32
+
+                            C 338 26, 210 31, 82 35
+
                             Z
                         "
                     />
 
 
-                    <!-- Inner imperfect border -->
+                    <!-- =====================
+                         INNER IMPERFECT LINE
+                    ====================== -->
 
                     <path
                         class="scroll-inner"
                         d="
                             M 92 48
-                            C 220 43, 340 44, 450 48
+
+                            C 215 43, 340 45, 450 49
                             C 560 52, 680 43, 790 48
-                            C 775 67, 776 83, 790 98
-                            C 802 110, 801 124, 789 137
-                            C 778 149, 779 164, 791 178
-                            C 800 189, 797 202, 785 210
 
-                            C 660 205, 555 211, 450 205
-                            C 330 199, 210 209, 95 207
+                            C 778 62, 777 79, 789 94
 
-                            C 108 191, 108 178, 96 164
-                            C 85 151, 86 137, 97 124
-                            C 108 111, 108 97, 97 85
+                            C 801 108, 802 121, 789 136
+
+                            C 777 150, 779 165, 791 179
+
+                            C 801 190, 797 202, 784 210
+
+                            C 665 206, 555 211, 450 205
+
+                            C 330 199, 210 209, 96 207
+
+                            C 108 192, 108 177, 96 164
+
+                            C 84 151, 86 137, 98 124
+
+                            C 110 111, 108 97, 97 85
+
                             C 86 72, 86 59, 92 48
+
                             Z
                         "
                     />
 
 
-                    <!-- Left rolled end -->
+                    <!-- =====================
+                         LEFT ROLL
+                    ====================== -->
 
                     <path
                         class="scroll-detail"
                         d="
-                            M 83 35
-                            C 62 43, 60 62, 73 74
-                            C 86 86, 85 99, 72 111
-                            C 59 123, 59 140, 72 151
-                            C 84 162, 84 176, 72 188
-                            C 61 199, 67 216, 88 222
+                            M 82 35
+
+                            C 61 40, 56 57, 68 71
+
+                            C 79 84, 79 96, 67 108
+
+                            C 54 120, 54 135, 68 147
+
+                            C 80 158, 80 171, 68 183
+
+                            C 55 196, 61 211, 81 219
                         "
                     />
 
+
+                    <!-- Extra twist -->
 
                     <path
                         class="scroll-detail"
                         d="
-                            M 72 39
-                            C 54 49, 55 65, 68 77
-                            C 80 89, 78 103, 66 114
-                            C 54 126, 55 140, 67 151
-                            C 79 163, 78 177, 67 189
-                            C 57 201, 65 214, 84 219
+                            M 70 42
+
+                            C 52 49, 52 62, 65 75
+
+                            C 76 87, 75 100, 63 112
+
+                            C 50 124, 52 138, 65 150
+
+                            C 77 162, 76 175, 64 188
+
+                            C 55 198, 61 211, 79 216
                         "
                     />
 
 
-                    <!-- Right rolled end -->
+                    <!-- =====================
+                         RIGHT ROLL
+                    ====================== -->
 
                     <path
                         class="scroll-detail"
                         d="
-                            M 817 35
-                            C 838 43, 840 62, 827 74
-                            C 814 86, 815 99, 828 111
-                            C 841 123, 841 140, 828 151
-                            C 816 162, 816 176, 828 188
-                            C 839 199, 833 216, 812 222
+                            M 818 35
+
+                            C 839 40, 844 57, 832 71
+
+                            C 821 84, 821 96, 833 108
+
+                            C 846 120, 846 135, 832 147
+
+                            C 820 158, 820 171, 832 183
+
+                            C 845 196, 839 211, 819 219
                         "
                     />
 
+
+                    <!-- Extra twist -->
 
                     <path
                         class="scroll-detail"
                         d="
-                            M 828 39
-                            C 846 49, 845 65, 832 77
-                            C 820 89, 822 103, 834 114
-                            C 846 126, 845 140, 833 151
-                            C 821 163, 822 177, 833 189
-                            C 843 201, 835 214, 816 219
+                            M 830 42
+
+                            C 848 49, 848 62, 835 75
+
+                            C 824 87, 825 100, 837 112
+
+                            C 850 124, 848 138, 835 150
+
+                            C 823 162, 824 175, 836 188
+
+                            C 845 198, 839 211, 821 216
                         "
                     />
+
 
                 </svg>
 
@@ -1065,6 +1134,7 @@
                     “Sometimes nothing is thing”
                 </p>
 
+
             </div>
 
         </div>
@@ -1072,35 +1142,10 @@
 
 
         <!-- =========================
-             WRITINGS
+             WRITING LINKS
         ========================== -->
 
         <div class="writing-list">
-
-
-            <a
-                class="writing-item"
-                href="essays.html"
-            >
-
-                <div class="writing-content">
-
-                    <h2>
-                        Essays
-                    </h2>
-
-                    <p>
-
-                        Personal essays, reflections,
-                        observations, and attempts to
-                        understand the things that surround us.
-
-                    </p>
-
-                </div>
-
-            </a>
-
 
 
             <a
@@ -1130,20 +1175,20 @@
 
             <a
                 class="writing-item"
-                href="books.html"
+                href="philosophy.html"
             >
 
                 <div class="writing-content">
 
                     <h2>
-                        Books
+                        Philosophy
                     </h2>
 
                     <p>
 
-                        Longer works that may eventually
-                        grow beyond the boundaries of
-                        individual essays and stories.
+                        Questions, reflections, and attempts
+                        to think carefully about existence,
+                        knowledge, society, and human life.
 
                     </p>
 
