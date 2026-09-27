@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="google-site-verification" content="DtcVo3vkh4i0Acg-yDinHgq_wv_f4Y40Tn4t2OZpFGU" />
+    <meta
+        name="google-site-verification"
+        content="DtcVo3vkh4i0Acg-yDinHgq_wv_f4Y40Tn4t2OZpFGU"
+    >
 
     <meta
         name="description"
@@ -15,7 +18,28 @@
 
     <title>Society Through a Human Prism — Hewwy Huynh</title>
 
+    <!-- Vintage typewriter font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
 
         * {
             box-sizing: border-box;
@@ -23,22 +47,53 @@
             padding: 0;
         }
 
-        body {
-            background: #0b1220;
-            color: #e7eaf0;
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.7;
+
+        /* =========================
+           ROOT
+        ========================= */
+
+        :root {
+            --black: #111111;
+            --black-soft: #171717;
+            --white: #e8e8e3;
+            --white-soft: #d2d2cd;
+            --grey: #8b8b87;
+            --grey-dark: #555552;
+            --line: #333331;
         }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            background: var(--black);
+            color: var(--white);
+
+            font-family:
+                "Special Elite",
+                "Courier New",
+                monospace;
+
+            line-height: 1.8;
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         .container {
             width: min(1100px, 90%);
             margin: 0 auto;
         }
+
 
         /* =========================
            HEADER
@@ -46,8 +101,12 @@
 
         header {
             padding: 32px 0;
-            border-bottom: 1px solid #26334a;
+
+            border-bottom: 1px solid var(--line);
+
+            animation: fadeDown 0.9s ease both;
         }
+
 
         nav {
             display: flex;
@@ -56,24 +115,61 @@
             gap: 30px;
         }
 
+
         .logo {
             font-family: Arial, sans-serif;
-            font-size: 13px;
+
+            font-size: 12px;
             letter-spacing: 2px;
-            color: #9eabc0;
+
+            color: var(--grey);
         }
+
 
         .nav-links {
             display: flex;
             gap: 28px;
+
             font-family: Arial, sans-serif;
-            font-size: 13px;
-            color: #9eabc0;
+
+            font-size: 12px;
+            color: var(--grey);
         }
 
-        .nav-links a:hover {
-            color: #ffffff;
+
+        .nav-links a {
+            position: relative;
+            transition:
+                color 0.3s ease;
         }
+
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--white);
+
+            transition: width 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
 
         /* =========================
            HERO
@@ -81,38 +177,73 @@
 
         .hero {
             padding: 130px 0 120px;
+
             max-width: 850px;
+
+            border-top: none;
+
+            animation: fadeUp 1.1s ease 0.15s both;
         }
+
 
         .eyebrow {
-            font-family: Arial, sans-serif;
+            font-family: "Special Elite", monospace;
+
             font-size: 12px;
-            letter-spacing: 3px;
-            color: #7185a6;
-            margin-bottom: 25px;
+            letter-spacing: 2px;
+
+            color: var(--grey);
+
+            margin-bottom: 28px;
+
+            animation: fadeUp 1s ease 0.3s both;
         }
 
+
         h1 {
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: clamp(48px, 8vw, 92px);
+
             font-weight: normal;
+
             line-height: 0.98;
+
             letter-spacing: -3px;
-            margin-bottom: 35px;
+
+            margin-bottom: 38px;
+
+            color: var(--white);
+
+            animation: fadeUp 1s ease 0.45s both;
         }
+
 
         .intro {
             max-width: 680px;
-            font-size: 21px;
-            color: #aeb8c8;
+
+            font-size: 19px;
+
+            color: var(--white-soft);
+
+            animation: fadeUp 1s ease 0.6s both;
         }
+
 
         .author {
             margin-top: 30px;
+
             font-family: Arial, sans-serif;
-            font-size: 13px;
-            letter-spacing: 1px;
-            color: #7185a6;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            color: var(--grey);
+
+            animation: fadeUp 1s ease 0.75s both;
         }
+
 
         /* =========================
            SECTIONS
@@ -120,16 +251,25 @@
 
         section {
             padding: 80px 0;
-            border-top: 1px solid #26334a;
+
+            border-top: 1px solid var(--line);
+
+            animation: reveal 0.9s ease both;
         }
+
 
         .section-title {
             font-family: Arial, sans-serif;
-            font-size: 12px;
+
+            font-size: 11px;
+
             letter-spacing: 3px;
-            color: #7185a6;
+
+            color: var(--grey);
+
             margin-bottom: 45px;
         }
+
 
         /* =========================
            FEATURED ESSAY
@@ -137,44 +277,78 @@
 
         .featured {
             display: grid;
+
             grid-template-columns: 2fr 1fr;
+
             gap: 60px;
+
             align-items: end;
         }
 
+
         .featured h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: clamp(32px, 5vw, 58px);
+
             font-weight: normal;
+
             line-height: 1.05;
+
             margin-bottom: 25px;
         }
 
+
         .featured p {
-            color: #aeb8c8;
-            font-size: 17px;
+            color: var(--white-soft);
+
+            font-size: 16px;
+
             max-width: 650px;
         }
 
+
         .work-type {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+
+            font-size: 10px;
+
             letter-spacing: 2px;
-            color: #7185a6;
+
+            color: var(--grey);
         }
+
 
         .read-link {
             display: inline-block;
+
             margin-top: 30px;
+
             font-family: Arial, sans-serif;
-            font-size: 12px;
+
+            font-size: 11px;
+
             letter-spacing: 2px;
-            border-bottom: 1px solid #7185a6;
+
+            border-bottom: 1px solid var(--grey);
+
             padding-bottom: 5px;
+
+            transition:
+                color 0.3s ease,
+                border-color 0.3s ease,
+                padding-left 0.3s ease;
         }
 
+
         .read-link:hover {
-            color: #ffffff;
+            color: var(--white);
+
+            border-color: var(--white);
+
+            padding-left: 6px;
         }
+
 
         /* =========================
            WRITINGS
@@ -182,36 +356,67 @@
 
         .writing-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 1px;
-            background: #26334a;
+
+            background: var(--line);
         }
 
+
         .writing-item {
-            background: #0b1220;
+            background: var(--black);
+
             padding: 40px 30px;
+
+            transition:
+                background 0.35s ease,
+                transform 0.35s ease;
         }
+
+
+        .writing-item:hover {
+            background: var(--black-soft);
+
+            transform: translateY(-2px);
+        }
+
 
         .writing-item span {
             display: block;
+
             font-family: Arial, sans-serif;
-            font-size: 11px;
+
+            font-size: 10px;
+
             letter-spacing: 2px;
-            color: #7185a6;
+
+            color: var(--grey);
+
             margin-bottom: 15px;
         }
 
+
         .writing-item h3 {
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: 28px;
+
             font-weight: normal;
+
             margin-bottom: 12px;
         }
 
+
         .writing-item p {
-            color: #aeb8c8;
-            font-size: 16px;
+            color: var(--white-soft);
+
+            font-size: 15px;
+
             max-width: 500px;
         }
+
 
         /* =========================
            LITERATURE
@@ -219,39 +424,70 @@
 
         .literature-intro {
             max-width: 700px;
+
             margin-bottom: 40px;
         }
 
+
         .literature-intro p {
-            font-size: 19px;
-            color: #aeb8c8;
+            font-size: 17px;
+
+            color: var(--white-soft);
         }
+
 
         .literature-forms {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 1px;
-            background: #26334a;
+
+            background: var(--line);
         }
 
+
         .literature-form {
-            background: #0b1220;
+            background: var(--black);
+
             padding: 30px 22px;
+
+            transition:
+                background 0.35s ease,
+                transform 0.35s ease;
         }
+
+
+        .literature-form:hover {
+            background: var(--black-soft);
+
+            transform: translateY(-2px);
+        }
+
 
         .literature-form span {
             display: block;
+
             font-family: Arial, sans-serif;
-            font-size: 11px;
+
+            font-size: 10px;
+
             letter-spacing: 2px;
-            color: #7185a6;
+
+            color: var(--grey);
+
             margin-bottom: 12px;
         }
 
+
         .literature-form h3 {
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: 22px;
+
             font-weight: normal;
         }
+
 
         /* =========================
            BOOKS
@@ -261,18 +497,28 @@
             max-width: 800px;
         }
 
+
         .books h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: clamp(32px, 5vw, 52px);
+
             font-weight: normal;
+
             line-height: 1.05;
+
             margin-bottom: 20px;
         }
 
+
         .books p {
-            color: #aeb8c8;
-            font-size: 18px;
+            color: var(--white-soft);
+
+            font-size: 17px;
+
             max-width: 650px;
         }
+
 
         /* =========================
            ABOUT
@@ -282,10 +528,13 @@
             max-width: 700px;
         }
 
+
         .about p {
-            font-size: 22px;
-            color: #c2c9d5;
+            font-size: 19px;
+
+            color: var(--white-soft);
         }
+
 
         /* =========================
            FOOTER
@@ -293,11 +542,65 @@
 
         footer {
             padding: 50px 0;
-            border-top: 1px solid #26334a;
+
+            border-top: 1px solid var(--line);
+
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            color: #66748c;
+
+            font-size: 11px;
+
+            color: var(--grey-dark);
         }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes reveal {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
 
         /* =========================
            MOBILE
@@ -307,28 +610,58 @@
 
             .nav-links {
                 gap: 12px;
-                font-size: 11px;
+
+                font-size: 10px;
             }
+
 
             .hero {
                 padding: 90px 0;
             }
 
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+
             .featured {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
+
 
             .writing-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .literature-forms {
                 grid-template-columns: repeat(2, 1fr);
             }
 
+
             .books h2 {
                 font-size: 38px;
+            }
+
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
 
         }
@@ -387,7 +720,7 @@
              HERO
         ========================= -->
 
-        <section class="hero" style="border-top: none;">
+        <section class="hero">
 
             <div class="eyebrow">
                 An independent publication by Hewwy Huynh
@@ -565,7 +898,6 @@
 
             <div class="literature-forms">
 
-
                 <a
                     class="literature-form"
                     href="literature.html#short-stories"
@@ -628,7 +960,6 @@
                     </h3>
 
                 </a>
-
 
             </div>
 
