@@ -4,7 +4,10 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="google-site-verification"
@@ -116,14 +119,17 @@
 
             background: var(--header-white);
 
-            border-bottom: 1px solid var(--header-line);
+            border-bottom:
+                1px solid var(--header-line);
 
-            animation: fadeDown 0.9s ease both;
+            animation:
+                fadeDown 0.9s ease both;
         }
 
 
         nav {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
 
@@ -196,48 +202,23 @@
         ========================= */
 
         .hero {
-            padding: 130px 0 120px;
+            padding: 150px 0 95px;
 
-            max-width: 850px;
-
-            border-top: none;
+            max-width: 950px;
 
             animation:
                 fadeUp 1.1s ease 0.15s both;
         }
 
 
-        .eyebrow {
-            font-family:
-                "Courier Prime",
-                "Courier New",
-                monospace;
-
-            font-size: 12px;
-
-            letter-spacing: 1px;
-
-            color: var(--grey);
-
-            margin-bottom: 28px;
-
-            animation:
-                fadeUp 1s ease 0.3s both;
-        }
-
-
-        /* =========================
-           MAIN HEADING
-        ========================= */
-
-        h1 {
+        .hero h1 {
             font-family:
                 "Cormorant Infant",
                 Georgia,
                 serif;
 
             font-size:
-                clamp(58px, 9vw, 108px);
+                clamp(60px, 9vw, 112px);
 
             font-weight: 400;
 
@@ -245,42 +226,40 @@
 
             letter-spacing: -2px;
 
-            margin-bottom: 38px;
-
             color: var(--white);
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            padding: 0 0 95px;
+
+            text-align: center;
 
             animation:
                 fadeUp 1s ease 0.45s both;
         }
 
 
-        .intro {
-            max-width: 680px;
+        .quote p {
+            font-family:
+                "Cormorant Infant",
+                Georgia,
+                serif;
 
-            font-size: 18px;
+            font-size:
+                clamp(22px, 3vw, 30px);
 
-            line-height: 1.85;
+            font-style: italic;
+
+            font-weight: 400;
 
             color: var(--white-soft);
 
-            animation:
-                fadeUp 1s ease 0.6s both;
-        }
-
-
-        .author {
-            margin-top: 30px;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 12px;
-
-            letter-spacing: 2px;
-
-            color: var(--grey);
-
-            animation:
-                fadeUp 1s ease 0.75s both;
+            letter-spacing: 0.2px;
         }
 
 
@@ -289,16 +268,16 @@
         ========================= */
 
         section {
+            border-top:
+                1px solid var(--line);
+
             padding: 80px 0;
-
-            border-top: 1px solid var(--line);
-
-            animation:
-                reveal 0.9s ease both;
         }
 
 
         .section-title {
+            margin-bottom: 45px;
+
             font-family: Arial, sans-serif;
 
             font-size: 11px;
@@ -306,94 +285,6 @@
             letter-spacing: 3px;
 
             color: var(--grey);
-
-            margin-bottom: 45px;
-        }
-
-
-        /* =========================
-           FEATURED ESSAY
-        ========================= */
-
-        .featured {
-            display: grid;
-
-            grid-template-columns: 2fr 1fr;
-
-            gap: 60px;
-
-            align-items: end;
-        }
-
-
-        .featured h2 {
-            font-family:
-                "Cormorant Infant",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(36px, 5vw, 62px);
-
-            font-weight: 500;
-
-            line-height: 0.95;
-
-            margin-bottom: 25px;
-
-            color: var(--white);
-        }
-
-
-        .featured p {
-            color: var(--white-soft);
-
-            font-size: 16px;
-
-            max-width: 650px;
-        }
-
-
-        .work-type {
-            font-family: Arial, sans-serif;
-
-            font-size: 10px;
-
-            letter-spacing: 2px;
-
-            color: var(--grey);
-        }
-
-
-        .read-link {
-            display: inline-block;
-
-            margin-top: 30px;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 11px;
-
-            letter-spacing: 2px;
-
-            border-bottom:
-                1px solid var(--grey);
-
-            padding-bottom: 5px;
-
-            transition:
-                color 0.3s ease,
-                border-color 0.3s ease,
-                padding-left 0.3s ease;
-        }
-
-
-        .read-link:hover {
-            color: var(--white);
-
-            border-color: var(--white);
-
-            padding-left: 6px;
         }
 
 
@@ -414,9 +305,11 @@
 
 
         .writing-item {
+            display: block;
+
             background: var(--black);
 
-            padding: 40px 30px;
+            padding: 42px 30px;
 
             transition:
                 background 0.35s ease,
@@ -435,6 +328,8 @@
         .writing-item span {
             display: block;
 
+            margin-bottom: 15px;
+
             font-family: Arial, sans-serif;
 
             font-size: 10px;
@@ -442,150 +337,33 @@
             letter-spacing: 2px;
 
             color: var(--grey);
-
-            margin-bottom: 15px;
         }
 
 
         .writing-item h3 {
+            margin-bottom: 14px;
+
             font-family:
                 "Cormorant Infant",
                 Georgia,
                 serif;
 
-            font-size: 31px;
+            font-size: 34px;
 
             font-weight: 500;
 
             line-height: 1;
-
-            margin-bottom: 14px;
 
             color: var(--white);
         }
 
 
         .writing-item p {
-            color: var(--white-soft);
+            max-width: 500px;
 
             font-size: 15px;
 
-            max-width: 500px;
-        }
-
-
-        /* =========================
-           LITERATURE
-        ========================= */
-
-        .literature-intro {
-            max-width: 700px;
-
-            margin-bottom: 40px;
-        }
-
-
-        .literature-intro p {
-            font-size: 17px;
-
             color: var(--white-soft);
-        }
-
-
-        .literature-forms {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 1px;
-
-            background: var(--line);
-        }
-
-
-        .literature-form {
-            background: var(--black);
-
-            padding: 30px 22px;
-
-            transition:
-                background 0.35s ease,
-                transform 0.35s ease;
-        }
-
-
-        .literature-form:hover {
-            background: var(--black-soft);
-
-            transform:
-                translateY(-2px);
-        }
-
-
-        .literature-form span {
-            display: block;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 10px;
-
-            letter-spacing: 2px;
-
-            color: var(--grey);
-
-            margin-bottom: 12px;
-        }
-
-
-        .literature-form h3 {
-            font-family:
-                "Cormorant Infant",
-                Georgia,
-                serif;
-
-            font-size: 27px;
-
-            font-weight: 500;
-
-            line-height: 1;
-        }
-
-
-        /* =========================
-           BOOKS
-        ========================= */
-
-        .books {
-            max-width: 800px;
-        }
-
-
-        .books h2 {
-            font-family:
-                "Cormorant Infant",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(38px, 5vw, 58px);
-
-            font-weight: 500;
-
-            line-height: 0.95;
-
-            margin-bottom: 20px;
-
-            color: var(--white);
-        }
-
-
-        .books p {
-            color: var(--white-soft);
-
-            font-size: 17px;
-
-            max-width: 650px;
         }
 
 
@@ -614,7 +392,8 @@
         footer {
             padding: 50px 0;
 
-            border-top: 1px solid var(--line);
+            border-top:
+                1px solid var(--line);
 
             font-family: Arial, sans-serif;
 
@@ -666,25 +445,6 @@
         }
 
 
-        @keyframes reveal {
-
-            from {
-                opacity: 0;
-
-                transform:
-                    translateY(15px);
-            }
-
-            to {
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
-
-        }
-
-
         /* =========================
            MOBILE
         ========================= */
@@ -699,22 +459,27 @@
 
 
             .hero {
-                padding: 90px 0;
+                padding: 100px 0 70px;
             }
 
 
-            h1 {
+            .hero h1 {
                 font-size:
-                    clamp(52px, 15vw, 78px);
+                    clamp(52px, 15vw, 80px);
 
                 letter-spacing: -1px;
             }
 
 
-            .featured {
-                grid-template-columns: 1fr;
+            .quote {
+                padding-bottom: 70px;
+            }
 
-                gap: 30px;
+
+            .quote p {
+                font-size: 23px;
+
+                padding: 0 15px;
             }
 
 
@@ -723,14 +488,8 @@
             }
 
 
-            .literature-forms {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .books h2 {
-                font-size: 42px;
+            .writing-item h3 {
+                font-size: 31px;
             }
 
         }
@@ -768,6 +527,10 @@
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================== -->
 
 <header>
 
@@ -810,91 +573,48 @@
 </header>
 
 
+<!-- =========================
+     MAIN
+========================== -->
+
 <main>
 
     <div class="container">
 
 
         <!-- =========================
-             HERO
-        ========================= -->
+             TITLE
+        ========================== -->
 
-        <section class="hero">
-
-            <div class="eyebrow">
-                An Independent Publication by Hewwy Huynh
-            </div>
-
+        <section
+            class="hero"
+            style="border-top: none;"
+        >
 
             <h1>
                 Society Through<br>
                 a Human Prism
             </h1>
 
-
-            <p class="intro">
-                An attempt to examine society, literature, philosophy,
-                culture, and human experience through one particular
-                human perspective.
-            </p>
-
-
-            <div class="author">
-                Hewwy Huynh
-            </div>
-
         </section>
 
 
         <!-- =========================
-             FEATURED ESSAY
-        ========================= -->
+             QUOTE
+        ========================== -->
 
-        <section id="essays">
+        <div class="quote">
 
-            <div class="section-title">
-                Featured
-            </div>
+            <p>
+                Sometimes nothing is thing
+            </p>
 
-
-            <div class="featured">
-
-                <div>
-
-                    <h2>
-                        The Things We Believe
-                    </h2>
-
-
-                    <p>
-                        A personal essay on belief, certainty,
-                        and the ways human beings make sense
-                        of the world around them.
-                    </p>
-
-
-                    <a
-                        class="read-link"
-                        href="essay-the-things-we-believe.html"
-                    >
-                        Read essay →
-                    </a>
-
-                </div>
-
-
-                <div class="work-type">
-                    Personal Essay
-                </div>
-
-            </div>
-
-        </section>
+        </div>
 
 
         <!-- =========================
              WRITINGS
-        ========================= -->
+        ========================== -->
 
         <section>
 
@@ -915,11 +635,9 @@
                         01
                     </span>
 
-
                     <h3>
                         Essays
                     </h3>
-
 
                     <p>
                         Personal essays, reflections, observations,
@@ -939,11 +657,9 @@
                         02
                     </span>
 
-
                     <h3>
                         Literature
                     </h3>
-
 
                     <p>
                         Stories, poems, and longer works of fiction
@@ -963,11 +679,9 @@
                         03
                     </span>
 
-
                     <h3>
                         Books
                     </h3>
-
 
                     <p>
                         Longer works that may eventually grow beyond
@@ -986,11 +700,9 @@
                         04
                     </span>
 
-
                     <h3>
                         Archive
                     </h3>
-
 
                     <p>
                         A record of everything written,
@@ -999,140 +711,6 @@
 
                 </a>
 
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             LITERATURE
-        ========================= -->
-
-        <section id="literature">
-
-            <div class="section-title">
-                Literature
-            </div>
-
-
-            <div class="literature-intro">
-
-                <p>
-                    Fiction and poetry, in whatever form the work
-                    happens to take. No genre required.
-                </p>
-
-            </div>
-
-
-            <div class="literature-forms">
-
-
-                <a
-                    class="literature-form"
-                    href="literature.html#short-stories"
-                >
-
-                    <span>
-                        01
-                    </span>
-
-
-                    <h3>
-                        Short Stories
-                    </h3>
-
-                </a>
-
-
-                <a
-                    class="literature-form"
-                    href="literature.html#novellas"
-                >
-
-                    <span>
-                        02
-                    </span>
-
-
-                    <h3>
-                        Novellas
-                    </h3>
-
-                </a>
-
-
-                <a
-                    class="literature-form"
-                    href="literature.html#novels"
-                >
-
-                    <span>
-                        03
-                    </span>
-
-
-                    <h3>
-                        Novels
-                    </h3>
-
-                </a>
-
-
-                <a
-                    class="literature-form"
-                    href="literature.html#poetry"
-                >
-
-                    <span>
-                        04
-                    </span>
-
-
-                    <h3>
-                        Poetry
-                    </h3>
-
-                </a>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             BOOKS
-        ========================= -->
-
-        <section>
-
-            <div class="section-title">
-                Books
-            </div>
-
-
-            <div class="books">
-
-                <h2>
-                    Works in longer form.
-                </h2>
-
-
-                <p>
-                    Books and longer projects will live here as they
-                    take shape. Some may begin as essays, some as
-                    stories, and some may begin without knowing what
-                    they are yet.
-                </p>
-
-
-                <a
-                    class="read-link"
-                    href="books.html"
-                >
-                    Explore books →
-                </a>
 
             </div>
 
@@ -1141,7 +719,7 @@
 
         <!-- =========================
              ABOUT
-        ========================= -->
+        ========================== -->
 
         <section id="about">
 
@@ -1184,6 +762,10 @@
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================== -->
 
 <footer>
 
