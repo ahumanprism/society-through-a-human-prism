@@ -4,11 +4,48 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The First Story — Hewwy Huynh</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="One life, one love, forever — Hewwy Huynh."
+    >
+
+    <title>
+        One life, one love, forever — Hewwy Huynh
+    </title>
+
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
 
     <style>
+
+        /* =========================
+           RESET
+        ========================== */
 
         * {
             box-sizing: border-box;
@@ -16,189 +53,734 @@
             padding: 0;
         }
 
-        body {
-            background: #0b1220;
-            color: #e7eaf0;
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.7;
+
+        /* =========================
+           ROOT
+        ========================== */
+
+        :root {
+
+            --black:
+                #111111;
+
+            --black-soft:
+                #181818;
+
+            --white:
+                #e8e8e3;
+
+            --white-soft:
+                #d0d0cb;
+
+            --grey:
+                #888884;
+
+            --grey-dark:
+                #555552;
+
+            --header-white:
+                #ffffff;
+
+            --header-black:
+                #111111;
+
+            --header-line:
+                #dddddd;
+
+            --body-line:
+                #30302e;
         }
+
+
+        /* =========================
+           BODY
+        ========================== */
+
+        body {
+
+            background:
+                var(--black);
+
+            color:
+                var(--white);
+
+            font-family:
+                "Courier Prime",
+                "Courier New",
+                monospace;
+
+            line-height:
+                1.85;
+
+            -webkit-font-smoothing:
+                antialiased;
+
+            text-rendering:
+                optimizeLegibility;
+        }
+
 
         a {
-            color: inherit;
-            text-decoration: none;
+
+            color:
+                inherit;
+
+            text-decoration:
+                none;
         }
+
 
         .container {
-            width: min(850px, 90%);
-            margin: 0 auto;
+
+            width:
+                min(1000px, 90%);
+
+            margin:
+                0 auto;
         }
 
+
         /* =========================
-           Header
-        ========================= */
+           HEADER
+        ========================== */
 
         header {
-            padding: 32px 0;
-            border-bottom: 1px solid #26334a;
+
+            padding:
+                32px 0;
+
+            background:
+                var(--header-white);
+
+            border-bottom:
+                1px solid var(--header-line);
+
+            animation:
+                fadeDown 0.9s ease both;
         }
+
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
         }
+
 
         .logo {
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            color: #9eabc0;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--header-black);
+
+            transition:
+                color 0.3s ease;
         }
+
 
         .logo:hover {
-            color: #ffffff;
+
+            color:
+                #555555;
         }
 
-        .back {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            color: #7185a6;
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                12px;
+
+            color:
+                var(--header-black);
         }
 
-        .back:hover {
-            color: #ffffff;
+
+        .nav-links a {
+
+            position:
+                relative;
+
+            transition:
+                color 0.3s ease;
         }
+
+
+        .nav-links a::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            bottom:
+                -6px;
+
+            width:
+                0;
+
+            height:
+                1px;
+
+            background:
+                var(--header-black);
+
+            transition:
+                width 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                #555555;
+        }
+
+
+        .nav-links a:hover::after {
+
+            width:
+                100%;
+        }
+
 
         /* =========================
-           Story header
-        ========================= */
+           MAIN
+        ========================== */
 
         main {
-            padding: 110px 0 130px;
+
+            padding:
+                135px 0 130px;
         }
+
+
+        /* =========================
+           STORY HEADER
+        ========================== */
+
+        .story-header {
+
+            max-width:
+                900px;
+
+            animation:
+                fadeUp 1.1s ease 0.15s both;
+        }
+
 
         .type {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #7185a6;
-            margin-bottom: 25px;
+
+            margin-bottom:
+                24px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2.5px;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--grey);
         }
+
 
         h1 {
-            font-size: clamp(48px, 8vw, 82px);
-            font-weight: normal;
-            line-height: 1;
-            letter-spacing: -3px;
-            margin-bottom: 30px;
+
+            max-width:
+                900px;
+
+            margin-bottom:
+                36px;
+
+            font-family:
+                "Cormorant Infant",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(60px, 9vw, 112px);
+
+            font-weight:
+                400;
+
+            line-height:
+                0.88;
+
+            letter-spacing:
+                -2px;
+
+            color:
+                var(--white);
         }
+
 
         .subtitle {
-            max-width: 680px;
-            font-size: 21px;
-            color: #aeb8c8;
-            margin-bottom: 45px;
+
+            max-width:
+                680px;
+
+            margin-bottom:
+                34px;
+
+            font-family:
+                "Courier Prime",
+                "Courier New",
+                monospace;
+
+            font-size:
+                18px;
+
+            line-height:
+                1.85;
+
+            color:
+                var(--white-soft);
         }
 
-        .meta {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.8px;
-            color: #66748c;
-            padding-bottom: 45px;
-            border-bottom: 1px solid #26334a;
-        }
 
         /* =========================
-           Chapters
-        ========================= */
+           BACK LINK
+        ========================== */
+
+        .back {
+
+            display:
+                inline-block;
+
+            position:
+                relative;
+
+            padding-bottom:
+                5px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--grey);
+        }
+
+
+        .back::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            bottom:
+                0;
+
+            width:
+                100%;
+
+            height:
+                1px;
+
+            background:
+                var(--grey);
+
+            transform:
+                scaleX(0.35);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform 0.35s ease;
+        }
+
+
+        .back:hover {
+
+            color:
+                var(--white);
+        }
+
+
+        .back:hover::after {
+
+            transform:
+                scaleX(1);
+        }
+
+
+        /* =========================
+           CHAPTERS
+        ========================== */
 
         .chapters {
-            padding-top: 60px;
+
+            margin-top:
+                105px;
+
+            animation:
+                fadeUp 1s ease 0.35s both;
         }
+
 
         .section-title {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #7185a6;
-            margin-bottom: 30px;
+
+            margin-bottom:
+                25px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2.5px;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--grey);
         }
+
 
         .chapter {
-            display: grid;
-            grid-template-columns: 70px 1fr 30px;
-            gap: 25px;
-            align-items: center;
-            padding: 28px 0;
-            border-top: 1px solid #26334a;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                70px minmax(0, 1fr) 30px;
+
+            gap:
+                25px;
+
+            align-items:
+                center;
+
+            padding:
+                28px 0;
+
+            border-top:
+                1px solid var(--body-line);
+
+            transition:
+                transform 0.35s ease;
         }
+
 
         .chapter:last-child {
-            border-bottom: 1px solid #26334a;
+
+            border-bottom:
+                1px solid var(--body-line);
         }
+
+
+        .chapter:hover {
+
+            transform:
+                translateX(8px);
+        }
+
 
         .chapter-number {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            color: #66748c;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--grey-dark);
         }
+
 
         .chapter-title {
-            font-size: 25px;
-            font-weight: normal;
+
+            font-family:
+                "Cormorant Infant",
+                Georgia,
+                serif;
+
+            font-size:
+                30px;
+
+            font-weight:
+                500;
+
+            line-height:
+                1;
+
+            color:
+                var(--white);
+
+            transition:
+                color 0.35s ease,
+                transform 0.35s ease;
         }
+
 
         .chapter:hover .chapter-title {
-            color: #ffffff;
+
+            color:
+                #ffffff;
+
+            transform:
+                translateX(4px);
         }
+
 
         .arrow {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: #7185a6;
-            text-align: right;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                15px;
+
+            color:
+                var(--grey);
+
+            text-align:
+                right;
+
+            transition:
+                transform 0.35s ease,
+                color 0.35s ease;
         }
 
+
+        .chapter:hover .arrow {
+
+            color:
+                var(--white);
+
+            transform:
+                translateX(4px);
+        }
+
+
         /* =========================
-           Footer
-        ========================= */
+           FOOTER
+        ========================== */
 
         footer {
-            padding: 50px 0;
-            border-top: 1px solid #26334a;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            color: #66748c;
+
+            padding:
+                50px 0;
+
+            background:
+                #ffffff;
+
+            border-top:
+                1px solid var(--header-line);
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                11px;
+
+            color:
+                #111111;
         }
 
+
         /* =========================
-           Mobile
-        ========================= */
+           ANIMATIONS
+        ========================== */
+
+        @keyframes fadeDown {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(-12px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 700px) {
 
-            main {
-                padding: 80px 0 100px;
+            .nav-links {
+
+                gap:
+                    16px;
+
+                font-size:
+                    10px;
             }
+
+
+            main {
+
+                padding:
+                    100px 0 100px;
+            }
+
 
             h1 {
-                letter-spacing: -2px;
+
+                font-size:
+                    clamp(54px, 15vw, 82px);
+
+                letter-spacing:
+                    -1px;
             }
+
+
+            .subtitle {
+
+                font-size:
+                    16px;
+            }
+
+
+            .chapters {
+
+                margin-top:
+                    80px;
+            }
+
 
             .chapter {
-                grid-template-columns: 50px 1fr 20px;
-                gap: 15px;
+
+                grid-template-columns:
+                    45px minmax(0, 1fr) 20px;
+
+                gap:
+                    15px;
+
+                padding:
+                    25px 0;
             }
+
 
             .chapter-title {
-                font-size: 21px;
+
+                font-size:
+                    25px;
             }
 
-            nav {
-                align-items: flex-start;
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
             }
 
         }
@@ -211,19 +793,31 @@
 <body>
 
 
+<!-- =========================
+     HEADER
+========================== -->
+
 <header>
 
     <div class="container">
 
         <nav>
 
-            <a class="logo" href="index.html">
+            <a
+                class="logo"
+                href="index.html"
+            >
                 Home
             </a>
 
-            <a class="back" href="literature.html">
-                ← Back to literature
-            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
 
         </nav>
 
@@ -232,40 +826,70 @@
 </header>
 
 
+
+<!-- =========================
+     MAIN
+========================== -->
+
 <main>
 
     <div class="container">
 
 
-        <div class="type">
-            Short story
-        </div>
+        <!-- =========================
+             STORY HEADER
+        ========================== -->
+
+        <section
+            class="story-header"
+            style="border-top: none;"
+        >
+
+            <div class="type">
+                Novella
+            </div>
 
 
-        <h1>
-            The First Story
-        </h1>
+            <h1>
+                One life, one love, forever
+            </h1>
 
 
-        <p class="subtitle">
-            An original work of fiction written through the same
-            human prism.
-        </p>
+            <p class="subtitle">
+
+                An original work of fiction written through
+                the same human prism.
+
+            </p>
 
 
-       <div class="meta">
-            Hewwy Huynh · 2026 · 16 chapters
-       </div>
+            <a
+                class="back"
+                href="literature.html"
+            >
+                ← Back to literature
+            </a>
 
+        </section>
+
+
+
+        <!-- =========================
+             CHAPTERS
+        ========================== -->
 
         <section class="chapters">
+
 
             <div class="section-title">
                 Chapters
             </div>
 
 
-            <a class="chapter" href="story-01-chapter-01.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-01.html"
+            >
 
                 <div class="chapter-number">
                     01
@@ -282,7 +906,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-02.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-02.html"
+            >
 
                 <div class="chapter-number">
                     02
@@ -299,7 +926,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-03.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-03.html"
+            >
 
                 <div class="chapter-number">
                     03
@@ -316,7 +946,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-04.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-04.html"
+            >
 
                 <div class="chapter-number">
                     04
@@ -333,7 +966,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-05.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-05.html"
+            >
 
                 <div class="chapter-number">
                     05
@@ -350,7 +986,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-06.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-06.html"
+            >
 
                 <div class="chapter-number">
                     06
@@ -367,7 +1006,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-07.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-07.html"
+            >
 
                 <div class="chapter-number">
                     07
@@ -384,7 +1026,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-08.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-08.html"
+            >
 
                 <div class="chapter-number">
                     08
@@ -401,7 +1046,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-09.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-09.html"
+            >
 
                 <div class="chapter-number">
                     09
@@ -418,7 +1066,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-10.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-10.html"
+            >
 
                 <div class="chapter-number">
                     10
@@ -435,7 +1086,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-11.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-11.html"
+            >
 
                 <div class="chapter-number">
                     11
@@ -452,7 +1106,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-12.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-12.html"
+            >
 
                 <div class="chapter-number">
                     12
@@ -469,7 +1126,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-13.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-13.html"
+            >
 
                 <div class="chapter-number">
                     13
@@ -486,7 +1146,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-14.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-14.html"
+            >
 
                 <div class="chapter-number">
                     14
@@ -503,7 +1166,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-15.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-15.html"
+            >
 
                 <div class="chapter-number">
                     15
@@ -520,7 +1186,10 @@
             </a>
 
 
-            <a class="chapter" href="story-01-chapter-16.html">
+            <a
+                class="chapter"
+                href="story-01-chapter-16.html"
+            >
 
                 <div class="chapter-number">
                     16
@@ -545,10 +1214,17 @@
 </main>
 
 
+
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
     <div class="container">
+
         © 2026 Hewwy Huynh
+
     </div>
 
 </footer>
