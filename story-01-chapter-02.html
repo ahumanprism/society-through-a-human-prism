@@ -26,7 +26,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com"
         crossorigin
     >
 
@@ -142,7 +142,7 @@
         }
 
 
-        .footer-container {
+        .site-container {
 
             width:
                 min(1100px, 90%);
@@ -556,23 +556,20 @@
         footer {
 
             padding:
-                70px 0;
+                50px 0;
 
             background:
                 #ffffff;
 
             border-top:
-                1px solid #dddddd;
+                1px solid var(--header-line);
 
             font-family:
-                "Courier Prime",
-                monospace;
+                Arial,
+                sans-serif;
 
             font-size:
-                14px;
-
-            letter-spacing:
-                0.5px;
+                11px;
 
             color:
                 #111111;
@@ -634,6 +631,13 @@
         ========================== */
 
         @media (max-width: 700px) {
+
+            .story-container {
+
+                width:
+                    calc(100% - 40px);
+            }
+
 
             .nav-links {
 
@@ -699,7 +703,7 @@
             }
 
 
-            .footer-container {
+            .site-container {
 
                 width:
                     min(1100px, calc(100% - 40px));
@@ -709,7 +713,7 @@
             footer {
 
                 padding:
-                    55px 0;
+                    50px 0;
             }
 
         }
@@ -1111,9 +1115,9 @@
 
 <footer>
 
-    <div class="footer-container">
+    <div class="site-container">
 
-        © 2026 A Human Prism · All rights reserved.
+        © 2026 A Human Prism · All rights reserved
 
     </div>
 
