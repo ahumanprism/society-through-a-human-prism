@@ -50,15 +50,25 @@
             text-decoration: none;
         }
 
+        /* =========================
+           CONTAINERS
+        ========================== */
+
         .container {
             width: min(760px, 90%);
             margin: 0 auto;
         }
 
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+
 
         /* =========================
            HEADER
-        ========================= */
+        ========================== */
 
         header {
             padding: 32px 0;
@@ -119,9 +129,10 @@
         }
 
 
+
         /* =========================
            ARTICLE
-        ========================= */
+        ========================== */
 
         article {
             padding: 125px 0 110px;
@@ -146,14 +157,11 @@
             width: fit-content;
             margin: 30px auto 0;
             padding-bottom: 6px;
-
             position: relative;
-
             font-family: Arial, sans-serif;
             font-size: 10px;
             letter-spacing: 2px;
             color: var(--grey);
-
             transition: color 0.3s ease;
         }
 
@@ -177,9 +185,10 @@
         }
 
 
+
         /* =========================
            STORY
-        ========================= */
+        ========================== */
 
         .story {
             padding-top: 75px;
@@ -195,9 +204,10 @@
         }
 
 
+
         /* =========================
            CHAPTER NAVIGATION
-        ========================= */
+        ========================== */
 
         .chapter-navigation {
             display: flex;
@@ -248,29 +258,25 @@
         }
 
 
+
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
-            padding: 70px 0;
+            padding: 50px 0;
             background: #ffffff;
-            border-top: 1px solid #dddddd;
-            font-family: "Courier Prime", monospace;
-            font-size: 14px;
-            letter-spacing: 0.5px;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
             color: #111111;
         }
 
-        .footer-container {
-            width: min(1100px, 90%);
-            margin: 0 auto;
-        }
 
 
         /* =========================
            ANIMATIONS
-        ========================= */
+        ========================== */
 
         @keyframes fadeDown {
 
@@ -301,11 +307,20 @@
         }
 
 
+
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
         @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
 
             .nav-links {
                 gap: 16px;
@@ -340,20 +355,17 @@
                 letter-spacing: 1.5px;
             }
 
-            .footer-container {
-                width: min(1100px, calc(100% - 40px));
-            }
-
             footer {
-                padding: 55px 0;
+                padding: 50px 0;
             }
 
         }
 
 
+
         /* =========================
            REDUCED MOTION
-        ========================= */
+        ========================== */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -373,12 +385,14 @@
 </head>
 
 
+
 <body>
+
 
 
 <header>
 
-    <div class="container">
+    <div class="site-container">
 
         <nav>
 
@@ -401,11 +415,13 @@
 </header>
 
 
+
 <main>
 
     <article>
 
         <div class="container">
+
 
 
             <div class="chapter-header">
@@ -419,6 +435,7 @@
                 </a>
 
             </div>
+
 
 
             <div class="story">
@@ -754,6 +771,7 @@
                 </p>
 
 
+
                 <div class="chapter-navigation">
 
                     <a class="navigation-link" href="story-01.html">
@@ -775,13 +793,15 @@
 </main>
 
 
+
 <footer>
 
-    <div class="footer-container">
-        © 2026 Hewwy Huynh · All rights reserved.
+    <div class="site-container">
+        © 2026 Hewwy Huynh · All rights reserved
     </div>
 
 </footer>
+
 
 
 </body>
