@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>23 February 2008 — One Life, One Love, Forever — A Human Prism</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --header-black: #111111;
+            --header-line: #d8d8d8;
+            --body-black: #0b0b0b;
+            --body-line: #2a2a2a;
+            --white-soft: #f2f0eb;
+            --grey: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--body-black);
+            color: var(--white-soft);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.8s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a,
+        .logo {
+            color: var(--header-black);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Article
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .literature-link {
+            display: block;
+            position: relative;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            margin-bottom: 30px;
+            font-family: "Courier Prime", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+        }
+
+        /* =========================
+           Chapter Navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white-soft);
+            transform: translateY(-2px);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="container">
+
+            <div class="chapter-header">
+
+                <div class="chapter-title">
+                    23 February 2008
+                </div>
+
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+                <p>
+                    After two weeks of celebrating Lunar New Year with my family, I went back to Southampton, where everything stayed unchanged—the familiar ceiling, the Puerto reeking of masculinity, and the weather cooler than the tropical monsoon climate in southern Vietnam. But what urged me to turn back was not only about the work and the studies, but about seeing Pedro. I was afraid that when time came, I was helpless to do such a trivial errand.
+                </p>
+
+                <p>
+                    During Tet, Pedro continuously called me to check how the weather was and how rural people like us celebrated such a festival. He also surprised me with a formal package sent via air mail. There were total three items in it: a cardigan for my grandmother, a pair of shoes for my mother, and an hourglass for me. They were all eager to invite him to come by if he was available. Naturally, I was bashful and brushed off with a murmur.
+                </p>
+
+                <p>
+                    I asked Pedro to come to the patronised beach after two weeks apart. It might sound serious, but he said that it was a prolonged period of time, and without me, he conceivably fell into depression. I laughed and told him that he had a lot of fun out there and why he kept searching for me.
+                </p>
+
+                <p>
+                    “But you’re different,” he said. “You and I have much in common.” I smiled and told him that he was chatty. In all fairness, however, I was different to him. I was a person on whom he could rely as well as with whom he could hang out all day without any wearisome moment. Though I was sometimes cold to him, that was not unreasonable by no means. Who could be so sweet to a person we had an unrequited feeling for? I meant that it was like plucking a flower. Everyone highly acclaimed and said that the picture of the person holding the flower was graceful and handsome, but little did they know that the person’s hand was painfully bleeding. Thus, I knowingly left an escape route in this unreturned affection, or else I would run up against desolation.
+                </p>
+
+                <p>
+                    “What about Pedro…” I thought as I was brushing my hair. He was good-looking, rich, sensible, et cetera. These points, nevertheless, solely gilded the lily. What enamoured me lay not only in such fugacious accoutrements, but also in his thoughtfulness. He was always good and thoughtful. As I loved him, I loved all the difficulties he had experienced whilst he was dropping out and eked out a livelihood for the family.
+                </p>
+
+                <p>
+                    Unhappily, Pedro was not destined to be romantically with me. I had always gathered this. The way he treated me was but in between the boundary of friendship and love. I did like him. I did love him. But it did not mean that I had to compel him to love me back. That would be selfish. I did not want to be that dictatorial. I wanted him to be happy, even when his happiness was built on my broken visceral core. I resignedly became a background for the life of him and his precious woman. I thought I could manage well this role.
+                </p>
+
+                <p>
+                    Immediately parking, Pedro rushed to hug me and said: “It’s been a fucking long time, you nerdy Anthony.”
+                </p>
+
+                <p>
+                    I was taken aback, but tried to reassuringly pat him and replied: “I’ve just left.”
+                </p>
+
+                <p>
+                    “Just?” he groaned. “It’s been two weeks!”
+                </p>
+
+                <p>
+                    “I think you’re doing perfectly fine.”
+                </p>
+
+                <p>
+                    “Of course not. I’m dying of boredom.”
+                </p>
+
+                <p>
+                    “Then…” I sat on the saddle and continued: “Why hesitate? Let’s go!”
+                </p>
+
+                <p>
+                    In view of the coldness, we were both equipped with thick layers of apparel. Having received many gifts from Pedro before, I decided to gift him a hand-knitted scarf, hoping that my compunction might feel less sore. At first, he was sunnily amazed, but when learning that it was a product of assiduousness, he was intent to lock it away. I, still, insisted firmly that he should wear it for my sake. This pretext helped me able to drape it around his neck.
+                </p>
+
+                <p>
+                    “Anthony.”
+                </p>
+
+                <p>
+                    “What’s wrong, señor?”
+                </p>
+
+                <p>
+                    “I don’t know why, but I’ve been thinking of change lately.”
+                </p>
+
+                <p>
+                    “Yes?” Spellbound, I asked: “Can you be more specific?”
+                </p>
+
+                <p>
+                    “I wanna join the navy.” He lowered his tone. “I won’t be around much.”
+                </p>
+
+                <p>
+                    “That’s so sudden…” My voice was shaking. My face turned slightly pale. Did I just see him again? I was not with him that long. Sitting on the cold sand, I felt lonelier. Those feather-like words crushed me so heavily that my heart was achingly ill, making me rasp like asthmatics. I scribbled on the sand and continued: “Have you packed your stuff?”
+                </p>
+
+                <p>
+                    “All done. Now I just wait for the start.”
+                </p>
+
+                <p>
+                    “Alright…”
+                </p>
+
+                <p>
+                    “I know it’s a bit sudden, but…”
+                </p>
+
+                <p>
+                    “Pedro, it’s fine. I feel you. You must have been really torn to make a decision like this.” My heavy eyes were looking at the far sea. Since the beginning of our talk, I had not looked at him. I was not bold to look at those eyes—the eyes granting me hope to love life once more, the eyes carrying a fire lighting me up, the eyes taking me to the so-called assuasive land. Now, in the blink of an eye, everything fell down. All he built for me was gone, leaving only shards of yesterday.
+                </p>
+
+                <p>
+                    “Actually, I thought about this a lot. I’ve always wanted to be a man like my respectable father. He was a police officer loved by everyone in my town. But, you know, life is full of shit. When he was on duty, he got injured in a work accident and passed away shortly after that. My younger sister just turned one at that time.”
+                </p>
+
+                <p>
+                    He, in the meantime, was not looking at me either. By sympathising with his solemn intonation, I felt that he was trying to take his cue from his father. He had always shouldered invisible responsibility, but until he could realise its gravity, he was to decide to walk on this path by his lonesome, where I, as a companion, was to stop to become his home front. However I positioned myself, I would be unable to run from solitude.
+                </p>
+
+                <p>
+                    “I’m sorry about your father.”
+                </p>
+
+                <p>
+                    “Am I heartless?”
+                </p>
+
+                <p>
+                    The question was like a superpower, breaking the ice and driving me to turn to him so that I could interrogate such a silly question: “No! Why do you think of yourself like that?”
+                </p>
+
+                <p>
+                    “I’ll leave everything and everyone behind just because of my undone dream. My family and you are all the same, all abandoned by me…”
+                </p>
+
+                <p>
+                    “Don’t say that, Pedro.” I was about to hold his hand, but the prejudice of society beset me, leaving me no choice but to discard such an intention. To many people, it was a common practice, but to me, it was like a leverage to fuel his doubt. I indeed loved him, but I simply wished to be a small planet around him, the sun. I did not want these misreadings to drive a wedge between us. Unless he acted first, I would stay passive and be uninterested. “I think your mother will take good care of herself, and she’ll understand your situation.”
+                </p>
+
+                <p>
+                    “My mother is alright. I’ve talked her through for a long time. But you…” He looked at me with anxious eyes and said: “Will you be okay on your own?”
+                </p>
+
+                <p>
+                    At that juncture, I really wanted to shout the word “Never!” at him. I, that said, would rather bite the bullet than make him more heavy-hearted. Troubling him not only drained his morale out, but tormented my heart. After that, I just nodded in an absent-minded way. This hangout was completely plagued with the greyness of the frost-bitten winter.
+                </p>
+
+                <p>
+                    Back to my room, I covered my tear-streaked eyes. Along the way home, my eyes were stained with tears when I thought about him leaving. Whilst we still had some chance to reunite, it would be few and far between. I tried to rub my unspoken tears away, but because I did not mind the force, my eyes got red in response. After getting off the bike, I hastily said goodbye to him and left.
+                </p>
+
+                <p>
+                    “He’s going far away…” I murmured, aggrieved. What he said was not entirely preposterous. If he was not here, would my life be the same? I meant the life before his arrival, where I only worked and returned home listlessly. Thanks to him, my life was painted with more hues, but now, I might be about to be in a groove again. It was not his fault, but my fragility after all. Unlike the earlier times, I had to be party to the mind-numbing studies in lieu of those fishing nets. I cried out of resentment for two hours and fell asleep afterwards.
+                </p>
+
+                <p>
+                    “Mother, listen to me. Leave him. He doesn’t deserve you.”
+                </p>
+
+                <p>
+                    My mother was shiveringly sitting with a snotty face. Nonetheless, she still persisted in defending him. She said: “It’s because he was drunk, so he wasn’t aware of what he was saying. You don’t need to hold a grudge.”
+                </p>
+
+                <p>
+                    “Look at you.” I burst out crying. “He’s tortured us like this, and you keep making an excuse for him?” Seeing her littered with bruises, I was half dead. I was fumbling around for the embrocation when my mother tried to sit up to clean the house.
+                </p>
+
+                <p>
+                    “Don’t say anything. Everything’s gonna be fine.”
+                </p>
+
+                <p>
+                    I blearily opened my eyes to refind my bearings in this façade of reality. “That dream again…” I whispered, my eyes unconsciously streaking. I pushed myself up and lit a fag, looking at the beloved Puerto. My mind was a literal mess. It seemed to linger with his words. My eyes were swollen courtesy of the dejected tears that I myself found helpless. I was the sad one, but my eyes were what discharged such negative emotions. It was like the upper reaches of some river, where salty streams of doleful things in this world trickled them down.
+                </p>
+
+                <p>
+                    Then I sat at the desk and grabbed some sheet of paper to make origami. When I was younger, the children in my childhood said that the Japanese legend once believed that if we succeeded in making one thousand paper cranes, we would have a wish. By dint of tight finances, I was only able to finish ninety-eight ones. I gave them to my mother and retold the legend. Taking them, she smiled and said: “You’re a good kid.” A few days later, I found the paper cranes spilling out of the broken jar in front of the door when I was going home from school. At that time, that man, as I acknowledged, went wild again.
+                </p>
+
+                <p>
+                    Whilst I was minutely writing, Pedro called me and asked if I was okay. The reply, as a rule, was that I was very alright and told him not to worry about me. I even bantered with him that if he joined the army, he would have a lot of new comrade-in-arms. He smiled and said that I was still his number one, because I was a pushover, and they were tough nuts. I tried to fight back tears and hung up.
+                </p>
+
+            </div>
+
+
+            <div class="chapter-navigation">
+
+                <a class="navigation-link" href="story-01-chapter-05.html">
+                    ← Chapter Five
+                </a>
+
+                <a class="navigation-link" href="story-01-chapter-07.html">
+                    Next chapter →
+                </a>
+
+            </div>
+
+        </div>
+
+    </article>
+</main>
+
+
+<footer>
+
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+</html>
