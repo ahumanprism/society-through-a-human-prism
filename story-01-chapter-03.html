@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chapter Three — One Life, One Love, Forever — A Human Prism</title>
+    <title>19 September 2007 — One Life, One Love, Forever — A Human Prism</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,23 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --black: #111111;
-            --white: #e8e8e3;
-            --white-soft: #d0d0cb;
-            --grey: #888884;
-
-            --header-white: #ffffff;
-            --header-black: #111111;
-            --header-line: #dddddd;
-
-            --body-line: #30302e;
-        }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        :root {
+            --black: #111111;
+            --white: #e8e8e3;
+            --white-soft: #d0d0cb;
+            --grey: #888884;
+            --header-white: #ffffff;
+            --header-black: #111111;
+            --header-line: #dddddd;
+            --body-line: #30302e;
         }
 
         html {
@@ -38,9 +39,10 @@
         body {
             background: var(--black);
             color: var(--white);
-            font-family: "Courier Prime", monospace;
+            font-family: "Courier Prime", "Courier New", monospace;
             line-height: 1.85;
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         a {
@@ -48,12 +50,11 @@
             text-decoration: none;
         }
 
-        .container {
-            width: min(1100px, 90%);
-            margin: 0 auto;
-        }
+        /* =========================
+           CONTAINERS
+        ========================== */
 
-        .story-container {
+        .container {
             width: min(760px, 90%);
             margin: 0 auto;
         }
@@ -63,107 +64,204 @@
             margin: 0 auto;
         }
 
+
+
         /* =========================
            HEADER
-        ========================= */
+        ========================== */
 
         header {
             padding: 32px 0;
             background: var(--header-white);
-            color: var(--header-black);
             border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.9s ease both;
         }
 
-        header .container {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
-        .site-title {
-            font-family: "Cormorant Infant", serif;
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: 0;
-        }
-
-        .site-navigation {
-            display: flex;
-            gap: 35px;
+        .logo {
             font-family: Arial, sans-serif;
             font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+            transition: color 0.3s ease;
         }
 
-        .site-navigation a {
-            transition: opacity 0.25s ease;
+        .logo:hover {
+            color: #555555;
         }
 
-        .site-navigation a:hover {
-            opacity: 0.55;
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
         }
+
+        .nav-links a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #555555;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
 
         /* =========================
            ARTICLE
-        ========================= */
+        ========================== */
 
         article {
             padding: 125px 0 110px;
         }
 
-        .chapter-date {
-            margin-bottom: 25px;
-            color: var(--grey);
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.08em;
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
         }
 
         .chapter-title {
-            margin-bottom: 70px;
-            font-family: "Cormorant Infant", serif;
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
             font-size: clamp(48px, 8vw, 82px);
-            font-weight: 500;
-            line-height: 0.95;
-            letter-spacing: -0.025em;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: var(--white);
         }
 
+        .literature-link {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease;
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.35s ease;
+        }
+
+        .literature-link:hover {
+            color: var(--white);
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+
+
+        /* =========================
+           STORY
+        ========================== */
+
         .story {
-            font-family: "Courier Prime", monospace;
-            font-size: 18px;
-            line-height: 1.9;
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
         }
 
         .story p {
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
             margin-bottom: 30px;
         }
 
+
+
         /* =========================
            CHAPTER NAVIGATION
-        ========================= */
+        ========================== */
 
         .chapter-navigation {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             gap: 30px;
+
             margin-top: 105px;
             padding-top: 35px;
+
             border-top: 1px solid var(--body-line);
         }
 
         .navigation-link {
-            color: var(--white-soft);
+            position: relative;
+            padding-bottom: 6px;
+
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            transition: opacity 0.25s ease;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+
+            transition: width 0.35s ease;
         }
 
         .navigation-link:hover {
-            opacity: 0.55;
+            color: var(--white);
+            transform: translateX(3px);
         }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             padding: 50px 0;
@@ -174,174 +272,319 @@
             color: #111111;
         }
 
+
+
+        /* =========================
+           ANIMATIONS
+        ========================== */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
         @media (max-width: 700px) {
-
-            .container {
-                width: calc(100% - 40px);
-            }
-
-            .story-container {
-                width: calc(100% - 40px);
-            }
 
             .site-container {
                 width: min(1100px, calc(100% - 40px));
             }
 
-            header {
-                padding: 25px 0;
+            .container {
+                width: calc(100% - 40px);
             }
 
-            .site-title {
-                font-size: 21px;
-            }
-
-            .site-navigation {
-                gap: 20px;
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
             }
 
             article {
-                padding: 90px 0 80px;
-            }
-
-            .chapter-date {
-                margin-bottom: 20px;
+                padding: 95px 0 90px;
             }
 
             .chapter-title {
-                margin-bottom: 55px;
-                font-size: clamp(46px, 15vw, 68px);
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
             }
 
             .story {
-                font-size: 16px;
-                line-height: 1.85;
+                padding-top: 60px;
             }
 
             .story p {
-                margin-bottom: 27px;
+                font-size: 17px;
+                line-height: 1.85;
             }
 
             .chapter-navigation {
-                margin-top: 80px;
-                padding-top: 30px;
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
             }
 
             footer {
                 padding: 50px 0;
             }
+
         }
+
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+        }
+
     </style>
+
 </head>
+
+
 
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="site-title">
-                A Human Prism
+
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
             </a>
 
-            <nav class="site-navigation">
-                <a href="index.html">Home</a>
-                <a href="archive.html">Archive</a>
-            </nav>
-        </div>
-    </header>
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
 
 
-    <main>
-        <article>
 
-            <div class="story-container">
+<main>
 
-                <div class="chapter-date">
-                    2007
+    <article>
+
+        <div class="container">
+
+
+
+            <div class="chapter-header">
+
+                <div class="chapter-title">
+                    19 September 2007
                 </div>
 
-                <h1 class="chapter-title">
-                    Chapter Three
-                </h1>
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
 
-                <div class="story">
+            </div>
 
-                    <p>I crawled out of bed to study for a while when the sun was still sleeping. Owing to the abnormal temperature, I felt slightly under the weather, and my mind was too preoccupied to get some shuteye. With a robust constitution, I had never thought of being tiredly ill. But I was wrong. My body had always been susceptible to daily work and studies. I was mistaken that my era full of beans sank into oblivion.</p>
 
-                    <p>After taking medicine, I swallowed two more paracetamols to make sure that this ailment would pass. My next mission was trying to act as if I were a resilient person, or else I would be prohibited from the work, which I was incapable of gaining the day’s pay in the end.</p>
 
-                    <p>It was relatively bleak today, from the moment we were on shore till we set sail. The captain said that the rain would end sooner or later, but the nature’s will was not always in favour with his speculation. The rain was falling in a ceaseless manner, but it did not seem horrendous. Yet, raindrops precluded our sight from the fishing bussiness. Sitting in the cabin, I was avoiding those heavy liquids outside. To normal sailors, they were like a new source of revitalisation, but to me, they were poisonous and might corrupt this feeble body.</p>
+            <div class="story">
 
-                    <p>In the afternoon, whilst we were preparing for the return, the captain announced my study as well as the lighter workload to other colleagues, which meant that I only showed up at work at weekends. Respectively, they paid me a compliment and wished me all the best, a social activity that I had not been experienced for ages. They all extolled my studiousness and said that as long as I went back here, they would agreeably welcome me with drinks or something like that.</p>
+                <p>
+                    I crawled out of bed to study for a while when the sun was still sleeping. Owing to the abnormal temperature, I felt slightly under the weather, and my mind was too preoccupied to get some shuteye. With a robust constitution, I had never thought of being tiredly ill. But I was wrong. My body had always been susceptible to daily work and studies. I was mistaken that my era full of beans sank into oblivion.
+                </p>
 
-                    <p>Three days ago, I told the captain my intention. I remembered his subtly proud face when he heard the news. He tapped my shoulder and said: “Good job, young man. You’re one of my most reliable people here. It’s sad that you can’t manage the work, but you’ve done really well. Keep it up!” My facial expression was as clear as day due to butterflies in my stomach, my cheeks flushing with contentment.</p>
+                <p>
+                    After taking medicine, I swallowed two more paracetamols to make sure that this ailment would pass. My next mission was trying to act as if I were a resilient person, or else I would be prohibited from the work, which I was incapable of gaining the day’s pay in the end.
+                </p>
 
-                    <p>Pedro leant over the gunwale, staying still, winked at me. I smiled and went back into the cabin in order to prepare for the farewell party tonight. It was the captain who initiated such an idea. At first, he meant to throw the party at the weekend, but I told him that I planned to leave on Friday, so he advisedly rescheduled it. Properly speaking, I was raring to go.</p>
+                <p>
+                    It was relatively bleak today, from the moment we were on shore till we set sail. The captain said that the rain would end sooner or later, but the nature’s will was not always in favour with his speculation. The rain was falling in a ceaseless manner, but it did not seem horrendous. Yet, raindrops precluded our sight from the fishing business. Sitting in the cabin, I was avoiding those heavy liquids outside. To normal sailors, they were like a new source of revitalisation, but to me, they were poisonous and might corrupt this feeble body.
+                </p>
 
-                    <p>Back to the home, I told this story to my grandmother and my mother. They shrieked, as they knew how I was loved like that. “Loved…” I thought. Maybe. They had liked me from the beginning. At that time, they said that I looked small and that how I could blend in with the tempo with such a baby face. I closed my eyes to their descant and proceeded with the given tasks. I remembered that the captain was not completely willing to recruit me: firstly, it was because of my potential incapacity and, secondly, he was concerned with the fact that if this half-illegitimate affair had been overt, I would have been under deportation of illegal immigration, and his career would have gone dark.</p>
+                <p>
+                    In the afternoon, whilst we were preparing for the return, the captain announced my study as well as the lighter workload to other colleagues, which meant that I only showed up at work at weekends. Respectively, they paid me a compliment and wished me all the best, a social activity that I had not been experienced for ages. They all extolled my studiousness and said that as long as I went back here, they would agreeably welcome me with drinks or something like that.
+                </p>
 
-                    <p>Classic mankind. They simply judged a book by its cover. They even pointed at you and gossiped indiscriminately. But when they knew you, they might see you in a different way. They might not consider you a trustworthy companion, but at least a bold person and not some mistletoe that solely lives off others’ alms. After all, we were but miserable beings in this wretched world.</p>
+                <p>
+                    Three days ago, I told the captain my intention. I remembered his subtly proud face when he heard the news. He tapped my shoulder and said: “Good job, young man. You’re one of my most reliable people here. It’s sad that you can’t manage the work, but you’ve done really well. Keep it up!” My facial expression was as clear as day due to butterflies in my stomach, my cheeks flushing with contentment.
+                </p>
 
-                    <p>Pedro had already arrived. He blew the horn to signal his arrival. As soon as I heard those strident, rhythmical sounds, I opened the window, as discussed earlier, to tell him that I sensed his presence. I stood facing the mirror to carefully appraise myself, including the muscles fibres of this body, and beamed at it right after.</p>
+                <p>
+                    Pedro leant over the gunwale, staying still, winked at me. I smiled and went back into the cabin in order to prepare for the farewell party tonight. It was the captain who initiated such an idea. At first, he meant to throw the party at the weekend, but I told him that I planned to leave on Friday, so he advisedly rescheduled it. Properly speaking, I was raring to go.
+                </p>
 
-                    <p>I met him and his familiar motorbike. He gave me a huge Triton’s trumpet shell upon seeing me and said: “I saw it trapped in the net the other day. I thought it looked cool and colourful, so I brought it home and did some refinements, you know. You can keep it as a farewell gift.”</p>
+                <p>
+                    Back to the home, I told this story to my grandmother and my mother. They shrieked, as they knew how I was loved like that. “Loved…” I thought. Maybe. They had liked me from the beginning. At that time, they said that I looked small and that how I could blend in with the tempo with such a baby face. I closed my eyes to their descant and proceeded with the given tasks. I remembered that the captain was not completely willing to recruit me: firstly, it was because of my potential incapacity and, secondly, he was concerned with the fact that if this half-illegitimate affair had been overt, I would have been under deportation of illegal immigration, and his career would have gone dark.
+                </p>
 
-                    <p>I held it in atonishment. As it was the first time being gifted by a male peer, I felt slightly awkward, but tried to compose myself and said: “Thank you, but I still work here. It’s just less workload than now.”</p>
+                <p>
+                    Classic mankind. They simply judged a book by its cover. They even pointed at you and gossiped indiscriminately. But when they knew you, they might see you in a different way. They might not consider you a trustworthy companion, but at least a bold person and not some mistletoe that solely lives off others’ alms. After all, we were but miserable beings in this wretched world.
+                </p>
 
-                    <p>“I know, but you’ll have a different life, so it’s like a goodbye gift to celebrate your next chapter of life.”</p>
+                <p>
+                    Pedro had already arrived. He blew the horn to signal his arrival. As soon as I heard those strident, rhythmical sounds, I opened the window, as discussed earlier, to tell him that I sensed his presence. I stood facing the mirror to carefully appraise myself, including the muscles fibres of this body, and beamed at it right after.
+                </p>
 
-                    <p>I smiled. When he said such things, I felt my youth revived. Although I was not too old, it was unusual for those of my age attending university. I caressed the shell and gazed at its delicate patterns. “But I felt a bit shy. You give me the wonderful gift for no reason, and I don’t know how to pay you back.”</p>
+                <p>
+                    I met him and his familiar motorbike. He gave me a huge Triton’s trumpet shell upon seeing me and said: “I saw it trapped in the net the other day. I thought it looked cool and colourful, so I brought it home and did some refinements, you know. You can keep it as a farewell gift.”
+                </p>
 
-                    <p>As always, he smiled and said: “No problem. I know it may surprise you, but don’t worry. We have our life ahead. And you can pay me back at anytime.”</p>
+                <p>
+                    I held it in atonishment. As it was the first time being gifted by a male peer, I felt slightly awkward, but tried to compose myself and said: “Thank you, but I still work here. It’s just less workload than now.”
+                </p>
 
-                    <p>Immediately we arrived, the men started to cheer as if they were presented to their saviour. I noticed that everything was well-prepared, wondering that this might be a tonight or never party.</p>
+                <p>
+                    “I know, but you’ll have a different life, so it’s like a goodbye gift to celebrate your next chapter of life.”
+                </p>
 
-                    <p>The captain put his arm around my shoulder and said: “You people are having the honour of meeting the future distinguished writer. Here’s to Anthony!”</p>
+                <p>
+                    I smiled. When he said such things, I felt my youth revived. Although I was not too old, it was unusual for those of my age attending university. I caressed the shell and gazed at its delicate patterns. “But I felt a bit shy. You give me the wonderful gift for no reason, and I don’t know how to pay you back.”
+                </p>
 
-                    <p>“To Anthony,” Pedro shouted. He appeared to be carrying a shred of happiness about me, a student-to-be. Nevertheless, that very happiness had me touching. I did not dare to confirm. After our conversations at the beach, we were more open and hung out more often. That said, he was rather quiet these days. In essence, his mouth functioned more efficiently, but there was something in his tone that my intuition cast doubt on. Then I reminded myself of not thinking much of it.</p>
+                <p>
+                    As always, he smiled and said: “No problem. I know it may surprise you, but don’t worry. We have our life ahead. And you can pay me back at anytime.”
+                </p>
 
-                    <p>Holding a beer, I was wandering on the soaked sand, where I left my footprints behind. The moon was half eaten, which looked like an areca palm leaf fan back when I was in my hometown. At first, it was a dry leaf, but was later bent to the fan used during boiling or power cut days. When I looked at the moon, I felt myself so distant. It was not merely about spatial and geographical distance, but lifetime one, the time I still had to suffer in this mortal body.</p>
+                <p>
+                    Immediately we arrived, the men started to cheer as if they were presented to their saviour. I noticed that everything was well-prepared, wondering that this might be a tonight or never party.
+                </p>
 
-                    <p>Having strolling for a stretch, I saw Pedro drawing on the sand. Strangely, just because I had never seen a man doing this and that before did not mean that I should be caught off guard or be hesitant every time Pedro did such things. Sometimes, I became a child in his eyes, and he was my cousin. He helped me unlock new perspectives that theoretical books failed to explain. I remembered that there was a time he taught me to ride his motorbike, but I refused, for I was afraid that I might mess him up. He, however, calmly said: “It’s alright. You can do it. Even so, if things go wrong, I’m still here, aren’t I?”</p>
+                <p>
+                    The captain put his arm around my shoulder and said: “You people are having the honour of meeting the future distinguished writer. Here’s to Anthony!”
+                </p>
 
-                    <p>“Hola señor,” I said, bending down to see his drawing.</p>
+                <p>
+                    “To Anthony,” Pedro shouted. He appeared to be carrying a shred of happiness about me, a student-to-be. Nevertheless, that very happiness had me touching. I did not dare to confirm. After our conversations at the beach, we were more open and hung out more often. That said, he was rather quiet these days. In essence, his mouth functioned more efficiently, but there was something in his tone that my intuition cast doubt on. Then I reminded myself of not thinking much of it.
+                </p>
 
-                    <p>“Hermano Anthony!”</p>
+                <p>
+                    Holding a beer, I was wandering on the soaked sand, where I left my footprints behind. The moon was half eaten, which looked like an areca palm leaf fan back when I was in my hometown. At first, it was a dry leaf, but was later bent to the fan used during boiling or power cut days. When I looked at the moon, I felt myself so distant. It was not merely about spatial and geographical distance, but lifetime one, the time I still had to suffer in this mortal body.
+                </p>
 
-                    <p>“What are you doing?”</p>
+                <p>
+                    Having strolling for a stretch, I saw Pedro drawing on the sand. Strangely, just because I had never seen a man doing this and that before did not mean that I should be caught off guard or be hesitant every time Pedro did such things. Sometimes, I became a child in his eyes, and he was my cousin. He helped me unlock new perspectives that theoretical books failed to explain. I remembered that there was a time he taught me to ride his motorbike, but I refused, for I was afraid that I might mess him up. He, however, calmly said: “It’s alright. You can do it. Even so, if things go wrong, I’m still here, aren’t I?”
+                </p>
 
-                    <p>“Just doodles. Nevermind.”</p>
+                <p>
+                    “Hola señor,” I said, bending down to see his drawing.
+                </p>
 
-                    <p>I uttered a gentle oh. By taking it on board, doodles were not a solid argument. They were calculatedly organised, and each had its own meaning. In my judgement, there were three people in the scene, a pond, a house, and a car. There was also a sun above and some flying birds. Not only that, on top of the left a stickman resided. I could not say for certain, but the entire picture did belie great suspicion.</p>
+                <p>
+                    “Hermano Anthony!”
+                </p>
 
-                    <p>“How’s the party?”</p>
+                <p>
+                    “What are you doing?”
+                </p>
 
-                    <p>“I like it.”</p>
+                <p>
+                    “Just doodles. Nevermind.”
+                </p>
 
-                    <p>“You deserve it.”</p>
+                <p>
+                    I uttered a gentle oh. By taking it on board, doodles were not a solid argument. They were calculatedly organised, and each had its own meaning. In my judgement, there were three people in the scene, a pond, a house, and a car. There was also a sun above and some flying birds. Not only that, on top of the left a stickman resided. I could not say for certain, but the entire picture did belie great suspicion.
+                </p>
 
-                    <p>“Do I?”</p>
+                <p>
+                    “How’s the party?”
+                </p>
 
-                    <p>He nodded. Suddenly, he tousled my hair and said: “If you don’t, then who?” I mean we’ve just been friends for a while, but I know you’re not a bad mate.”</p>
+                <p>
+                    “I like it.”
+                </p>
 
-                    <p>My heartbeat went faster. Meanwhile, my stomach was seemingly turbulent, as though someone were fomenting the war of acid in it. I tried to resist the awkwardness and said: “I’m really grateful.” Subsequently, I gave him my beer and a fag.</p>
+                <p>
+                    “You deserve it.”
+                </p>
 
-                    <p>He took a sip and continued: “Sometimes, I think you try to keep to yourself. It’s just my observation, but if you think you’re alone fighting back the world, you really make a big mistake. You got me, idiot. You’re the one telling me to have a rest whenever I feel under pressure. But look at you. You look like a tired mate carrying a huge stone day by day and pretend as if nothing happened. Look at you. Your nose has got longer like Pinocchio!”</p>
+                <p>
+                    “Do I?”
+                </p>
 
-                    <p>Literally, I was almost in tears. They were meant to break free from the repression of the mind, but I timely prevented them from overstepping my bounds, or else I would have been called a cry-baby. On the other hand, I did not let the others see my weak side, so I stood up and yelled at the sea: “Fuck you, life!”</p>
+                <p>
+                    He nodded. Suddenly, he tousled my hair and said: “If you don’t, then who?” I mean we’ve just been friends for a while, but I know you’re not a bad mate.”
+                </p>
 
-                    <p>Then he followed my lead. We both looked at each other and dissolved into laughters. Since he became my friend, my mood changed a lot. I laughed even more. I spoke even more. And most importantly, I opened myself even more. I liked him, but not enough to fall into his melting snare. I was struggling to separate myself from friendship and love, because, to me, he was more than a friend. He was a trustworthy companion.</p>
+                <p>
+                    My heartbeat went faster. Meanwhile, my stomach was seemingly turbulent, as though someone were fomenting the war of acid in it. I tried to resist the awkwardness and said: “I’m really grateful.” Subsequently, I gave him my beer and a fag.
+                </p>
 
-                    <p>After he took me home, I curtsied to say goodbye. Before leaving, he told me to take good care of myself and, that if he had free time, he would come by to check up on me. Though I was not moving, I might be at school for the most part, since the two locations were not too convenient to move back and forth, taking me at least fifteen minutes of cycling to get to the school. Therefore, the frequency of fishing would diminish compared to how things were now.</p>
+                <p>
+                    He took a sip and continued: “Sometimes, I think you try to keep to yourself. It’s just my observation, but if you think you’re alone fighting back the world, you really make a big mistake. You got me, idiot. You’re the one telling me to have a rest whenever I feel under pressure. But look at you. You look like a tired mate carrying a huge stone day by day and pretend as if nothing happened. Look at you. Your nose has got longer like Pinocchio!”
+                </p>
 
-                    <p>I stood at the doorstep waiting for him to gradually disappear. Next, I proceeded with my habitual doings: studying, praying, smoking, and going to bed. My eyes still lingered with his soulful words. But soon I dozed off, as the medication kicked in. My body temperature was getting higher, torn between the illness and the excitement.</p>
+                <p>
+                    Literally, I was almost in tears. They were meant to break free from the repression of the mind, but I timely prevented them from overstepping my bounds, or else I would have been called a cry-baby. On the other hand, I did not let the others see my weak side, so I stood up and yelled at the sea: “Fuck you, life!”
+                </p>
 
-                    <p>Outside the wind blew harshly as if it were planning to pry into the tragic page of my novel. There, the love story between the two was beyond repair eventually.</p>
+                <p>
+                    Then he followed my lead. We both looked at each other and dissolved into laughters. Since he became my friend, my mood changed a lot. I laughed even more. I spoke even more. And most importantly, I opened myself even more. I liked him, but not enough to fall into his melting snare. I was struggling to separate myself from friendship and love, because, to me, he was more than a friend. He was a trustworthy companion.
+                </p>
 
-                </div>
+                <p>
+                    After he took me home, I curtsied to say goodbye. Before leaving, he told me to take good care of myself and, that if he had free time, he would come by to check up on me. Though I was not moving, I might be at school for the most part, since the two locations were not too convenient to move back and forth, taking me at least fifteen minutes of cycling to get to the school. Therefore, the frequency of fishing would diminish compared to how things were now.
+                </p>
+
+                <p>
+                    I stood at the doorstep waiting for him to gradually disappear. Next, I proceeded with my habitual doings: studying, praying, smoking, and going to bed. My eyes still lingered with his soulful words. But soon I dozed off, as the medication kicked in. My body temperature was getting higher, torn between the illness and the excitement.
+                </p>
+
+                <p>
+                    Outside the wind blew harshly as if it were planning to pry into the tragic page of my novel. There, the love story between the two was beyond repair eventually.
+                </p>
+
+
 
                 <div class="chapter-navigation">
 
@@ -357,15 +600,24 @@
 
             </div>
 
-        </article>
-    </main>
-
-
-    <footer>
-        <div class="site-container">
-            © 2026 A Human Prism · All rights reserved
         </div>
-    </footer>
+
+    </article>
+
+</main>
+
+
+
+<footer>
+
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
 
 </body>
+
 </html>
