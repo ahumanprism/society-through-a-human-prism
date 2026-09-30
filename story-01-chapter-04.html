@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="31 October 2007 — One Life, One Love, Forever — A Human Prism"
+    >
+
+    <title>
+        31 October 2007 — One Life, One Love, Forever — A Human Prism
+    </title>
+
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           ROOT
+        ========================== */
+
+        :root {
+
+            --black: #111111;
+            --black-soft: #181818;
+
+            --white: #e8e8e3;
+            --white-soft: #d0d0cb;
+
+            --grey: #888884;
+            --grey-dark: #555552;
+
+            --header-white: #ffffff;
+            --header-black: #111111;
+
+            --header-line: #dddddd;
+            --body-line: #333333;
+
+        }
+
+
+        /* =========================
+           BODY
+        ========================== */
+
+        body {
+
+            background:
+                var(--black);
+
+            color:
+                var(--white);
+
+            font-family:
+                "Courier Prime",
+                "Courier New",
+                monospace;
+
+            line-height:
+                1.85;
+
+            -webkit-font-smoothing:
+                antialiased;
+
+            text-rendering:
+                optimizeLegibility;
+        }
+
+
+        a {
+
+            color:
+                inherit;
+
+            text-decoration:
+                none;
+        }
+
+
+        .container {
+
+            width:
+                min(760px, 90%);
+
+            margin:
+                0 auto;
+        }
+
+
+        .site-container {
+
+            width:
+                min(1100px, 90%);
+
+            margin:
+                0 auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            padding:
+                32px 0;
+
+            background:
+                var(--header-white);
+
+            border-bottom:
+                1px solid var(--header-line);
+
+            animation:
+                fadeDown 0.9s ease both;
+        }
+
+
+        nav {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+        }
+
+
+        .logo {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--header-black);
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                28px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                12px;
+
+            color:
+                var(--header-black);
+        }
+
+
+        .nav-links a {
+
+            position:
+                relative;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        .nav-links a::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            bottom:
+                -6px;
+
+            width:
+                0;
+
+            height:
+                1px;
+
+            background:
+                var(--header-black);
+
+            transition:
+                width 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                #555555;
+        }
+
+
+        .nav-links a:hover::after {
+
+            width:
+                100%;
+        }
+
+
+        /* =========================
+           ARTICLE
+        ========================== */
+
+        article {
+
+            padding:
+                125px 0 110px;
+        }
+
+
+        .chapter-header {
+
+            animation:
+                fadeUp 1s ease 0.1s both;
+        }
+
+
+        .chapter-title {
+
+            text-align:
+                center;
+
+            font-family:
+                "Cormorant Infant",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(48px, 8vw, 82px);
+
+            font-weight:
+                400;
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -1.5px;
+
+            color:
+                var(--white);
+        }
+
+
+        .literature-link {
+
+            position:
+                relative;
+
+            display:
+                block;
+
+            width:
+                fit-content;
+
+            margin:
+                30px auto 0;
+
+            padding-bottom:
+                5px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--grey);
+        }
+
+
+        .literature-link::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            bottom:
+                0;
+
+            width:
+                35%;
+
+            height:
+                1px;
+
+            background:
+                var(--grey);
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        /* =========================
+           STORY
+        ========================== */
+
+        .story {
+
+            padding-top:
+                75px;
+
+            animation:
+                fadeUp 1s ease 0.3s both;
+        }
+
+
+        .story p {
+
+            margin-bottom:
+                30px;
+
+            font-family:
+                "Courier Prime",
+                "Courier New",
+                monospace;
+
+            font-size:
+                18px;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--white-soft);
+        }
+
+
+        /* =========================
+           CHAPTER NAVIGATION
+        ========================== */
+
+        .chapter-navigation {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+
+            margin-top:
+                105px;
+
+            padding-top:
+                35px;
+
+            border-top:
+                1px solid var(--body-line);
+        }
+
+
+        .navigation-link {
+
+            position:
+                relative;
+
+            padding-bottom:
+                6px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                2px;
+
+            color:
+                var(--grey);
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .navigation-link::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            bottom:
+                0;
+
+            width:
+                0;
+
+            height:
+                1px;
+
+            background:
+                var(--grey);
+
+            transition:
+                width 0.3s ease;
+        }
+
+
+        .navigation-link:hover {
+
+            color:
+                var(--white-soft);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .navigation-link:hover::after {
+
+            width:
+                100%;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            padding:
+                50px 0;
+
+            background:
+                #ffffff;
+
+            border-top:
+                1px solid var(--header-line);
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            font-size:
+                11px;
+
+            color:
+                #111111;
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================== */
+
+        @keyframes fadeDown {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(-12px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+
+                width:
+                    min(1100px, calc(100% - 40px));
+            }
+
+
+            .container {
+
+                width:
+                    calc(100% - 40px);
+            }
+
+
+            .nav-links {
+
+                gap:
+                    16px;
+
+                font-size:
+                    10px;
+            }
+
+
+            article {
+
+                padding:
+                    95px 0 90px;
+            }
+
+
+            .chapter-title {
+
+                font-size:
+                    clamp(45px, 14vw, 68px);
+
+                letter-spacing:
+                    -1px;
+            }
+
+
+            .story {
+
+                padding-top:
+                    60px;
+            }
+
+
+            .story p {
+
+                font-size:
+                    17px;
+
+                line-height:
+                    1.85;
+            }
+
+
+            .chapter-navigation {
+
+                gap:
+                    20px;
+
+                margin-top:
+                    85px;
+            }
+
+
+            .navigation-link {
+
+                font-size:
+                    9px;
+
+                letter-spacing:
+                    1.5px;
+            }
+
+
+            footer {
+
+                padding:
+                    50px 0;
+            }
+
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a
+                class="logo"
+                href="index.html"
+            >
+                Home
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     ARTICLE
+========================== -->
+
+<article>
+
+    <div class="container">
+
+
+        <!-- =========================
+             CHAPTER HEADER
+        ========================== -->
+
+        <div class="chapter-header">
+
+            <div class="chapter-title">
+                31 October 2007
+            </div>
+
+
+            <a
+                class="literature-link"
+                href="literature.html"
+            >
+                Back to Literature
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             STORY
+        ========================== -->
+
+        <div class="story">
+
+            <p>
+                Today was Halloween, and the local, including the students at my school, were very eager. Every time I went out, I saw people in costumes, playing trick-or-treat, with pumpkins weirdly carved everywhere. It looked like a funeral with flashy domestics so as to dilute the sorrow.
+            </p>
+
+            <p>
+                I was on campus doing several mid-term assignments for Medieval Literature. Two years ago, I did do some research about this topic, so it was manageable in general. Pedro had asked me to show him around the school and opportunistically find some girls. If one met his expectations, he would propose at once. As a rule, I simply let out a faint smile.
+            </p>
+
+            <p>
+                At five, I stood at the school gate to wait for him. My mind went unorganised now, barely capable of thinking of anything but the four verses Henry had given to me the day before. He was in the Literature club as well and had fallen for me since I achieved the excellent position in the Young Literature Contest at the beginning of the term. Occasionally, I wondered if he was chasing me or my academic honour. I pulled out a fag from my pocket and lit it. Taking a deep puff, my mind went clear now.
+            </p>
+
+            <p>
+                His motor sound was howling from afar. It acted as if it were on a hunt, telling other creatures that it was here, and they ought to pay attention to it. The tailpipe was not disturbing like the one in racing movies, but was natural in fact. Surely, he turned down the volume with a view to avoiding breaking the others’ tranquility.
+            </p>
+
+            <p>
+                He was still in his simple outfit and a matte black helmet. This pacified me up to a point. I stepped toward from the bush and waved. “Pedro!”
+            </p>
+
+            <p>
+                “Hermano Anthony! Am I late?”
+            </p>
+
+            <p>
+                “My legs are about to break,” I said in a monotonous tone.
+            </p>
+
+            <p>
+                “I’m sorry. Take your seat, señor,” he said, grinning.
+            </p>
+
+            <p>
+                “It’s just a banter, idiot.” Then I teasingly pecked on his helmet.
+            </p>
+
+            <p>
+                He took me to a park. After parking, we went for a walk and talked with fags and beers. On one side, we were cognisant of the illegality of driving with alcohol, but we also knew that skating on thin ice was at least good to us. Genuinely, even when I quenched my thirst by ten beers or more, I would be still sober to drag myself home. I was not certain about his booze tolerance. It might not be alright.
+            </p>
+
+            <p>
+                “Didn’t you want to find some girls?” I asked inquisitively. “Why do you wanna go to this quiet place?”
+            </p>
+
+            <p>
+                He tutted and said: “They’re just boring.” He put his arm around my shoulder and continued: “Why is it so hard to find someone like you?”
+            </p>
+
+            <p>
+                “Like me?”
+            </p>
+
+            <p>
+                “Yeah. Someone has aims and humours. I’d get bored if she’s not qualified. But she has to own something for herself, a dream or some objective. If she’s all about money, anyone can do that too. Am I right, Anthony?”
+            </p>
+
+            <p>
+                I said nothing, but looked at him indifferently. For a split second, what he said somewhat startled me. I had never ever thought that he was a straightforward person like that. Verily, whilst I did agree with him to some degree, the remnants of his outlook might hurt other people. I hope I would not be the target of his judgement. I hoped so.
+            </p>
+
+            <p>
+                “Hey!” he frowned.
+            </p>
+
+            <p>
+                “I find you quite reasonable.”
+            </p>
+
+            <p>
+                “Hell yeah!”
+            </p>
+
+            <p>
+                Friend or brother? Was my position in his heart full brother or social harmony? He continuously called me hermano time and again. To some individuals, they did not mind every single word, nuance, or semantic layer. But I was the contrary. Whatever he uttered, I had to take quite a plenty of time to ponder. It was beyond the capacity of affirming whether his expression was of willingness or love. However, constant dripping wears away a stone, and my heart was clearly not made of stone. If this persisted, could I bear such a blow?
+            </p>
+
+            <p>
+                “Pedro.”
+            </p>
+
+            <p>
+                “What’s wrong?”
+            </p>
+
+            <p>
+                “When will you get married?” I seriously asked as if I were waiting for an answer that could comfort me.
+            </p>
+
+            <p>
+                He rubbed his moustache and said: “I don’t know. I’d go for it if I found a match. It could be this year or the next year. Or it could be years later. But hey,” he ruffled my hair and continued: “I want you to be my groomsman. Is that okay?”
+            </p>
+
+            <p>
+                “Me? Your groomsman?”
+            </p>
+
+            <p>
+                “Yeah!”
+            </p>
+
+            <p>
+                “Come on. Being a groomsman is boring. I wanna be your officiant.” I mindlessly talked nonsense as I did not know how to be responsive. I was afraid if I had been hesitant, he could have smelled my homosexuality. I would rather shun drama.
+            </p>
+
+            <p>
+                “Officiant? This is sort of stressful.” He gave a soft gasp and scratched his head. I had seen him doing such a thing many times before. He must have been confused or nervy. I bet he was wondering why I wanted to be in charge of a position on a par with Fathers. Confusion was required in this situation.
+            </p>
+
+            <p>
+                “Alright. I’d…”
+            </p>
+
+            <p>
+                “Fine.” He interrupted me, showing those white teeth, and said: “But I have a condition.”
+            </p>
+
+            <p>
+                “Is it impossible?”
+            </p>
+
+            <p>
+                “Far from it. I promise.” He nodded repeatedly.
+            </p>
+
+            <p>
+                “Well, go on then.”
+            </p>
+
+            <p>
+                “I won’t definitely marry this year. Probably it won’t be the next year either. It’s too early, you know. And I have to go back to Spain the year after next to do some business, so I can’t have my marriage done. I suppose two years after next.”
+            </p>
+
+            <p>
+                “In 2011?”
+            </p>
+
+            <p>
+                “I suppose so. We’ll take 2011 as our starting point, okay?”
+            </p>
+
+            <p>
+                “Vale.”
+            </p>
+
+            <p>
+                “So from now until then, if this friendship still lasts, you’re allowed to be my officiant. Deal?”
+            </p>
+
+            <p>
+                I turned white as a sheet. “Four years?” I thought. Why was it not now? I meant if he settled down early, our time together might be no long available. Our meetings could dwindle, as he had to provide for his dear family.
+            </p>
+
+            <p>
+                No. It was me. I did not want to leave him. I had been waiting for weekends to come day in, day out so that I could return to that port, where he was fishing shirtless, and where I was sitting quietly in the cabin drawing and writing whilst he was opposite smoking and talking shit. After all, I was the only one stuck in that backwater, stuck in so-called illusions created by myself.
+            </p>
+
+            <p>
+                I lit a fag on purpose and gave it to him. “Deal. Four is a lovely number.”
+            </p>
+
+            <p>
+                “Lovely? What do you mean?”
+            </p>
+
+            <p>
+                “I mean it’s a long time for you to experience things. Until then, you must have been a different man. You must have been full of yourself and looked down on me.”
+            </p>
+
+            <p>
+                “Hermano!” He stopped me and said: “How can you think of me like that?”
+            </p>
+
+            <p>
+                “Everyone’ll change. I’m just spitting a fact.”
+            </p>
+
+            <p>
+                “But I’m different, idiot.”
+            </p>
+
+            <p>
+                “Different? You’ll change like the others. Time will tell anyway.”
+            </p>
+
+            <p>
+                “You bet?”
+            </p>
+
+            <p>
+                “Bet what?”
+            </p>
+
+            <p>
+                “Who stops being friends first is a moron, agree?” He then clenched his fist at me.
+            </p>
+
+            <p>
+                “Stop. That’s childish.”
+            </p>
+
+            <p>
+                “You dare?” His eyes became more determined.
+            </p>
+
+            <p>
+                “Sí, sí, señor.” I accepted the bet. Those keen eyes almost tightened my heart. “You’re not chill.”
+            </p>
+
+            <p>
+                “I’m just showing you that not everyone will change.”
+            </p>
+
+            <p>
+                I flicked the ash off my fag. I lost sight of the fact that it was wearing away my mental drug whilst arguing with him. Sitting down on a nearby bench, I calmly said: “I’ve witnessed lots of stuff like that. People come and go. I’m used to it.” I caressed his moustache and continued: “It’s just we’re not best friends or something. I’m not sure if this friendship lasts long.”
+            </p>
+
+            <p>
+                He said nothing. The autumn breeze rustling through the treetops made everything more poetic. The moonlight seemed so bright that it turned us into the protagonists of some tragic play. A man and another man, face to face with no words spoken. The notion of a joyful Pedro was consumed by the darkness, leaving only a serious, saturnine, and slightly intense one.
+            </p>
+
+            <p>
+                I lied on bed thinking of what he had said and his aloofness. I had never imagined my magnitude in his eyes. Yet, he merely cherished me as a friend or, more intimately, a social brother. What he adored in me was not romantic attachment, but my truthfulness, a quality which attacked his belief of our friendship. I felt guilty at the end of the day.
+            </p>
+
+            <p>
+                The children were playing trick-or-treat outside. The noise scuttled my sleeping, and I could barely fall asleep as usual. Was it because of my agitation or my oversensitivity? I could not think clear now.
+            </p>
+
+            <p>
+                Then I decided to edit my novel. I tried to mend their breakdown, but after all, everything went as it meant to. Vicissitudes is but an essentiality. I had to learn from that. As for Pedro, he did not believe so.
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             CHAPTER NAVIGATION
+        ========================== -->
+
+        <div class="chapter-navigation">
+
+            <a
+                class="navigation-link"
+                href="story-01-chapter-03.html"
+            >
+                ← Chapter Three
+            </a>
+
+
+            <a
+                class="navigation-link"
+                href="story-01-chapter-05.html"
+            >
+                Next chapter →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="site-container">
+
+        © 2026 A Human Prism · All rights reserved
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
