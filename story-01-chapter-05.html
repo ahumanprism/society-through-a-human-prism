@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 December 2007 — One Life, One Love, Forever — A Human Prism</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --header-black: #111111;
+            --header-line: #d8d8d8;
+            --body-black: #0b0b0b;
+            --body-line: #2a2a2a;
+            --white-soft: #f2f0eb;
+            --grey: #8f8f8f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--body-black);
+            color: var(--white-soft);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.8s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a,
+        .logo {
+            color: var(--header-black);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ARTICLE */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .literature-link {
+            display: block;
+            position: relative;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+        /* STORY */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            margin-bottom: 30px;
+            font-family: "Courier Prime", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+        }
+
+        /* CHAPTER NAVIGATION */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white-soft);
+            transform: translateY(-2px);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="site-container">
+        <nav>
+            <a class="logo" href="index.html">Home</a>
+
+            <div class="nav-links">
+                <a href="archive.html">Archive</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article>
+
+        <div class="container">
+
+            <div class="chapter-header">
+                <div class="chapter-title">22 December 2007</div>
+
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
+            </div>
+
+            <div class="story">
+
+                <p>Yesterday Pedro asked me to go to the park, but because of my busyness, I was unable to reply him. About half past eight in the morning, I checked my phone and found five missed calls, with three of them from him. When I tried to text him back, his motor thrum alarmed, and it seemed to get closer.</p>
+
+                <p>Pulling back the curtains, he darted a deadly glance at me. I quickly answered his messages, telling him I would be there in next to no time, and prepared myself with haste. Standing in front of the wardrobe, I was in two minds between a bluish shirt interwoven with white stitches and a plain grey cardigan. I was in distress for a while prior to deciding to pick a random oversized off-white shirt draped in a black sweater that my mother had bought the day before I landed here.</p>
+
+                <p>On second thought, I had no idea why he wanted this outing to succeed today. No matter what intention he held, I found this imperative since he himself asked for time off. My mind carried a hint of concern.</p>
+
+                <p>Seeing him, I did ask why he, all of a sudden, would love me to join the hangout, but he remained silent and huffed. I got on the motorbike and asked: “You mad at me?”</p>
+
+                <p>“I wouldn’t dare.”</p>
+
+                <p>“Wouldn’t dare?” I pecked on his helmet. “I didn’t see your texts, so I didn’t know you’d come today.”</p>
+
+                <p>He said nothing and rode away. I tried to be a jester, awkwardly telling jokes, but my efforts proved futile. When I stuck out my tongue to make fun of him, he saw me in the rearview mirror by chance and witnessed all. Perhaps his facial muscle was tired of this sombreness, so he wrinkled his eyes, smiling. Even though I did not see his face, I could conjure up an image of those white teeth. At that moment, I became a wit.</p>
+
+                <p>He forced himself to unseal his mouth and said: “I was worried about you.”</p>
+
+                <p>“Worried about me?” I fell about. “My Pedro is so kind. How sentimental you are!” In this ridiculous laugh, I tried to hide a glimmer of joy for my soft heart.</p>
+
+                <p>“I mean it. If you didn’t show up, I might call the police.”</p>
+
+                <p>I only knew that I laughed a lot all along the way, whilst Pedro tried his best to explain. He must have felt helpless, and on the other hand, heartened when my safety was secured. Or it was but my imagination, which, in fact, was normal care, but I romanticised it, coverting it into something of my own, only me, this Anthony, was able to feel it. After that, Pedro did not utter a single word, but directed his attention to driving, regardless of my jokes and prattle about literature.</p>
+
+                <p>We arrived at New Forest National Park, a wildlife park for a great variety of animals. Here, they could fit in a mini world just like their natural habitats. Their survival chance, as a result, was higher more or less compared to their peers outside this biome. Even so, they looked as though they were confined in a big sugarcoated cage as a decorative item that was believed to be an ideal haven.</p>
+
+                <p>At times, I questioned my existence in this life. Was I chained in a cage like these pitiful creatures? And above all, was this cage formed by myself, or was I the victim of the fickleness of human nature?</p>
+
+                <p>My eyes were heavy, unaware of Pedro’s voice. Unable to draw my attention, he flicked my forehead and said: “Anthony, what’s on your mind?”</p>
+
+                <p>Startled, I replied: “Just assignments…” I beat around the bush whilst massaging my forehead. Although he did not fire on all cylinders, that was enough for me to get to the conversation. “Why are we here?”</p>
+
+                <p>“It’s your birthday!”</p>
+
+                <p>“My birthday was yesterday actually.” I stared at him blankly.</p>
+
+                <p>His sombreness eased off, and he felt extremely embarrassed. He scatched his head and stutteringly convered his back: “I misremember then.” Then he let out a cheesy grin.</p>
+
+                <p>I watched those animals, saying nothing. My heartbeat was racing as if I were doing exercise. But all was different now. Each throb wished to send my gratitude to his good nature, albeit the date mix-up. Still, he meant to celebrate my birthday and accomomodate me with a brief respite away from the afflictive assignments. I quietly smiled and said: “Thank you so much. I’m very happy.”</p>
+
+                <p>“Don’t be a stranger!” He tousled my hair and equivocally said: “We’re friends. That’s what friends are for.”</p>
+
+                <p>“It’s just…”</p>
+
+                <p>“Just what?”</p>
+
+                <p>“My birthday’s never been celebrated like this before. Formally, I mean.”</p>
+
+                <p>He lit a fag and gave it to me. Taking a gentle drag, my turmoil started to ease. Truthfully, my birthday had never been celebrated formally or in a decent manner. I remembered when I was in grade five, my friend, whose birthday was on that day, brought a huge birthday cake and shared it to other classmates, including me. After the class had ended, I went back home and asked that man if I had a birthday. True to form, the answered did not stop at the dry utterance “No!”. He lambasted my mother and claimed that it was her who instilled in me with tripe. At the same time, my mother was cooking dinner and did not know what hit her. I only remembered that I blamed myself and cried a lot over my stupidity.</p>
+
+                <p>“As long as you’re still alive, you have me in your birthday.”</p>
+
+                <p>I gazed at him with tear-brimmed eyes. Notwithstanding my perseverance, my heart became so vulnerable in front of a tactful and considerate man. I sobbed and turned away to wipe the contented teardrops. Deliberately taking another puff to quell my nerves, this mental drug was overshadowed by my frankness. “I’m sorry. This is so embarrassing.”</p>
+
+                <p>He, instead of laughing at me, simply embraced me and gently said: “It’s alright. I’m here. You’ll be fine, Anthony.”</p>
+
+                <p>I pressed my tearful face against his warm chest. There, I could feel his regular, lyrical heartbeat, which made me relent. It was like an orchestra putting myself at ease. What he did to me that day brought me back to life after days of being in bondage to the painful past.</p>
+
+                <p>Two weeks ago, whilst I was sitting in the cabin brainstorming for my upcoming presentation, he habitually came to me, smoking, and talked nonsense. Before knowing him, I had been immune to his speech. Eventually, I found it interestingly catchy. People often say: “Love me, love my dog.” I thought this was why it appealed me. To lay my cards on the table, his nonsense did not become automatically engaging. I had been approving of him all this time.</p>
+
+                <p>We got here at nine and got back at about eight. On the one hand, I did want him to go home soon, for I did not want to disturb him or did not want him to go home late. Admittedly, I did want to be with him for a little more to fool around and laughed uncontrollably. But his move went beyond my calculation. Back then, he intended to bring me to his home to meet his family, but I lied to him that I needed to complete some undone assignments. I was reluctant to dodge his hospitality. Luckily, he did not recognise my reddening face.</p>
+
+                <p>He pressed his lit fag against my unlit one and said: “You’ve never told me your type of women.”</p>
+
+                <p>Momentarily, I was stunned before answering: “Everyone has a skeleton in their cupboard, you know.”</p>
+
+                <p>“Dime. Your type is blonde or brunette, curly or straight.” Suddenly, he squeezed his left chest and said: “Are you into curvy body?”</p>
+
+                <p>“Stop being a pervert.” I shot a judgemental look at him.</p>
+
+                <p>He snorted, and so did I. Actually, he was right. I did love a curvy body. His hobby was talking nonstop and making the others laugh. He was specially kind and thoughtful to other people, colleagues, and family. He had a close friend. Though they did not see each other regularly, they were thick as thieves. To him, the friend was a friend, a trustworthy companion. To the friend, he was more than that, because the friend’s care exceeded the threshold of a normal friendship, at least to the friend’s perception. The friend viewed him as an ideal husband, a man to whom he could anchor his life till death aparted them. But he would never know why his friend unconditionally stood shoulder and shoulder with him. To the friend, he was everything. The friend thought one swallow did be able to make a summer.</p>
+
+                <p>“You mad at me?”</p>
+
+                <p>“About what?” I replied with wide eyes.</p>
+
+                <p>“About the Halloween night.”</p>
+
+                <p>“That was ages ago…”</p>
+
+                <p>“Because I didn’t know you, so I kept stubborn.”</p>
+
+                <p>“You’re just trying to defend your viewpoint. Don’t think too hard. In the end, we’ve share a good laugh, have we not?”</p>
+
+                <p>“I know, but…”</p>
+
+                <p>“Alright. Leave the past in the past. We should focus on the present, señor.”</p>
+
+                <p>Stars were competitively twinkling in the sky, just like specks of glitter on pyjamas of the ladies in my hometown. The wind sea blew so steadily that it gave me goose pimples. But his coat was what warmed me and made me less shivering. It was my sneeze that moved his goodness. No. He had always been good to people. In the name of friendship, he had treated me so well. I wondered if I had been his lover, what sacrifice could have been made by him?</p>
+
+                <p>He tapped my shoulder and said that I should not think too much and took care of myself more instead. I smiled and thanked him for what he had done, adding that if he ran into any trouble, he could confide in me openly.</p>
+
+                <p>“He’s so sweet,” I inwardly remarked, smiling. “How much I love him!”</p>
+
+            </div>
+
+            <div class="chapter-navigation">
+                <a class="navigation-link" href="story-01-chapter-04.html">
+                    ← Chapter Four
+                </a>
+
+                <a class="navigation-link" href="story-01-chapter-06.html">
+                    Next chapter →
+                </a>
+            </div>
+
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+</footer>
+
+</body>
+</html>
