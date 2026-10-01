@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>31 December 2008 — One Life, One Love, Forever — A Human Prism</title>
+
+    <style>
+
+        :root {
+            --header-black: #111111;
+            --header-line: #dddddd;
+            --body-black: #0b0b0b;
+            --white-soft: #eeeeee;
+            --grey: #999999;
+            --body-line: #292929;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--body-black);
+            color: var(--white-soft);
+            font-family: "Courier Prime", "Courier New", monospace;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.8s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Article
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .literature-link {
+            position: relative;
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            margin-bottom: 30px;
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+        }
+
+        .poem {
+            text-align: center;
+            font-style: italic;
+            margin: 45px 0;
+        }
+
+
+        /* =========================
+           Chapter navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white-soft);
+            transform: translateY(-2px);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+
+        /* =========================
+           Reduced motion
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500&family=Courier+Prime&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="container">
+
+
+            <header class="chapter-header">
+
+                <div class="chapter-title">
+                    31 December 2008
+                </div>
+
+                <a
+                    class="literature-link"
+                    href="literature.html"
+                >
+                    Back to Literature
+                </a>
+
+            </header>
+
+
+            <section class="story">
+
+
+                <p>
+                    People often claim that a beautiful love is an incomplete one. So now, should I sever all the ties with Pedro and pretend as if nothing ever happened between us? Then I could embrace our indelible memories without the interference of time. I used to think that until he told me that if we bore such a continual apprehension, love would be like a two-edged sword. On the one hand, love was so abundantly warm that it drove human beings mad, sheathed in honey of passion. On the other hand, one’s inhibition might lead them to be deteriorated from within, making the love story between the two, which could have fabulously bloomed, gradually subdued by no one else but the people cherished it.
+                </p>
+
+
+                <p>
+                    “Why do you come here?”
+                </p>
+
+
+                <p>
+                    “To take you to my family, so that we can celebrate the New Year’s party together. My mom insisted, you know.”
+                </p>
+
+
+                <p>
+                    “What? I stared in astonishment. “Why so sudden?”
+                </p>
+
+
+                <p>
+                    “If I told you before, you might make some excuse to decline.”
+                </p>
+
+
+                <p>
+                    “So you ambush me like this?”
+                </p>
+
+
+                <p>
+                    “Now you know.” He shrugged. “Get ready. I’m waiting for you here.”
+                </p>
+
+
+                <p>
+                    “Oh my,” I groaned, shaking my head helplessly. “But get inside please. It’s very cold here.”
+                </p>
+
+
+                <p>
+                    “I…”
+                </p>
+
+
+                <p>
+                    “Get in. I won’t bite you.”
+                </p>
+
+
+                <p>
+                    “No. You should be the one scared to be bitten.”
+                </p>
+
+
+                <p>
+                    I must say that I was a little shy when bringing him in my room. Although there was no homosexual vestige here, being together privately was quite odd. Seeing him being shirtless or acting sexily did not amaze me, but this time, being alone with him, the atmosphere was seemingly hard to breathe.
+                </p>
+
+
+                <p>
+                    I poured him a glass of warm water and told him to be my guest. Notably, I reminded him not to open the unfinished novel on the table whilst I was showering. I wondered if he stayed still or wandered around to explore secrets of me.
+                </p>
+
+
+                <p>
+                    These days, I seemed more vacant to shower. Every time thinking about it, my body turned to jelly as though it withered away. Still, I tried to purify myself in the warm water in order to unwind and shun the proliferating fungi.
+                </p>
+
+
+                <p>
+                    “Pedro.” My voice echoed from the bathroom. “Have you prepared carefully?”
+                </p>
+
+
+                <p>
+                    I did not hear anything from him. He must have called his family or been tired and fallen asleep. I let the shower clear the cold and mused about his departure. “Just one more week…” I murmured. “How fleet time is!” In effect, time still elapsed, and the pace of life stayed the same. It was only that in our world, time, out of the blue, went too fast, too cruel for those who stayed. There, he kept going, and I kept waiting. It had always been like that.
+                </p>
+
+
+                <p>
+                    Turning back in, I saw Pedro being glued to my novel. He was sitting still and looking over it as if he were cramming for an upcoming class. Seeing that, I felt so sorry and irritated at the same time. I felt sorry for him reluctantly dropping out so early, for which he did not experience a sense of academic involvement. But I felt irritated, for he broke the promise and proceeded to open the novel cold-heartedly. Whatever its content was, his arbitrariness did hurt my image of a Pedro, who was mature and level-headed. Then I said nothing and got to the bike first, leaving him to read it as much as he wanted. Had his mother not insisted, I would not have been there to see his face.
+                </p>
+
+
+                <p>
+                    All along the way, he, as a matter of course, showed his ramblings, contending that my story was top-notch and made him emotional. Normally, those nonsenses were supportable, but they sounded like noises from some construction site at that time, buzzing around my ears. I tried to ignore him and stayed calm. His final word before concluding his speech was “I’m sorry!”.
+                </p>
+
+
+                <p>
+                    Upon arriving, his sister was the one greeting me. She looked so deferential and adorable. She had an auburn hair and some freckles on her face. My impression of her was her bunny teeth, which made her impish and wide-eyed. I said hello to her and walked in to meet her mother, not paying attending to Pedro calling my name.
+                </p>
+
+
+                <p>
+                    In the kitchen, everything appeared formally well-prepared. Though they were in England, their food all reflected their traditional hometown. I noticed there were several plates of grapes, making up to forty grapes, I daresaid. If my judgement was right, it was quite a typical tradition of them, that each symbolises each month of a year. If one managed to finish twelve during the ringing bell, they might go without a hitch in the new year. I thought that this would never happen to me, as I myself had hardly found luck. I was a jinx!
+                </p>
+
+
+                <p>
+                    After holding hands praying, we began the feast. Albeit being a Buddhist, I did try my best to become so elegant and conversable in this Catholic setting. I darted my look at Pedro and knew that he kept looking at me, beaming. The atmosphere got so awkward when people were having the meals. Being a guest, I took the food to keep up appearances, but not too much. Sensing the silence, his mother decided to break this solemness and asked: “You’re Anthony, right? Pedro often talks about you. Are you studying?
+                </p>
+
+
+                <p>
+                    “Yes. I’m studying English Literature.”
+                </p>
+
+
+                <p>
+                    She gushed and told me that it was of good prospects. I faintly smiled and carried on eating. I personally studied this major not because I wanted my writings to be a licence to print money, but because I wished to earn a degree to continue my learning journey, which is always my deepest desire. To me, there were a myriad of unknown writers that were not actually familiar to the public, and their works sometimes lapsed into obscurity. I, however, knew that people wrote not to polish their name in the labour market, but simply to search for dark and dirty corners of the earthly world, thus bespeaking them through the quintessence of human words and phrases.
+                </p>
+
+
+                <p>
+                    Pedro cut in and said: “He actually writes very well.”
+                </p>
+
+
+                <p>
+                    “Really, Anthony?”
+                </p>
+
+
+                <p>
+                    “Just average.” I forced a smile and glanced at him.
+                </p>
+
+
+                <p>
+                    Midnight was still two hours away. After helping his mother wash the dishes, I sat on the settee and mellowed out. Whilst her mother said that I was a guest and that I did not need to do anything, my helpful nature was indisposed to stay immobilised. In fact, if I had not helped her, I would have been at a loss for words to my mother.
+                </p>
+
+
+                <p>
+                    “Mother…” I murmured. He had a good mother. So did I. It, nevertheless, had been quite a long time since I met her. Every time I returned home, she was away, mostly. My grandmother said that she was busy with her charity work. Her goodness always inspired me to be a good, dignified man. Soon, we would be reunited—a month later probably. “I wonder if grandmother and she live well.”
+                </p>
+
+
+                <p>
+                    “What’s on your mind?” he ran his hands through my hair, saying.
+                </p>
+
+
+                <p>
+                    I did not answer and enjoyed the vodka martini, leaving him to be a clown in front of me. Sometimes, I thought that we were like a couple, upset and affection, with each other, all the time, for regular friends were not upset with each other that much like we were. Yet, it turned out that he was the culprit of pissing me off most of the time. Like three weeks ago, I caught a big sturgeon and told him to check if there was roe inside. He, on the other hand, held it and somehow set it free recklessly, regardless of my warning. How annoying he was!
+                </p>
+
+
+                <p>
+                    “Anthony,” his sister suddenly called me. “Do you write poems?”
+                </p>
+
+
+                <p>
+                    “I do,” I said, smiling.
+                </p>
+
+
+                <p>
+                    “Can you give me an example?”
+                </p>
+
+
+                <p>
+                    “I have nothing in mind yet…”
+                </p>
+
+
+                <p>
+                    Pedro chimed in and said: “An elusive and unreal life…”
+                </p>
+
+
+                <p>
+                    I shot a glance at him. This time, I wanted to explode in this room. My boundaries were ridiculed, as if what I told him before deliquesced. I tried to overcome his grudge, putting a smile with his sister, and said that I would give her my poem if I had the chance. Then I said goodbye to her mother and left. I did not care about how many times he shouted my name behind. I was still unable to hamper my rancour at the moment. “He must have understood the gravity of the situation, right?” I thought. I gritted my teeth, running in the drizzle. The raindrops rolled on my face, then my gums. They tasted like standing water in rusty cans that were not changed for months.
+                </p>
+
+
+                <p>
+                    25 September 1999, after our day was over, other classmates and I played football behind the school. When we were enjoying the game, the sky turned grey, and the storm approached afterwards. We left school at three thirty, but the storm persisted up to five. The sky went so dark in the aftermath of the rainstorm. I remembered that my hometown was not that modern, and people often went to bed around six when the night cracked. My home was the same. But what I was scared most was that my mother could be a punchbag for that man, deeming that I was a henchman, and that my mother was useless at parenting. The street was dark, but my mind was far darker. There, I could not do anything even screaming.
+                </p>
+
+
+                <p>
+                    I unwarily sat in the bus stop quite far from his home. “So this is New Year then…” I whispered, whilst searching for unsoaked fags in my pocket. Before the bus arrived, I wilfully turned my head to his home once again.
+                </p>
+
+
+                <p>
+                    I got on the bus, completely soaked, unwilling to sit as I was afraid that my dampness might deprive someone of a chance to relax. I stood there with a cold body and a broken heart. My eyes still lingered on a family merrily waiting for New Year. Feeling resonant, I recited the earlier poem:
+                </p>
+
+
+                <p class="poem">
+                    An elusive and unreal life,<br>
+                    Echoing the suffering inherent.<br>
+                    I, young and naive, might try,<br>
+                    Life was alive, but I made no difference.
+                </p>
+
+
+                <p>
+                    Turning back the room, I did not dare to get close to the desk. A while ago, Pedro sat there, reading my novel attentively. It was just that I was so upset and sad. He did ask me to give my literary works, but I said that when I finished, he would not be the second person reading them. It was here today and gone tomorrow. I felt so disappointed.
+                </p>
+
+
+                <p>
+                    I flopped down on the floor, indifferently looking at the window, where fireworks blossomed in the sky, respectively, no different from paintings left by sages.
+                </p>
+
+
+                <p>
+                    My phone vibrated by his incessant messages and calls. I took no heed and threw it aside, introspecting the surrounding and what had happened between us. “So beautiful…” I told myself. “Thank you, Pedro, but you hurt me so much. This pain must take me a long time to heal.”
+                </p>
+
+
+            </section>
+
+
+            <div class="chapter-navigation">
+
+                <a
+                    class="navigation-link"
+                    href="story-01-chapter-07.html"
+                >
+                    ← Chapter Seven
+                </a>
+
+                <a
+                    class="navigation-link"
+                    href="story-01-chapter-09.html"
+                >
+                    Next chapter →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
