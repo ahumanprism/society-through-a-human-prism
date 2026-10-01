@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>07 April 2008 — One Life, One Love, Forever — A Human Prism</title>
+
+    <style>
+
+        :root {
+            --header-black: #111111;
+            --header-line: #dddddd;
+            --body-black: #0b0b0b;
+            --white-soft: #eeeeee;
+            --grey: #999999;
+            --body-line: #292929;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--body-black);
+            color: var(--white-soft);
+            font-family: "Courier Prime", "Courier New", monospace;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.8s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Article
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .literature-link {
+            position: relative;
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            margin-bottom: 30px;
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+        }
+
+
+        /* =========================
+           Chapter navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white-soft);
+            transform: translateY(-2px);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+
+        /* =========================
+           Reduced motion
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500&family=Courier+Prime&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="container">
+
+
+            <header class="chapter-header">
+
+                <div class="chapter-title">
+                    07 April 2008
+                </div>
+
+                <a
+                    class="literature-link"
+                    href="literature.html"
+                >
+                    Back to Literature
+                </a>
+
+            </header>
+
+
+            <section class="story">
+
+
+                <p>
+                    “For you.”
+                </p>
+
+
+                <p>
+                    “A ball? You knit yourself?” Pedro was excited.
+                </p>
+
+
+                <p>
+                    “Of course.” I was happy with the fact that I made him astounded. “Can you see that? I also embroidered your name down here.”
+                </p>
+
+
+                <p>
+                    “Looks absolutely cute. Thank you. I promise…” he stammered. “I promise to keep it safe. The scarf you gave me before, I’ll drape it around the ball.”
+                </p>
+
+
+                <p>
+                    “The gift’s not valuable, but…”
+                </p>
+
+
+                <p>
+                    “But it’s your effort and dedication. I really admire it. It’s much more valuable than luxurious stuff out there.” He interrupted me with a hubristic face.
+                </p>
+
+
+                <p>
+                    Seeing him playing with the ball like a child, I was somewhat soothed. Whenever I thought about him leaving, my heart felt wrenched, insofar as it yearned for his voice. He told me that he would manage to pay me and his family some visit. But, in reality, his well-being was what I cared about more. If he kept going back and forth, how could he recover from fatigue?
+                </p>
+
+
+                <p>
+                    He, nevertheless, did not even mind if he was well or not. He said that he himself must tend his beloved people instead of cliché suggestions. “What if they betray you?” I questioned. Not because I meant to ask questions of his morale, but rather because I wanted to see his reaction in the face of such a difficulty. He looked at me and firmly stated that his selected person would never be such a kind.
+                </p>
+
+
+                <p>
+                    I leaned in close to his ear and whispered: “Are you ready for the next surprise, Don Pedro?”
+                </p>
+
+
+                <p>
+                    “You’re mysterious, Anthony.” He smirked.
+                </p>
+
+
+                <p>
+                    “Close your eyes.”
+                </p>
+
+
+                <p>
+                    “Vale.”
+                </p>
+
+
+                <p>
+                    “Don’t peek.”
+                </p>
+
+
+                <p>
+                    I rushed to take the birthday cake I had prepared before. I was not a gifted cook, so this was obviously bought in a bakery near the school. Tantalisingly, the moment I brought it out of the shop, Henry was waiting for me for a while. He asked me to go to a bookstore and discussed the upcoming term paper together, but I turned him down, saying that I had had an appointment this day.
+                </p>
+
+
+                <p>
+                    I, at times, wondered why he was so fond of me. I surely was not a coming-of-age boy like him. Regarding the countenance, I was not in possession of those big eyes, a high-bridged nose, red lips, or white complexion. I merely had an oval face looking younger than my years, but the overall look was passable. Even so, it had been a long time since he pursued me.
+                </p>
+
+
+                <p>
+                    But I realised that he and I had been the same, all sharing unrequited love. The chasm between us was our principle about it. He, though having feelings for me, bred everywhere, regardless of sex. I sometimes wondered what his purpose of chasing me was. Was it about trying to conquer the old wolf—me myself—or to turn me into a stop in the journey of being a rake? In brief, my type would never be someone jejune like him.
+                </p>
+
+
+                <p>
+                    To me, love was like an altar that I worshiped one and only one man. Even if it received no blessing, I found it impossible to break my principle and engaged in debauchery. They were them, and I was me. They could do whatever they wished, having sex with those they found tasteful, or they could be in as many simultaneous relationships as they desired. But I could not. I could not surrender myself arbitrarily to somebody just because I could not suffocate my libido. With these hands, I believed they completely eclipsed tons of men out there.
+                </p>
+
+
+                <p>
+                    “You done?” Pedro deliberately peeked but saw nothing. He scanned around frantically, but found no trace of me. He shouted my name, but responses were silent. He then scrambled around the beach in search of my silhouette. He anxiously looked for me, calling my name over and over again. At last, he resorted to phone me, but my phone was switched back to vibrate mode, so again, responses were silent.
+                </p>
+
+
+                <p>
+                    It was sometimes true to say that I was so childish. No, correction, I became childish around him. Inane actions I did to him like calling him señor or pulling his flap and tagging along behind were what made me so little in his eyes. I loved being childish in his eyes. I wanted to keep a modicum of innocence of formative years in our memories, so that when we were not together anymore, I still had something to cling to.
+                </p>
+
+
+                <p>
+                    It appeared that my giggle disclosed my retreat. Slowly, he came closer and tapped lightly on my head. I grinned and said: “Happy birthday, señor.”
+                </p>
+
+
+                <p>
+                    “You’re so…” he sighed. “I thought you were kidnapped.”
+                </p>
+
+
+                <p>
+                    “Come on. I’m grown up already, not a kid to be kidnapped.”
+                </p>
+
+
+                <p>
+                    He helplessly shook his head. But there was something in his complaint that made me so protected in his subconscious. Lighting the candles for him, I, by the way, lit a fag for myself. He clasped his hands and started to make some wish, but everything happened in a flash. I wondered whether deities could follow his longing.
+                </p>
+
+
+                <p>
+                    “Done.”
+                </p>
+
+
+                <p>
+                    “What’s your wish?”
+                </p>
+
+
+                <p>
+                    He whispered: “It’s a secret.”
+                </p>
+
+
+                <p>
+                    “A secret?”
+                </p>
+
+
+                <p>
+                    He nodded. “But you did scare me back then.”
+                </p>
+
+
+                <p>
+                    “I’m fine, idiot.” I took a puff and said: “If you’re worried about me, then catch me.”
+                </p>
+
+
+                <p>
+                    “You challenge me?”
+                </p>
+
+
+                <p>
+                    “If you can’t, you won’t see me ever again.”
+                </p>
+
+
+                <p>
+                    “What if I can?”
+                </p>
+
+
+                <p>
+                    “Then I can’t run away from you.”
+                </p>
+
+
+                <p>
+                    I ran like the wind towards the distance. In terms of muscles, Pedro far outweighed me. On flexibility and stamina, however, I was very willing to compete with him. I was running whilst holding the smoldering fag. The smoke wafting in the vernal air made the beach landscape more impactful. Spring comes, winter goes, and then summer and autumn. The four seasons just carries on. This chase was alike. I ran to a place and ran back to it, letting him scream behind, whilst I gleefully chuckled. Being with him meant laugh and cry were all the same. All were expressed with ease.
+                </p>
+
+
+                <p>
+                    When I was almost nabbed, I quickly ran to the water and said: “Give up yet?”
+                </p>
+
+
+                <p>
+                    He smirked and said: “Never.”
+                </p>
+
+
+                <p>
+                    He took off his shirt, jumped to the water, and chased me like a whalekiller, making me bop up and down to avoid his sight. It must have been because I usually immersed myself in the riverine area, my swimming skills came along the way. At least I had enough knowledge to steer clear of drowning or unwanted incidents during swimming such as cramp. In retrospect, it was such a happy time.
+                </p>
+
+
+                <p>
+                    “Do you really know how to swim?” I mockingly asked.
+                </p>
+
+
+                <p>
+                    “Don’t be so pretentious, hermano.”
+                </p>
+
+
+                <p>
+                    “I dare not.”
+                </p>
+
+
+                <p>
+                    “Since when did my birthday become a swimming competition?”
+                </p>
+
+
+                <p>
+                    “Like you said, I’m always mysterious.”
+                </p>
+
+
+                <p>
+                    In the end, he was able to snatch my collar. He and I were face-to-face grinning. In that moment, I wanted time to be frozen, so that we could be together for a little longer, so that I could feel his warmth spreading through the sea. Looking closely, his eyes were much more mesmerising in the water. It must have been the water that made his eyelashes longer and sharper than usual. His body, too, was beaded with water droplets, altogether adding lustre to his wild beauty. Then I, on purpose, gave him a wide berth and dived towards the shore.
+                </p>
+
+
+                <p>
+                    We basked in the sun. He poked my belly and said: “Thank you. Honestly, this is the best birthday ever.”
+                </p>
+
+
+                <p>
+                    “You’re welcome, señor.” I flipped onto my front and continued: “You deserve good things.”
+                </p>
+
+
+                <p>
+                    “It’s just…” he hesitated. “I don’t know what to say.”
+                </p>
+
+
+                <p>
+                    “You don’t need to say anything.” I comfortingly patted his head. “Today is your day. You’re only allowed to be happy, not to be sad, remember?
+                </p>
+
+
+                <p>
+                    He smiled and said: “You’re my family, Anthony. I like you.”
+                </p>
+
+
+                <p>
+                    “Me too, but Pedro.”
+                </p>
+
+
+                <p>
+                    “Yes?”
+                </p>
+
+
+                <p>
+                    “You have to live well.”
+                </p>
+
+
+                <p>
+                    He said nothing but enjoyed the consoling sunlight of spring. I guessed what he meant to say earlier related to this, so he remained quiet when I said so. I thought he was planning something that he himself found no solution. But when he confessed, would I be capable of helping him? Or would I offer him those empty recommendations?
+                </p>
+
+
+                <p>
+                    “Will you promise me something?”
+                </p>
+
+
+                <p>
+                    “Go for it.” I lit a fag and said: “As long as you don’t tell me to go through fire and water.”
+                </p>
+
+
+                <p>
+                    He chuckled. “No. I want you to keep in touch with me when I’m in the army. I mean, there are days that we’re both busy to make a call, so send me a text instead. I’ll read it.”
+                </p>
+
+
+                <p>
+                    “You.” I tweaked his ear playfully.
+                </p>
+
+
+                <p>
+                    “What?” he frowned.
+                </p>
+
+
+                <p>
+                    “Nothing. You’re just stating obvious stuff.” I gave him my fag and continued: “Not only that, I’ll write letters if you don’t reply me.”
+                </p>
+
+
+                <p>
+                    He took a drag and said: “Really? Sounds like we’re in wartime.”
+                </p>
+
+
+                <p>
+                    The birthday cake read “Pedro the Caballero” was placed next to our bags. We kept lying there and talking shit about upcoming days. I, once detesting the sun, now let it penetrate through my body with reckless abandon. To me, it was not only bland rays of sunshine, but it was the embodiment of Pedro, the gentleman with whom I fell in love in secrecy.
+                </p>
+
+
+            </section>
+
+
+            <div class="chapter-navigation">
+
+                <a
+                    class="navigation-link"
+                    href="story-01-chapter-06.html"
+                >
+                    ← Chapter Six
+                </a>
+
+                <a
+                    class="navigation-link"
+                    href="story-01-chapter-08.html"
+                >
+                    Next chapter →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
