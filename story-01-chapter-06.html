@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -41,18 +43,18 @@
             text-decoration: none;
         }
 
-        .site-container {
+        .container {
             width: min(1100px, 90%);
             margin: 0 auto;
         }
 
-        .container {
+        .story-container {
             width: min(760px, 90%);
             margin: 0 auto;
         }
 
         /* =========================
-           Header
+           HEADER
         ========================= */
 
         header {
@@ -66,12 +68,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
             color: var(--header-black);
         }
 
@@ -105,7 +107,7 @@
         }
 
         /* =========================
-           Article
+           ARTICLE
         ========================= */
 
         article {
@@ -154,7 +156,7 @@
         }
 
         /* =========================
-           Story
+           STORY
         ========================= */
 
         .story {
@@ -171,7 +173,7 @@
         }
 
         /* =========================
-           Chapter Navigation
+           CHAPTER NAVIGATION
         ========================= */
 
         .chapter-navigation {
@@ -215,7 +217,7 @@
         }
 
         /* =========================
-           Footer
+           FOOTER
         ========================= */
 
         footer {
@@ -228,7 +230,7 @@
         }
 
         /* =========================
-           Animations
+           ANIMATIONS
         ========================= */
 
         @keyframes fadeDown {
@@ -256,16 +258,16 @@
         }
 
         /* =========================
-           Mobile
+           MOBILE
         ========================= */
 
         @media (max-width: 700px) {
 
-            .site-container {
-                width: min(1100px, calc(100% - 40px));
+            .container {
+                width: calc(100% - 40px);
             }
 
-            .container {
+            .story-container {
                 width: calc(100% - 40px);
             }
 
@@ -323,13 +325,16 @@
         }
 
     </style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-    <div class="site-container">
+    <div class="container">
 
         <nav>
 
@@ -356,7 +361,7 @@
 
     <article>
 
-        <div class="container">
+        <div class="story-container">
 
             <div class="chapter-header">
 
@@ -555,12 +560,13 @@
         </div>
 
     </article>
+
 </main>
 
 
 <footer>
 
-    <div class="site-container">
+    <div class="container">
         © 2026 A Human Prism · All rights reserved
     </div>
 
@@ -568,4 +574,5 @@
 
 
 </body>
+
 </html>
