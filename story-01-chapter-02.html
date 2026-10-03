@@ -15,6 +15,7 @@
     </title>
 
 
+
     <!-- =========================
          FONTS
     ========================== -->
@@ -26,7 +27,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.googleapis.com"
+        href="https://fonts.gstatic.com"
         crossorigin
     >
 
@@ -34,6 +35,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
         rel="stylesheet"
     >
+
 
 
     <style>
@@ -47,6 +49,7 @@
             margin: 0;
             padding: 0;
         }
+
 
 
         /* =========================
@@ -75,6 +78,7 @@
         }
 
 
+
         /* =========================
            BODY
         ========================== */
@@ -82,6 +86,7 @@
         html {
             scroll-behavior: smooth;
         }
+
 
 
         body {
@@ -108,6 +113,7 @@
         }
 
 
+
         a {
 
             color:
@@ -116,6 +122,7 @@
             text-decoration:
                 none;
         }
+
 
 
         /* =========================
@@ -132,6 +139,7 @@
         }
 
 
+
         .story-container {
 
             width:
@@ -142,6 +150,7 @@
         }
 
 
+
         .site-container {
 
             width:
@@ -150,6 +159,7 @@
             margin:
                 0 auto;
         }
+
 
 
         /* =========================
@@ -172,6 +182,7 @@
         }
 
 
+
         nav {
 
             display:
@@ -188,6 +199,7 @@
         }
 
 
+
         .logo {
 
             font-family:
@@ -197,9 +209,6 @@
             font-size:
                 12px;
 
-            letter-spacing:
-                2px;
-
             color:
                 var(--header-black);
 
@@ -208,11 +217,13 @@
         }
 
 
+
         .logo:hover {
 
             color:
                 #555555;
         }
+
 
 
         .nav-links {
@@ -235,6 +246,7 @@
         }
 
 
+
         .nav-links a {
 
             position:
@@ -243,6 +255,7 @@
             transition:
                 color 0.3s ease;
         }
+
 
 
         .nav-links a::after {
@@ -273,6 +286,7 @@
         }
 
 
+
         .nav-links a:hover {
 
             color:
@@ -280,11 +294,13 @@
         }
 
 
+
         .nav-links a:hover::after {
 
             width:
                 100%;
         }
+
 
 
         /* =========================
@@ -298,6 +314,7 @@
         }
 
 
+
         /* =========================
            CHAPTER HEADER
         ========================== */
@@ -307,6 +324,7 @@
             animation:
                 fadeUp 1s ease 0.1s both;
         }
+
 
 
         .chapter-title {
@@ -334,6 +352,7 @@
             color:
                 var(--white);
         }
+
 
 
         .literature-link {
@@ -371,6 +390,7 @@
         }
 
 
+
         .literature-link::after {
 
             content:
@@ -399,6 +419,7 @@
         }
 
 
+
         .literature-link:hover {
 
             color:
@@ -406,11 +427,13 @@
         }
 
 
+
         .literature-link:hover::after {
 
             width:
                 100%;
         }
+
 
 
         /* =========================
@@ -425,6 +448,7 @@
             animation:
                 fadeUp 1s ease 0.3s both;
         }
+
 
 
         .story p {
@@ -446,6 +470,7 @@
             margin-bottom:
                 30px;
         }
+
 
 
         /* =========================
@@ -477,6 +502,7 @@
         }
 
 
+
         .navigation-link {
 
             position:
@@ -502,6 +528,7 @@
                 color 0.3s ease,
                 transform 0.3s ease;
         }
+
 
 
         .navigation-link::after {
@@ -532,6 +559,7 @@
         }
 
 
+
         .navigation-link:hover {
 
             color:
@@ -542,11 +570,13 @@
         }
 
 
+
         .navigation-link:hover::after {
 
             width:
                 100%;
         }
+
 
 
         /* =========================
@@ -576,6 +606,7 @@
         }
 
 
+
         /* =========================
            ANIMATIONS
         ========================== */
@@ -603,6 +634,7 @@
         }
 
 
+
         @keyframes fadeUp {
 
             from {
@@ -626,17 +658,27 @@
         }
 
 
+
         /* =========================
            MOBILE
         ========================== */
 
         @media (max-width: 700px) {
 
+            .container {
+
+                width:
+                    calc(100% - 40px);
+            }
+
+
+
             .story-container {
 
                 width:
                     calc(100% - 40px);
             }
+
 
 
             .nav-links {
@@ -649,11 +691,13 @@
             }
 
 
+
             article {
 
                 padding:
                     95px 0 90px;
             }
+
 
 
             .chapter-title {
@@ -666,11 +710,13 @@
             }
 
 
+
             .story {
 
                 padding-top:
                     60px;
             }
+
 
 
             .story p {
@@ -683,6 +729,7 @@
             }
 
 
+
             .chapter-navigation {
 
                 gap:
@@ -691,6 +738,7 @@
                 margin-top:
                     85px;
             }
+
 
 
             .navigation-link {
@@ -703,11 +751,13 @@
             }
 
 
+
             .site-container {
 
                 width:
                     min(1100px, calc(100% - 40px));
             }
+
 
 
             footer {
@@ -717,6 +767,7 @@
             }
 
         }
+
 
 
         /* =========================
@@ -749,7 +800,9 @@
 </head>
 
 
+
 <body>
+
 
 
 <!-- =========================
@@ -770,6 +823,7 @@
             </a>
 
 
+
             <div class="nav-links">
 
                 <a href="archive.html">
@@ -786,6 +840,8 @@
 
 
 
+
+
 <!-- =========================
      MAIN
 ========================== -->
@@ -795,6 +851,7 @@
     <article>
 
         <div class="story-container">
+
 
 
             <!-- =========================
@@ -808,6 +865,7 @@
                 </div>
 
 
+
                 <a
                     class="literature-link"
                     href="literature.html"
@@ -816,6 +874,8 @@
                 </a>
 
             </div>
+
+
 
 
 
@@ -830,9 +890,11 @@
                 </p>
 
 
+
                 <p>
                     Pedro came in and saw me mesmerised with my own business. He said nothing, simply sitting opposite to me, and lit a fag. Recently, he appeared to keep conversing with me, which could have been considered a protracted annal. I knew that he had no company that was around his age, but it was unfortunate for him that I had no interest in making male friends or, more precisely, male peers. Perhaps, it was because I was downcast, antisocial, and tedious, so I did not desire to communicate with human beings.
                 </p>
+
 
 
                 <p>
@@ -840,9 +902,11 @@
                 </p>
 
 
+
                 <p>
                     And as in previous times, he probably did not stand this overwhelming atmosphere like military enlistment, so his mouth finally moved. “Your drawing is cool.”
                 </p>
+
 
 
                 <p>
@@ -850,9 +914,11 @@
                 </p>
 
 
+
                 <p>
                     He suddenly lowered his voice and asked: “You hate me?”
                 </p>
+
 
 
                 <p>
@@ -860,9 +926,11 @@
                 </p>
 
 
+
                 <p>
                     “Nothing,” he replied and turned away. “Sometimes I feel that you’re trying to avoid me.”
                 </p>
+
 
 
                 <p>
@@ -870,9 +938,11 @@
                 </p>
 
 
+
                 <p>
                     “Then hang out with me after work. Us, cigarettes, beers, shit talk, that sort of thing.”
                 </p>
+
 
 
                 <p>
@@ -880,9 +950,11 @@
                 </p>
 
 
+
                 <p>
                     It was seven now. Streetlights showed up by turns as luminescent mushrooms in the twilight. I combed my hair and adjusted my outfit for the walk with Pedro. Looking at my reflection in the mirror, I found myself changed in an unrecognisable way. It is indisputable that change is constant, but I seemed to become another version of that man. I hated him, but I could not negate the fact that flesh and blood within my body were produced by him. Even the face, the jawline, or the facial features of me were granted by him. Apparently, I did not dare to repudiate such gifts.
                 </p>
+
 
 
                 <p>
@@ -890,9 +962,11 @@
                 </p>
 
 
+
                 <p>
                     But my physique stood out most. I had got bigger and more muscular since high school. It must have been hard work and a strict diet that made the change inevitably normal. Yet, I felt sorry for myself and other people, for we were under the judgement of society. At the bottom of my heart, I would love to be a little boy so as to be shielded by my husband. Would he love me and this body? Or was it because of my oversensitivity with everything?
                 </p>
+
 
 
                 <p>
@@ -900,9 +974,11 @@
                 </p>
 
 
+
                 <p>
                     I looked at him and said nothing. His outfit was seemingly intended for a runaway fashion show. It was all simple, like a pair of navy skinny leg jeans, a plain white shirt, and a black coat. In fact, his face was the centre of attention, which led the others to deem that he was attending some couture presentation. He was of typical Spanish countenance that I had always perceived, with a sharp nose, thick eyebrows and eyelashes, brown eyes and, in particular, a fairly chic moustache.
                 </p>
+
 
 
                 <p>
@@ -910,9 +986,11 @@
                 </p>
 
 
+
                 <p>
                     We walked along the beach, each of us having our own beers and fags. The air here was much better than it was on the ship. The temperature and the stars altogether embellished the surrounding landscape, which somewhat ameliorated my languid mood. I plopped down on the white sand and gazed at those blinking pearls in the sky, attempting to seize the moment.
                 </p>
+
 
 
                 <p>
@@ -920,9 +998,11 @@
                 </p>
 
 
+
                 <p>
                     A shooting star from of nowhere flashed through the sky. I quietly prayed for my peaceful nation, my happy family, and self-peace. “Self-peace? I wonder if I might have it in my lifetime…” I told myself.
                 </p>
+
 
 
                 <p>
@@ -930,9 +1010,11 @@
                 </p>
 
 
+
                 <p>
                     “I’m helping you to go back to reality.” He grinned.
                 </p>
+
 
 
                 <p>
@@ -940,9 +1022,11 @@
                 </p>
 
 
+
                 <p>
                     Then I stubbed out the fag in the sand and reached out a beer prepared beforehand. Taking a sip, I tried to regain my composure. He, nevertheless, was reasonable. I maybe ought to live in the real world. Fantasy might contain no suffering, but mere monotony. Reality, by contrast, might have earthly aesthetics, but lacked placidity.
                 </p>
+
 
 
                 <p>
@@ -950,9 +1034,11 @@
                 </p>
 
 
+
                 <p>
                     He turned to me, frowning, and said with his wistful eyes: “You got any plan for the future, or you just keep working here?”
                 </p>
+
 
 
                 <p>
@@ -960,9 +1046,11 @@
                 </p>
 
 
+
                 <p>
                     “Really?” he stuttered. “You… I’m a bit surprised.”
                 </p>
+
 
 
                 <p>
@@ -970,9 +1058,11 @@
                 </p>
 
 
+
                 <p>
                     “You’re fucking cool!”
                 </p>
+
 
 
                 <p>
@@ -980,9 +1070,11 @@
                 </p>
 
 
+
                 <p>
                     “What are you studying?”
                 </p>
+
 
 
                 <p>
@@ -990,9 +1082,11 @@
                 </p>
 
 
+
                 <p>
                     “You love Literature?”
                 </p>
+
 
 
                 <p>
@@ -1000,9 +1094,11 @@
                 </p>
 
 
+
                 <p>
                     Out of curiosity, I took advantage of the situation and asked: “And you? What’s your plan?”
                 </p>
+
 
 
                 <p>
@@ -1010,9 +1106,11 @@
                 </p>
 
 
+
                 <p>
                     “How simple.” His dream was what many people desired. Having a stable life, a stable job, and a stable home sounded simple. Still, not everyone could achieve it and had the ability to pursue such a dream. I personally wanted to build my own home. Deep down in my heart, there had always been a wife waiting for his husband to return home. It had been a long time since I thought of it.
                 </p>
+
 
 
                 <p>
@@ -1020,9 +1118,11 @@
                 </p>
 
 
+
                 <p>
                     “You have dreams and free will. I believe you can get what you deserve.” I reassured him with soothing words that I had been pining for being listened to. “I think your dream may be simple, but it’s not insignificant at all. You said you’re not mature enough, but you have plenty of time ahead, and we’ve got a lot to learn. It’s just that if you feel under pressure, have a rest instead. Don’t be so harsh on yourself. Pride comes before a fall, you know.”
                 </p>
+
 
 
                 <p>
@@ -1030,9 +1130,11 @@
                 </p>
 
 
+
                 <p>
                     “Gracias, señor.”
                 </p>
+
 
 
                 <p>
@@ -1040,9 +1142,11 @@
                 </p>
 
 
+
                 <p>
                     “Did something happen?”
                 </p>
+
 
 
                 <p>
@@ -1050,9 +1154,11 @@
                 </p>
 
 
+
                 <p>
                     “I’m so sorry to hear that.”
                 </p>
+
 
 
                 <p>
@@ -1060,9 +1166,11 @@
                 </p>
 
 
+
                 <p>
                     Literally, I was pretty astounded. The first thing that amazed me was his mannerism. If he had not mentioned his early school leave, I would never have been apprised of his academic background, as I had supposed that he owned a bachelor’s degree or something. I mean he did look daft now and then, but he proved himself an educated man, not some street thug he confessed. Until then, he had been a kind person to me. “You’ll definitely be a man that everyone can rely on. I believe so,” I said.
                 </p>
+
 
 
                 <p>
@@ -1070,9 +1178,12 @@
                 </p>
 
 
+
                 <p>
                     The moon was bright like the other days. I looked out of the window to marvel at the stars reigning in the darkness. Yet, unlike the other days, today I smiled a lot.
                 </p>
+
+
 
 
 
@@ -1088,6 +1199,7 @@
                     >
                         ← Chapter One
                     </a>
+
 
 
                     <a
@@ -1109,6 +1221,8 @@
 
 
 
+
+
 <!-- =========================
      FOOTER
 ========================== -->
@@ -1122,6 +1236,8 @@
     </div>
 
 </footer>
+
+
 
 
 
