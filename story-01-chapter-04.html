@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +33,7 @@
     <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
+        crossorigin
     >
 
     <link
@@ -118,17 +120,17 @@
         .container {
 
             width:
-                min(760px, 90%);
+                min(1100px, 90%);
 
             margin:
                 0 auto;
         }
 
 
-        .site-container {
+        .story-container {
 
             width:
-                min(1100px, 90%);
+                min(760px, 90%);
 
             margin:
                 0 auto;
@@ -180,11 +182,18 @@
             font-size:
                 12px;
 
-            letter-spacing:
-                2px;
-
             color:
                 var(--header-black);
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        .logo:hover {
+
+            color:
+                #555555;
         }
 
 
@@ -320,7 +329,7 @@
                 30px auto 0;
 
             padding-bottom:
-                5px;
+                6px;
 
             font-family:
                 Arial,
@@ -334,6 +343,9 @@
 
             color:
                 var(--grey);
+
+            transition:
+                color 0.3s ease;
         }
 
 
@@ -346,7 +358,7 @@
                 absolute;
 
             left:
-                50%;
+                0;
 
             bottom:
                 0;
@@ -360,8 +372,22 @@
             background:
                 var(--grey);
 
-            transform:
-                translateX(-50%);
+            transition:
+                width 0.35s ease;
+        }
+
+
+        .literature-link:hover {
+
+            color:
+                var(--white);
+        }
+
+
+        .literature-link:hover::after {
+
+            width:
+                100%;
         }
 
 
@@ -471,7 +497,7 @@
                 0;
 
             width:
-                0;
+                35%;
 
             height:
                 1px;
@@ -480,17 +506,17 @@
                 var(--grey);
 
             transition:
-                width 0.3s ease;
+                width 0.35s ease;
         }
 
 
         .navigation-link:hover {
 
             color:
-                var(--white-soft);
+                var(--white);
 
             transform:
-                translateY(-2px);
+                translateX(3px);
         }
 
 
@@ -584,14 +610,14 @@
 
         @media (max-width: 700px) {
 
-            .site-container {
+            .container {
 
                 width:
-                    min(1100px, calc(100% - 40px));
+                    calc(100% - 40px);
             }
 
 
-            .container {
+            .story-container {
 
                 width:
                     calc(100% - 40px);
@@ -710,7 +736,7 @@
 
 <header>
 
-    <div class="site-container">
+    <div class="container">
 
         <nav>
 
@@ -737,14 +763,13 @@
 </header>
 
 
-
 <!-- =========================
      ARTICLE
 ========================== -->
 
 <article>
 
-    <div class="container">
+    <div class="story-container">
 
 
         <!-- =========================
@@ -766,7 +791,6 @@
             </a>
 
         </div>
-
 
 
         <!-- =========================
@@ -1007,9 +1031,7 @@
                 Then I decided to edit my novel. I tried to mend their breakdown, but after all, everything went as it meant to. Vicissitudes is but an essentiality. I had to learn from that. As for Pedro, he did not believe so.
             </p>
 
-
         </div>
-
 
 
         <!-- =========================
@@ -1041,14 +1063,13 @@
 </article>
 
 
-
 <!-- =========================
      FOOTER
 ========================== -->
 
 <footer>
 
-    <div class="site-container">
+    <div class="container">
 
         © 2026 A Human Prism · All rights reserved
 
@@ -1060,3 +1081,4 @@
 </body>
 
 </html>
+```
