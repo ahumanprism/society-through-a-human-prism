@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>15 May 2010 — A Human Prism</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --black: #111111;
+            --black-soft: #181818;
+
+            --white: #e8e8e3;
+            --white-soft: #d0d0cb;
+
+            --grey: #888884;
+            --grey-dark: #555552;
+
+            --header-white: #ffffff;
+            --header-black: #111111;
+            --header-line: #dddddd;
+
+            --body-line: #333331;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: Georgia, serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           Containers
+        ========================= */
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .story-container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: var(--header-white);
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.9s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Chapter
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: var(--white);
+        }
+
+        .literature-link {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease;
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover {
+            color: var(--white);
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           Chapter Navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .container,
+            .story-container {
+                width: calc(100% - 40px);
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 18px;
+                font-size: 11px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+        /* =========================
+           Reduced Motion
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="story-container">
+
+            <div class="chapter-header">
+
+                <h1 class="chapter-title">
+                    15 May 2010
+                </h1>
+
+                <a class="literature-link" href="story-01.html">
+                    ← Back to Literature
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+                <p>
+                    Pedro messaged me
+                    that he would drop by my place to chat for a bit. It had been a year since he
+                    joined the navy. He often told me what happened there, as well as his fellows.
+                    He also mentioned me in a few conversations with them. I heard that they liked
+                    me too and wanted to have a face-to-face meeting with me somewhere down the
+                    road. If that day came, I might try my best to present my friendliness like the
+                    first day I made my acquaintance at the Puerto.
+                </p>
+
+                <p>
+                    My curriculum was practically
+                    complete. Only a couple more months, I had to find a company with an internship
+                    post. How was my future then? Obviously, I would be there, at the Puerto, and
+                    write literature during break time. But what about Pedro? Would he still be
+                    there? Even though he had said that he would come back, how could I nail it
+                    on? And if he was not there, what else could I do?
+                </p>
+
+                <p>
+                    He arrived at six. I told him to
+                    get in and have dinner. He was not wearing the uniform, but an outfit that
+                    looked more stately than those first days we met. Verily, the disciplined
+                    environment sharpened him. His way of talking was gentler, milder, and above
+                    all, his behaviour was more refined. His mouth was now uninterested in working
+                    with utmost efficiency, and it switched to a mode of temporary retirement. This
+                    meant that it stilled worked well, but the frequency dropped considerably. He
+                    did not smile as much as before, but he acted more instead. A month ago, if I
+                    remembered rightly, he gave me a handmade necklace of seashells that looked
+                    very charming. I was excitedly enchanted but pretended to deflect suspicion.
+                </p>
+
+                <p>
+                    To be fair, I understood why he
+                    treated me so well like that. He had never met someone like me before. I did
+                    not blow my own trumpet or have any devices to tempt him. I, however, was the
+                    first person giving him a sense of comfort and warmth, as a man. I was not sure
+                    if the women he had met before treated him like I did, but I bet I was the only
+                    man willing to do everything for him, and I was even willing to see him happy
+                    with someone else. I could do it.
+                </p>
+
+                <p>
+                    “You look thinner. Have you been
+                    eating poorly?" he asked, enjoying my com tam.
+                </p>
+
+                <p>
+                    I involuntarily touched my face
+                    and gave a faint smile. “No, I haven’t. I look normal,” I said.
+                </p>
+
+                <p>
+                    He pinched my face and said: “Is
+                    this really normal? You’ve got thinner. Come shopping with me tomorrow. I’ll
+                    buy you some nutritious food.”
+                </p>
+
+                <p>
+                    “You don’t have to, Pedro. I…”
+                </p>
+
+                <p>
+                    “Ant, listen to me. You’ve
+                    promised to take good care of yourself. Now you look even worse than me,” he
+                    said, sighing.
+                </p>
+
+                <p>
+                    “I’m fine…”
+                </p>
+
+                <p>
+                    He sat up and opened the fridge
+                    to find me a small carton of milk. “Take this when you’re done eating.”
+                </p>
+
+                <p>
+                    “You’re so…” I took it and said: “Thank you.”
+                </p>
+
+                <p>
+                    He started to call me Ant after
+                    that reunion. At that time, I even laughed and said that the name was no
+                    different from an ant. But he told me that calling me so was dearer, lest
+                    people saw it and deemed that we were strangers. But honestly, there was barely
+                    anyone caring or thinking about what we did. He simply named me so to call me
+                    for short. I wondered how much sincerity was underlying in that endearment.
+                </p>
+
+                <p>
+                    After dinner, he took me to his
+                    home. His sister, as usual, was very eager to know about my latest publication.
+                    Her mother, on the other hand, tenderly asked how I was. Everyone loved me and
+                    viewed me as their family. He once said that I was his family and that I could
+                    move here if I would love to. But I did not want to burden anyone, and he would
+                    settle down one day; therefore, doing so might possibly stand in his way. After
+                    all, I was his mere social brother.
+                </p>
+
+                <p>
+                    I was lying on the bed waiting for
+                    him to shower. It had been three years since I met him. Time did pass so
+                    quickly. Everything was like in the blink of an eye. At times, I thought what
+                    had happened between us was like yesterday. Last month, whilst I was surfing
+                    the net to find ideas for his birthday present, I came across a succulent pot.
+                    Its figure was delicate and somewhat sacred. I hesitated for a while and then
+                    decided to get it as his secondary present. As it was secondary, I indeed had
+                    prepared him a primary one. I specially knit him two pairs of gloves: one for
+                    riding the motorbike and one for the wintertime. When he took the presents, he
+                    embraced me and said that I was always thoughtful.
+                </p>
+
+                <p>
+                    “It’s nothing,” I replied. In
+                    truth, what I did to him was nothing to me. I never minded making efforts to
+                    cheer him up. He must have been my life, so I was diligent about cultivating
+                    it, hoping it might bring me some novel vitality, the thing which I could
+                    hardly find in anyone or anywhere else. I hoped that this life would never
+                    abandon me literally and figuratively.
+                </p>
+
+                <p>
+                    He walked in and saw me lying on
+                    bed wistfully. “What’s wrong?” he asked.
+                </p>
+
+                <p>
+                    I came to my senses and said:
+                    “Nothing.”
+                </p>
+
+                <p>
+                    “Ant, I’m gonna go back to Spain
+                    to arrange accommodation for my mother and my sister. I’ll be back soon.”
+                </p>
+
+                <p>
+                    “Alright. Take your time. You
+                    haven’t gone back to your hometown for years, have you?”
+                </p>
+
+                <p>
+                    “Yeah. It’s been a long time. I’m
+                    a little bit nostalgic, you know.” He frowned and continued: “Are you happy
+                    when you’re back in your hometown?”
+                </p>
+
+                <p>
+                    “Why are you asking like that?”
+                </p>
+
+                <p>
+                    “I don’t know. You seem not to
+                    mention it much, so I’m a little curious.”
+                </p>
+
+                <p>
+                    “I’m happy…” I sat on the fence
+                    before replying to him.
+                </p>
+
+                <p>
+                    “Ant, do you remember what we
+                    compromised on?”
+                </p>
+
+                <p>
+                    “Never leave anyone behind.”
+                </p>
+
+                <p>
+                    “So now, look me in the eyes and
+                    tell me if I’m being left behind or not.”
+                </p>
+
+                <p>
+                    He was staring at me with those
+                    adamantine eyes. Whenever I looked at them, I felt as though I were standing
+                    before some court, completely exposed, waiting for the sentence to be pronounced.
+                    He always used those eyes to see if I was being honest or went off at a
+                    tangent. Truthfully, he always tried to be a cheerful and amiable person, but
+                    he, in fact, always protected me. I was very appreciative of his good nature.
+                    But every time the night fell, my heart contracted, as if it were pinned by
+                    needles of love or were scratched by splinters of memories. I loved him, but
+                    this idea backed me into a corner of being wracked by my own thoughts. Was it
+                    because of me or was it because of the ordained fate? “You’re not being left
+                    behind,” I said, calmly.
+                </p>
+
+                <p>
+                    “Really?”
+                </p>
+
+                <p>
+                    “Really. I’ve been scientifically verified.”
+                </p>
+
+                <p>
+                    “Alright then.” He tousled my
+                    hair and said: “Life may be elusive and unreal, but you’ve got me. I’ll make
+                    your life more secure.”
+                </p>
+
+                <p>
+                    “Thank you,” I said, eyes
+                    widening. I then saw the handmade sweater I had given him and aimlessly said:
+                    “I was wondering who knit that gorgeous sweater over there.”
+                </p>
+
+                <p>
+                    “Idiot Ant, of course.” He smiled
+                    and said: “Feeling smug, are you?”
+                </p>
+
+                <p>
+                    “Certainly.”
+                </p>
+
+                <p>
+                    “I really like it. I haven’t even
+                    worn it yet.”
+                </p>
+
+                <p>
+                    “If you don’t often wear it, how
+                    can I admire the sweater’s beauty in your massive body?”
+                </p>
+
+                <p>
+                    “Are you complimenting it or me
+                    now?”
+                </p>
+
+                <p>
+                    “You do know the answer.”
+                </p>
+
+                <p>
+                    “Alright, me then.”
+                </p>
+
+                <p>
+                    “You’re deluding yourself,
+                    señor.”
+                </p>
+
+                <p>
+                    Then we did puzzles together. I
+                    thought that it might take us the whole night to finish, but the pieces
+                    gradually fit in the frame, hence the picture of a dinosaur. We again followed
+                    our custom with fags and beers and shit talk about life. In a daze, I called
+                    him Caba. He said nothing but smiled and said that he loved that nickname. I
+                    was so scared that I thought he might kick me out at once, but it turned out
+                    that the reality did not put me through the ordeal. And so, during the talk, I
+                    kept calling him Caba over and over again to express my untold intimacy to him.
+                </p>
+
+                <p>
+                    I was going to sleep with him
+                    tonight. The family all persuaded me to stay over, so reluctantly accepting the
+                    offer might be better. Though I nodded as a courtesy, my heart was afire with
+                    exhilaration as if I won the lottery. Even though this was not my first time
+                    sleeping with him, this was my first time sleeping with him in his own house.
+                    For a moment, I felt like his mistress.
+                </p>
+
+                <p>
+                    Around half past midnight, we
+                    both could hardly fall asleep. Our eyes were glued to the ceiling, and we were
+                    listening to the ticking of the second hand. The dim moonlight outside and the
+                    stars were altogether casting light on the dark room, as though they were
+                    investigating what was happening here. But we just lay there and remained
+                    silent. I thought that silence is not really bad, for people sometimes need
+                    certain quietness from the hectic pace of life. Noise is not good for all time,
+                    and silence is not an escape either. Reconciling between the dynamic and the
+                    still is ambiperfect.
+                </p>
+
+                <p>
+                    On this April Fools’ Day, I messaged
+                    him that we ought to stop talking for some time. Once the message was sent, he
+                    gave me an immediate call and asked me what the fuck was happening. I had to
+                    act cool and hold back my wicked giggle. Though I did not see him in person, I
+                    was able to picture a Pedro, confused and frightened. I, at that time, felt so
+                    guilty, but because of that, I trusted and loved him more than yesterday.
+                </p>
+
+                <p>
+                    “Ant.”
+                </p>
+
+                <p>
+                    “What’s wrong?”
+                </p>
+
+                <p>
+                    “Do you like me?”
+                </p>
+
+                <p>
+                    “Of course.”
+                </p>
+
+                <p>
+                    “Are you happy with me?”
+                </p>
+
+                <p>
+                    “A little bit.”
+                </p>
+
+                <p>
+                    “Just a little bit?” He turned to
+                    me, questioning.
+                </p>
+
+                <p>
+                    “Sort of.”
+                </p>
+
+                <p>
+                    “If you have your own
+                    family, do you still like me?”
+                </p>
+
+                <p>
+                    I caressed his moustache and
+                    said: “Claro que sí, señor.”
+                </p>
+
+                <p>
+                    That was our conversation, simple
+                    and random. The tipsiness soon kicked in, and we finally felt sleepy. At times,
+                    I sneaked a glance at him and smiled. And he did so, too.
+                </p>
+
+            </div>
+
+
+            <div class="chapter-navigation">
+
+                <a class="navigation-link" href="story-01-chapter-10.html">
+                    ← Chapter Ten
+                </a>
+
+                <a class="navigation-link" href="story-01-chapter-12.html">
+                    Next chapter →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
