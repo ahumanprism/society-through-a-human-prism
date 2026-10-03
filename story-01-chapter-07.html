@@ -41,22 +41,27 @@
             text-decoration: none;
         }
 
+        /* =========================
+           Containers
+        ========================= */
+
         .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .story-container {
             width: min(760px, 90%);
             margin: 0 auto;
         }
 
-        .site-container {
-            width: min(1100px, 90%);
-            margin: 0 auto;
-        }
 
 
         /* =========================
            Header
         ========================= */
 
-        .site-header {
+        header {
             padding: 32px 0;
             background: #ffffff;
             border-bottom: 1px solid var(--header-line);
@@ -67,12 +72,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 30px;
         }
 
         .logo {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
             color: var(--header-black);
         }
 
@@ -102,6 +107,7 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+
 
 
         /* =========================
@@ -154,6 +160,7 @@
         }
 
 
+
         /* =========================
            Story
         ========================= */
@@ -170,6 +177,7 @@
             line-height: 1.9;
             color: var(--white-soft);
         }
+
 
 
         /* =========================
@@ -217,6 +225,7 @@
         }
 
 
+
         /* =========================
            Footer
         ========================= */
@@ -229,6 +238,7 @@
             font-size: 11px;
             color: #111111;
         }
+
 
 
         /* =========================
@@ -264,17 +274,18 @@
         }
 
 
+
         /* =========================
            Mobile
         ========================= */
 
         @media (max-width: 700px) {
 
-            .site-container {
-                width: min(1100px, calc(100% - 40px));
+            .container {
+                width: calc(100% - 40px);
             }
 
-            .container {
+            .story-container {
                 width: calc(100% - 40px);
             }
 
@@ -318,6 +329,7 @@
         }
 
 
+
         /* =========================
            Reduced motion
         ========================= */
@@ -359,12 +371,14 @@
 </head>
 
 
+
 <body>
 
 
-<header class="site-header">
 
-    <div class="site-container">
+<header>
+
+    <div class="container">
 
         <nav>
 
@@ -387,11 +401,13 @@
 </header>
 
 
+
 <main>
 
     <article>
 
-        <div class="container">
+        <div class="story-container">
+
 
 
             <header class="chapter-header">
@@ -410,7 +426,9 @@
             </header>
 
 
+
             <section class="story">
+
 
 
                 <p>
@@ -418,9 +436,11 @@
                 </p>
 
 
+
                 <p>
                     “A ball? You knit yourself?” Pedro was excited.
                 </p>
+
 
 
                 <p>
@@ -428,9 +448,11 @@
                 </p>
 
 
+
                 <p>
                     “Looks absolutely cute. Thank you. I promise…” he stammered. “I promise to keep it safe. The scarf you gave me before, I’ll drape it around the ball.”
                 </p>
+
 
 
                 <p>
@@ -438,9 +460,11 @@
                 </p>
 
 
+
                 <p>
                     “But it’s your effort and dedication. I really admire it. It’s much more valuable than luxurious stuff out there.” He interrupted me with a hubristic face.
                 </p>
+
 
 
                 <p>
@@ -448,9 +472,11 @@
                 </p>
 
 
+
                 <p>
                     He, nevertheless, did not even mind if he was well or not. He said that he himself must tend his beloved people instead of cliché suggestions. “What if they betray you?” I questioned. Not because I meant to ask questions of his morale, but rather because I wanted to see his reaction in the face of such a difficulty. He looked at me and firmly stated that his selected person would never be such a kind.
                 </p>
+
 
 
                 <p>
@@ -458,9 +484,11 @@
                 </p>
 
 
+
                 <p>
                     “You’re mysterious, Anthony.” He smirked.
                 </p>
+
 
 
                 <p>
@@ -468,9 +496,11 @@
                 </p>
 
 
+
                 <p>
                     “Vale.”
                 </p>
+
 
 
                 <p>
@@ -478,9 +508,11 @@
                 </p>
 
 
+
                 <p>
                     I rushed to take the birthday cake I had prepared before. I was not a gifted cook, so this was obviously bought in a bakery near the school. Tantalisingly, the moment I brought it out of the shop, Henry was waiting for me for a while. He asked me to go to a bookstore and discussed the upcoming term paper together, but I turned him down, saying that I had had an appointment this day.
                 </p>
+
 
 
                 <p>
@@ -488,9 +520,11 @@
                 </p>
 
 
+
                 <p>
                     But I realised that he and I had been the same, all sharing unrequited love. The chasm between us was our principle about it. He, though having feelings for me, bred everywhere, regardless of sex. I sometimes wondered what his purpose of chasing me was. Was it about trying to conquer the old wolf—me myself—or to turn me into a stop in the journey of being a rake? In brief, my type would never be someone jejune like him.
                 </p>
+
 
 
                 <p>
@@ -498,9 +532,11 @@
                 </p>
 
 
+
                 <p>
                     “You done?” Pedro deliberately peeked but saw nothing. He scanned around frantically, but found no trace of me. He shouted my name, but responses were silent. He then scrambled around the beach in search of my silhouette. He anxiously looked for me, calling my name over and over again. At last, he resorted to phone me, but my phone was switched back to vibrate mode, so again, responses were silent.
                 </p>
+
 
 
                 <p>
@@ -508,9 +544,11 @@
                 </p>
 
 
+
                 <p>
                     It appeared that my giggle disclosed my retreat. Slowly, he came closer and tapped lightly on my head. I grinned and said: “Happy birthday, señor.”
                 </p>
+
 
 
                 <p>
@@ -518,9 +556,11 @@
                 </p>
 
 
+
                 <p>
                     “Come on. I’m grown up already, not a kid to be kidnapped.”
                 </p>
+
 
 
                 <p>
@@ -528,9 +568,11 @@
                 </p>
 
 
+
                 <p>
                     “Done.”
                 </p>
+
 
 
                 <p>
@@ -538,9 +580,11 @@
                 </p>
 
 
+
                 <p>
                     He whispered: “It’s a secret.”
                 </p>
+
 
 
                 <p>
@@ -548,9 +592,11 @@
                 </p>
 
 
+
                 <p>
                     He nodded. “But you did scare me back then.”
                 </p>
+
 
 
                 <p>
@@ -558,9 +604,11 @@
                 </p>
 
 
+
                 <p>
                     “You challenge me?”
                 </p>
+
 
 
                 <p>
@@ -568,9 +616,11 @@
                 </p>
 
 
+
                 <p>
                     “What if I can?”
                 </p>
+
 
 
                 <p>
@@ -578,9 +628,11 @@
                 </p>
 
 
+
                 <p>
                     I ran like the wind towards the distance. In terms of muscles, Pedro far outweighed me. On flexibility and stamina, however, I was very willing to compete with him. I was running whilst holding the smoldering fag. The smoke wafting in the vernal air made the beach landscape more impactful. Spring comes, winter goes, and then summer and autumn. The four seasons just carries on. This chase was alike. I ran to a place and ran back to it, letting him scream behind, whilst I gleefully chuckled. Being with him meant laugh and cry were all the same. All were expressed with ease.
                 </p>
+
 
 
                 <p>
@@ -588,14 +640,17 @@
                 </p>
 
 
+
                 <p>
                     He smirked and said: “Never.”
                 </p>
 
 
+
                 <p>
-                    He took off his shirt, jumped to the water, and chased me like a whalekiller, making me bop up and down to avoid his sight. It must have been because I usually immersed myself in the riverine area, my swimming skills came along the way. At least I had enough knowledge to steer clear of drowning or unwanted incidents during swimming such as cramp. In retrospect, it was such a happy time.
+                    He took off his shirt, jumped to the water, and chased me like an orca, making me bop up and down to avoid his sight. It must have been because I usually immersed myself in the riverine area, my swimming skills came along the way. At least I had enough knowledge to steer clear of drowning or unwanted incidents during swimming such as cramp. In retrospect, it was such a happy time.
                 </p>
+
 
 
                 <p>
@@ -603,9 +658,11 @@
                 </p>
 
 
+
                 <p>
                     “Don’t be so pretentious, hermano.”
                 </p>
+
 
 
                 <p>
@@ -613,9 +670,11 @@
                 </p>
 
 
+
                 <p>
                     “Since when did my birthday become a swimming competition?”
                 </p>
+
 
 
                 <p>
@@ -623,9 +682,11 @@
                 </p>
 
 
+
                 <p>
                     In the end, he was able to snatch my collar. He and I were face-to-face grinning. In that moment, I wanted time to be frozen, so that we could be together for a little longer, so that I could feel his warmth spreading through the sea. Looking closely, his eyes were much more mesmerising in the water. It must have been the water that made his eyelashes longer and sharper than usual. His body, too, was beaded with water droplets, altogether adding lustre to his wild beauty. Then I, on purpose, gave him a wide berth and dived towards the shore.
                 </p>
+
 
 
                 <p>
@@ -633,9 +694,11 @@
                 </p>
 
 
+
                 <p>
                     “You’re welcome, señor.” I flipped onto my front and continued: “You deserve good things.”
                 </p>
+
 
 
                 <p>
@@ -643,9 +706,11 @@
                 </p>
 
 
+
                 <p>
                     “You don’t need to say anything.” I comfortingly patted his head. “Today is your day. You’re only allowed to be happy, not to be sad, remember?
                 </p>
+
 
 
                 <p>
@@ -653,9 +718,11 @@
                 </p>
 
 
+
                 <p>
                     “Me too, but Pedro.”
                 </p>
+
 
 
                 <p>
@@ -663,9 +730,11 @@
                 </p>
 
 
+
                 <p>
                     “You have to live well.”
                 </p>
+
 
 
                 <p>
@@ -673,9 +742,11 @@
                 </p>
 
 
+
                 <p>
                     “Will you promise me something?”
                 </p>
+
 
 
                 <p>
@@ -683,9 +754,11 @@
                 </p>
 
 
+
                 <p>
                     He chuckled. “No. I want you to keep in touch with me when I’m in the army. I mean, there are days that we’re both busy to make a call, so send me a text instead. I’ll read it.”
                 </p>
+
 
 
                 <p>
@@ -693,9 +766,11 @@
                 </p>
 
 
+
                 <p>
                     “What?” he frowned.
                 </p>
+
 
 
                 <p>
@@ -703,9 +778,11 @@
                 </p>
 
 
+
                 <p>
                     He took a drag and said: “Really? Sounds like we’re in wartime.”
                 </p>
+
 
 
                 <p>
@@ -713,7 +790,9 @@
                 </p>
 
 
+
             </section>
+
 
 
             <div class="chapter-navigation">
@@ -735,6 +814,7 @@
             </div>
 
 
+
         </div>
 
     </article>
@@ -742,13 +822,15 @@
 </main>
 
 
+
 <footer>
 
-    <div class="site-container">
+    <div class="container">
         © 2026 A Human Prism · All rights reserved
     </div>
 
 </footer>
+
 
 
 </body>
