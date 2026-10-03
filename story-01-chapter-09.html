@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>09 August 2009 — One Life, One Love, Forever — A Human Prism</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --black: #111111;
+            --white: #e8e8e3;
+            --white-soft: #d0d0cb;
+            --grey: #888884;
+            --header-white: #ffffff;
+            --header-black: #111111;
+            --header-line: #dddddd;
+            --body-line: #30302e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: "Courier Prime", "Courier New", monospace;
+            line-height: 1.85;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           CONTAINERS
+        ========================== */
+
+        .container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        .site-container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            padding: 32px 0;
+            background: var(--header-white);
+            border-bottom: 1px solid var(--header-line);
+            animation: fadeDown 0.9s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--header-black);
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #555555;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: var(--header-black);
+        }
+
+        .nav-links a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 1px;
+            background: var(--header-black);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #555555;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           ARTICLE
+        ========================== */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: var(--white);
+        }
+
+        .literature-link {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+            transition: color 0.3s ease;
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+            transition: width 0.35s ease;
+        }
+
+        .literature-link:hover {
+            color: var(--white);
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           STORY
+        ========================== */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--white-soft);
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           CHAPTER NAVIGATION
+        ========================== */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+            margin-top: 105px;
+            padding-top: 35px;
+
+            border-top: 1px solid var(--body-line);
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--grey);
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 35%;
+            height: 1px;
+            background: var(--grey);
+
+            transition: width 0.35s ease;
+        }
+
+        .navigation-link:hover {
+            color: var(--white);
+            transform: translateX(3px);
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--header-line);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================== */
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .site-container {
+                width: min(1100px, calc(100% - 40px));
+            }
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 10px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="site-container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="container">
+
+
+            <div class="chapter-header">
+
+                <div class="chapter-title">
+                    09 August 2009
+                </div>
+
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+                <p>
+                    I remembered that it was 7
+                    January 2009, I was taking an exam at school. Coincidentally, that very day
+                    was his departure for the army. Though he messaged me to come to bid him
+                    farewell if I lazed about, his messages ended up getting buried because of my
+                    tight schedule with academic stuff. That night I could barely fall asleep with
+                    two trails of tears and an unending yearning for him.
+                </p>
+
+                <p>
+                    I remembered that it was 24 March
+                    2009, that feeling hit me again—the first days knowing him and the existence of
+                    that voluable mouth. It had been quite a long time since I met him. At times,
+                    I, as per usual, went to that beach in an absent-minded manner, where pieces of
+                    memories of us were disorientating, like footage reshowing the glorious past of
+                    us. “Glorious…” I whispered. I then lit a fag and quietly sat on the sand,
+                    gazing at the falling dusk. “If I had made it to see him the last time, I would
+                    have been…”
+                </p>
+
+                <p>
+                    I sometimes swung by his home to
+                    talk to his family. After that explosion, everyone seemed to care about me
+                    more, especially his mother. She kept asking about my studies as well as my
+                    well-being. She also said that if I wanted, I could stay in his room until he
+                    came back. I knew that this was his offer, but I really wondered if I simmered
+                    down or I was still looking for our beautiful memories and was then lost in
+                    them like the way I turned to this fag.
+                </p>
+
+                <p>
+                    His sister was enraptured by my
+                    literary works, as I, on occasion, showed her my short stories. I, as a matter
+                    of fact, was unsure if my writing style suited her naivety, but she did not
+                    think so. On the other day, whilst I was having lunch and thinking of him, she
+                    came to me and said: “You write so well, Anthony. I want to be a writer like
+                    you.” I just patted on her head and said that she ought to focus on studying
+                    subjects at school and take writing as a pastime, not framing herself but
+                    letting it flow with the surrounding currents. Then, words could totally live
+                    on in readers’ hearts.
+                </p>
+
+                <p>
+                    I turned to the distant sea and
+                    took a dip in spite of the burning fag in my hand. Since it was autumn, the
+                    temperature was rather low. Whilst my body was undergoing a fever, it seemed to
+                    emit some heat to balance out the cold outside. It might sound injudicious, but
+                    whenever I felt off-colour, I felt as if I were being draped with a thick
+                    blanket. It was chill outside, but within me, there was some sort of exuding
+                    warmth. I reached out to the terns flying high above me, irrespective of the
+                    water gradually permeating my body.
+                </p>
+
+                <p>
+                    I remembered that it was 7 April
+                    2009, I celebrated his birthday alone. Though his family invited me to take a
+                    commemorative picture together, I politely declined and said that I was not
+                    feeling well. Truth to be told, I was physically and mentally exhausted. Had I
+                    come to his home with my shakiness, who would I have become? That being said, I
+                    did wish to celebrate his birthday alone. In fact, I had prepared a present
+                    before. This year, I, in particular, knit him a white jersey with his name on
+                    the back and a large number “07”. He was passionate about football, and there
+                    was a time that he and his mates achieved multiple trophies in a row during secondary
+                    school. But again, owing to the financial issue, he could not afford his dream.
+                    I sometimes watched him play football, yet he told me: “Probably I’m an adult
+                    now, so I find football a little bit strange.”
+                </p>
+
+                <p>
+                    I remembered that it was 16 May
+                    2009, in my dream, I met him again. He, in the military uniform, looked
+                    immaculately attractive and manly. He and I strolled along the beach, smoking,
+                    drinking, and talking shit like the good old days. His face, I recalled, was
+                    etched with gravitas of time. Wrinkles around the eyes and the forehead thus
+                    emerged. I teased him that he was old and was no longer virile like before. I
+                    also added that if he did not settle down soon, he would miss his manhood. He,
+                    by contrast, said nothing but looked at me with those eyes. After that, he held
+                    my hands and whispered: “Please take good care of yourself.” And he vanished,
+                    as though his existence were but a mere ephemerality. I woke up and realised
+                    that all was just a dream, not too good nor too bad to be called a nightmare.
+                    The dream was basically my unsubtle ardency for Pedro, the man I had been persistently
+                    pining for.
+                </p>
+
+                <p>
+                    I remembered that it was 14 June
+                    2009, whilst I was on my lunch break, the captain came to me and asked if I
+                    still kept in touch with Pedro. I simply nodded and smiled. He then told me
+                    that after being discharged from the military, he would come back here to
+                    continue the work. At that time, I thought why he made such an abrupt decision,
+                    because obviously if he remained in the navy, he could be promoted down the road,
+                    hence a brighter future ahead. Then I, in a mindless moment, checked my phone.
+                    There, I saw nothing since those farewell words.
+                </p>
+
+                <p>
+                    I remembered that it was 24 July
+                    2009, the blazing sunshine of summer reminded me of his figure. I wondered what
+                    he was doing at the present, if he lived well or talked nonsense with his
+                    fellows. I, from time to time, wondered if he ever thought about me. But I soon
+                    got rid of such simple-minded daydreaming. Who was he? A friend, at last. I,
+                    however, fancied that he was far more special than the young men I had met.
+                    What a shame!
+                </p>
+
+                <p>
+                    This morning I had a call from
+                    his mother. She said that he would manage to go to see her in the next two
+                    weeks, and she asked if I let him say a few words with me. Anyway, it was her
+                    mother who spoke for him, so I could not turn her down but let out a
+                    perfunctory smile and said. Actually, I was very happy. I was happy to know
+                    that he lived well and, above all, he was going to see me in person,
+                    face-to-face, directly. I imagined that the confrontation was either equable or
+                    intemperate. Even so, I smiled a lot, my mind relieved by the knowledge that he
+                    was still doing good.
+                </p>
+
+                <p>
+                    I stepped onto the shore and went
+                    back home. Having been completely drenched with seawater, plus the autumnal
+                    keenness, my warm body could not stand the perishing gusts of wind. I embraced
+                    myself to leaven the cold outside and inside. Sadly, tomorrow was very likely
+                    to be a rainy day. I had planned to go out to bask in his return, but it seemed
+                    not to permit me to leave the room laden with notions of him. “I miss you,
+                    Pedro,” I said to myself in a trembling voice.
+                </p>
+
+                <p>
+                    Whilst I was attempting to sketch
+                    the Triton’s trumpet shell, the urge to admire literature within me grew suddenly
+                    strong. I opened my novel and went on the previous plot. He, by implication,
+                    always inspired me, helping me to finish the course of actions of this love
+                    story without his realisation. I sometimes argued that for this reason, he
+                    thought that he himself had the right to preview the story. But he was not
+                    aware of the fact that being inspiring and arbitrary was an entirely distinct
+                    matter. He might encourage me to move forward, but that did not mean that he
+                    owned the path I walked on and presumed that it was his, thus doing whatever he
+                    wanted. If so, I was no different than a brothel, letting him check in and out
+                    casually.
+                </p>
+
+                <p>
+                    After having the chapter
+                    finished, I decided to meditate with a view to steadying myself. Yet, when I
+                    just closed my eyes, his face untimely came to my mind. Amidst the darkness, he
+                    was my light, guiding me to the paths that I had been very frightened to get
+                    through. He made things appear easier. There was a time that his motorbike
+                    could not function properly, and he then brought out the requisite tools
+                    prepared before to fix it. Seeing that, I was more interested in his talent.
+                    Perhaps theoretical knowledge was not his strength, but with regard to life
+                    skills, he indeed left me in the shade.
+                </p>
+
+                <p>
+                    I sat up and opened the window to
+                    look around. I took a puff, drank a beer, and nibble on some snacks. I had not
+                    watched the stars for quite some time. Since the prevalence of social media
+                    platforms, many people had a trendy liking for some sort of horoscope reading
+                    consultation like fortune tellers in my hometown. I supposed this was but a
+                    westernised version and was not the twelve zodiac animals like ours. My
+                    curiosity then led me to give it a try, and I discovered that my zodiac sign was
+                    Sagittarius and was of the Fire element. His was Taurus and was of the Wood
+                    element. These two elements, as I learned, do not often get along well. No
+                    wonder every time I was with him, I just wanted to curse as much as possible.
+                </p>
+
+                <p>
+                    “You’re a twat.”
+                </p>
+
+                <p>
+                    “What did you just say?” Pedro
+                    laughed.
+                </p>
+
+                <p>
+                    “I said you’re a twat, a fucking moron.”
+                </p>
+
+                <p>
+                    He kept laughing whilst I was fed
+                    up to the back teeth of him. Then I walked ahead, leaving him calling me
+                    behind. As it was heavily snowing in Winchester, my gait became stiff
+                    accordingly. I thought he would take me
+                    to some famous attraction on Christmas Eve, but he surprisingly took me to a
+                    house of prostitution. Furthermore, he said that he wanted to teach me to taste
+                    the ways of life when he was away. I was about to go ballistic, but because I
+                    wanted to save our faces, I decided to transfer this fury at the end of the
+                    alley.
+                </p>
+
+                <p>
+                    “Wait, Anthony,” he said, with a
+                    mouth unable to shut. “I’m just joking.”
+                </p>
+
+                <p>
+                    “Your joke is working now.
+                    Congratulations!”
+                </p>
+
+                <p>
+                    “Come on. Don’t be so childish
+                    like that.”
+                </p>
+
+                <p>
+                    “What? Childish?” I turned to him
+                    with an annoyed expression. “I’m literally speechless.”
+                </p>
+
+                <p>
+                    He seized me by the wrist and
+                    said: “Alright, Anthony. I’m sorry.”
+                </p>
+
+                <p>
+                    “For what?”
+                </p>
+
+                <p>
+                    “For…”
+                </p>
+
+                <p>
+                    “Your goodwill is not always good
+                    to me.”
+                </p>
+
+                <p>
+                    “I’m just joking.”
+                </p>
+
+                <p>
+                    I sighed and said: “You do know
+                    my principles.”
+                </p>
+
+                <p>
+                    “I know, but it’s just…”
+                </p>
+
+                <p>
+                    “It’s just you wanted to go in
+                    there, and you didn’t want to go alone, so you took me with you. Am I right?”
+                </p>
+
+                <p>
+                    He shook his head and said: “No.
+                    It’s just you’ve been feeling lonely for a long time, so I wanted to give you a
+                    chance to relax.”
+                </p>
+
+                <p>
+                    “You cunning, but allow me to
+                    turn down your kind offer. And if you want to relax, I’m very pleased to wait
+                    here.”
+                </p>
+
+                <p>
+                    “I’m not into having sex like
+                    that.”
+                </p>
+
+                <p>
+                    “Didn’t you tell me your sex
+                    life? Why are you being so suddenly picky?”
+                </p>
+
+                <p>
+                    “No, they’re different. The women
+                    there are…”
+                </p>
+
+                <p>
+                    I glared at him and moved on.
+                    What just happened was beyond my conception. However, I, after this chance
+                    occurrence, knew that he was not an omnivore. He must have been afraid of
+                    health issues, so he refused to seek fleshpots like this one. Compared to
+                    Henry, he was not really a rake that lulled the women he had slept with into a
+                    lingering sensual attachment. He once told me that the number of times he had
+                    sex with women counted on his fingers. He also pointed at me and laughed when
+                    figuring out that I was a virgin and had never experienced physical intimacy
+                    before. There, nevertheless, had always existed a secret about me that he could
+                    never ever imagine that women were but my friends and sisters. Men were my
+                    literal targets. By coincidence, he was the man of whom I was enamoured.
+                </p>
+
+
+                <div class="chapter-navigation">
+
+                    <a class="navigation-link" href="story-01-chapter-08.html">
+                        ← Chapter Eight
+                    </a>
+
+                    <a class="navigation-link" href="story-01-chapter-10.html">
+                        Next chapter →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="site-container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
