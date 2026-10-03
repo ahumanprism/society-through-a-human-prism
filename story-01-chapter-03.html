@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
@@ -50,20 +53,20 @@
             text-decoration: none;
         }
 
+
         /* =========================
            CONTAINERS
         ========================== */
 
         .container {
-            width: min(760px, 90%);
-            margin: 0 auto;
-        }
-
-        .site-container {
             width: min(1100px, 90%);
             margin: 0 auto;
         }
 
+        .story-container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
 
 
         /* =========================
@@ -87,7 +90,6 @@
         .logo {
             font-family: Arial, sans-serif;
             font-size: 12px;
-            letter-spacing: 2px;
             color: var(--header-black);
             transition: color 0.3s ease;
         }
@@ -129,7 +131,6 @@
         }
 
 
-
         /* =========================
            ARTICLE
         ========================== */
@@ -137,6 +138,11 @@
         article {
             padding: 125px 0 110px;
         }
+
+
+        /* =========================
+           CHAPTER HEADER
+        ========================== */
 
         .chapter-header {
             animation: fadeUp 1s ease 0.1s both;
@@ -185,7 +191,6 @@
         }
 
 
-
         /* =========================
            STORY
         ========================== */
@@ -204,7 +209,6 @@
         }
 
 
-
         /* =========================
            CHAPTER NAVIGATION
         ========================== */
@@ -214,22 +218,18 @@
             justify-content: space-between;
             align-items: center;
             gap: 30px;
-
             margin-top: 105px;
             padding-top: 35px;
-
             border-top: 1px solid var(--body-line);
         }
 
         .navigation-link {
             position: relative;
             padding-bottom: 6px;
-
             font-family: Arial, sans-serif;
             font-size: 10px;
             letter-spacing: 2px;
             color: var(--grey);
-
             transition:
                 color 0.3s ease,
                 transform 0.3s ease;
@@ -240,11 +240,9 @@
             position: absolute;
             left: 0;
             bottom: 0;
-
             width: 35%;
             height: 1px;
             background: var(--grey);
-
             transition: width 0.35s ease;
         }
 
@@ -256,7 +254,6 @@
         .navigation-link:hover::after {
             width: 100%;
         }
-
 
 
         /* =========================
@@ -271,7 +268,6 @@
             font-size: 11px;
             color: #111111;
         }
-
 
 
         /* =========================
@@ -307,18 +303,17 @@
         }
 
 
-
         /* =========================
            MOBILE
         ========================== */
 
         @media (max-width: 700px) {
 
-            .site-container {
-                width: min(1100px, calc(100% - 40px));
+            .container {
+                width: calc(100% - 40px);
             }
 
-            .container {
+            .story-container {
                 width: calc(100% - 40px);
             }
 
@@ -362,7 +357,6 @@
         }
 
 
-
         /* =========================
            REDUCED MOTION
         ========================== */
@@ -385,14 +379,12 @@
 </head>
 
 
-
 <body>
-
 
 
 <header>
 
-    <div class="site-container">
+    <div class="container">
 
         <nav>
 
@@ -415,13 +407,11 @@
 </header>
 
 
-
 <main>
 
     <article>
 
-        <div class="container">
-
+        <div class="story-container">
 
 
             <div class="chapter-header">
@@ -435,7 +425,6 @@
                 </a>
 
             </div>
-
 
 
             <div class="story">
@@ -585,7 +574,6 @@
                 </p>
 
 
-
                 <div class="chapter-navigation">
 
                     <a class="navigation-link" href="story-01-chapter-02.html">
@@ -607,15 +595,13 @@
 </main>
 
 
-
 <footer>
 
-    <div class="site-container">
+    <div class="container">
         © 2026 A Human Prism · All rights reserved
     </div>
 
 </footer>
-
 
 
 </body>
