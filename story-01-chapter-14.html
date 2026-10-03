@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>09 April 2017 — Hewwy Huynh</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111111;
+            color: #e8e8e3;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .story-container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #dddddd;
+            animation: fadeDown 0.9s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: #111111;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Chapter
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: #e8e8e3;
+        }
+
+        .literature-link {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #888884;
+            transition: color 0.3s ease;
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #e8e8e3;
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover {
+            color: #e8e8e3;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d0d0cb;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           Chapter Navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid #292929;
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #888884;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #e8e8e3;
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: #e8e8e3;
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid #dddddd;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .story-container {
+                width: calc(100% - 40px);
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 18px;
+                font-size: 11px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="story-container">
+
+
+            <div class="chapter-header">
+
+                <h1 class="chapter-title">
+                    09 April 2017
+                </h1>
+
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+
+                <p>
+                    My schedule was all go this week.
+                    Until now, I had the chance to throw a birthday party for him. Even when I
+                    intended to do so on the exact day, his wife manifestly took precedence over
+                    me. However, I was glad that he still remembered me, remembered days of mutually
+                    celebrating birthdays.
+                </p>
+
+
+                <p>
+                    To be honest, I was weary of
+                    appearing on camera and speaking. They even went to the Puerto or my nest to
+                    bother not only me but the people around. At such times, he was the one kindly
+                    asking them to leave. I did not know whether they cared about my feelings or
+                    simply piggybacked over my claims to boost their brands’ images. I, as a matter of
+                    fact, did have plans to disappear. A few years from now, I would be
+                    withdrawing from the media.
+                </p>
+
+
+                <p>
+                    We still met at that familiar
+                    beach. I had bought a birthday cake with the words “Pedro the Padre”. He indeed
+                    was going to have his own angel. I did not know if the baby was a boy or a
+                    girl, but I could feel the excitement in his tone. He had always ached for a
+                    perfect family, and now he could have a good laugh. I was very happy for him.
+                    Thus, I was conferred the title of “God father”. On that day, he hoped that I
+                    would teach his child literature, so that he or she could be as top-notch as
+                    me. I just smiled and told him that he did a good job already.
+                </p>
+
+
+                <p>
+                    Whilst I was having lunch break
+                    in the cabin, he came to me with the recognisable routines, smoking and talking
+                    nonsense. He said that he was the happiest man on earth, as he had a beautiful
+                    wife, a child to come, and a best fella, me myself. I smiled and said that he
+                    was cunning and raised a toast to congratulate him on his jollity. But my eyes
+                    were so brazen. Rather than showing joy, they gleamed with envy beyond a shadow
+                    of doubt. It was just that he trusted and spoiled me, so he could barely
+                    recognise the pettiness in me. What a shame!
+                </p>
+
+
+                <p>
+                    After work, he wanted to take me
+                    home, but I said: “I still want to watch the sunset for a little longer”. In
+                    truth, it was but an excuse. I already knew that had he not had his own family,
+                    I would have been his priority. But life changed. My standing with him shifted,
+                    and I, as a result, clearly had no reason to bar his way. The motorbike’s roar dissipated
+                    into the atmosphere. He left, but what he left was not only me, but a feeling
+                    of incredible emptiness.
+                </p>
+
+
+                <p>
+                    I took out the pencil and the
+                    notebook from my canvas tote bag and embarked on sketching the imposing
+                    landscape before me. Although I saw it almost every day, sitting down and
+                    reflecting on it and on myself was sort of a leisure pursuit. Back then, when
+                    he was still here, I felt like I was accompanied; yet, he had his own love now. It
+                    seemed to me that I had better find some diversion for myself to fill his
+                    absence, which helped hone myself for the middle age later.
+                </p>
+
+
+                <p>
+                    I stroked my hair. It was long
+                    enough to donate. But I occasionally asked myself if I truly wished to cut this
+                    hair. Doing good is exemplary, but what if the good goes against our will? He
+                    once told me to let it be, and though I, of course, would be the one making the
+                    final decision, he remained on my side eventually. “What is ours is ours. What
+                    is not ours is never ours, regardless of how poor we are or how hard we try to
+                    plead for. It will slip through our fingers,” I told myself.
+                </p>
+
+
+                <p>
+                    Immediately after the disappearance of
+                    the dusk, I had everything prepared. Recently, I was wondering about finding
+                    someone to fill his absence, as if I were trying to prove that without him, I still
+                    had other choices. So far, homosexuality had been accepted more than before,
+                    but telling him the truth was what made me undecided. I meant that hiding
+                    truths was bad, but if the truths possibly broke down the relationship between
+                    us, I believed it would be a wise move to maintain silence. Since he said that
+                    he did not care about homosexual things, why should I utter then? Being with
+                    him in this heterosexual condition was better than telling the truth, which might
+                    bewilder him and compel him to accept my new me.
+                </p>
+
+
+                <p>
+                    The search notwithstanding, I
+                    could hardly find anyone to fill the emptiness he left in me. There was no one
+                    but him able to do so. There was no one but him able to enter my life. And
+                    there was no one but him able to open my dust-covered gate. But everything had
+                    its own fate. Mine was solitude, a comet that kept flying in the universe and
+                    never had a fixed destination. “I wonder if he leaves everything behind and
+                    runs with me.”
+                </p>
+
+
+                <p>
+                    “What are you thinking, Ant?”
+                </p>
+
+
+                <p>
+                    Startled, I said: “Nothing. Just
+                    keep going.”
+                </p>
+
+
+                <p>
+                    “What’s wrong? Are you thinking
+                    of someone?”
+                </p>
+
+
+                <p>
+                    “No.” I smiled. “I said I’d be a virgin
+                    for rest of my life.”
+                </p>
+
+
+                <p>
+                    “Bullshit. You’ll find your ideal
+                    woman in the end.”
+                </p>
+
+
+                <p>
+                    “Will I, daddy?”
+                </p>
+
+
+                <p>
+                    He shyly nodded. As a to-be
+                    father, he appeared to strive to be a model figure for his offspring. In
+                    reality, he had always strived to achieve what he wanted. At the present, he
+                    was content with what he had. He, nevertheless, once told me that life was
+                    unpredictable. He was afraid that living for the present and losing sight of
+                    the difficulties ahead might summon some serious repercussions. He was testament
+                    to the differential between being academically properly educated and being
+                    experientially vitally educated. In my writing works, he was always the
+                    protagonist, a person influential in spreading positivity to the people around.
+                    And there, I was always the antagonist, who loved making trouble and ruining
+                    everything he built.
+                </p>
+
+
+                <p>
+                    “I have an idea.”
+                </p>
+
+
+                <p>
+                    “What?”
+                </p>
+
+
+                <p>
+                    “Why don’t we go swimming?”
+                </p>
+
+
+                <p>
+                    “You’re energetic. Besides, you’ve
+                    just bounced back, so please don’t do such a stupid thing.”
+                </p>
+
+
+                <p>
+                    “I’m fit as a flea. I suddenly
+                    remember our days of swimming here, so I’m sort of in high spirits. You go?”
+                </p>
+
+
+                <p>
+                    “Of course… Yes!” I shouted.
+                </p>
+
+
+                <p>
+                    He held my hand rushing to the
+                    sea like fish saw water. We played all manners of things, like splashing, diving,
+                    and wrestling. The saltiness, however, caused me to cry. I quickly immersed my
+                    tears into the current so as not to preoccupy him. I was supposed to be happy. Truth
+                    to be told, I had no idea why I cried. I had money, career, and a good fella.
+                    Why did I cry so desperately like this? I tried to scream into the water, as
+                    though I were releasing my ever-present anger. Even when I shouted, the water
+                    was immune to the negative feelings of me.
+                </p>
+
+
+                <p>
+                    A while later, we went back to my
+                    home. After getting everything in place, I told him to make a wish as tradition
+                    dictated. He looked at me and said: “Again, thank you so much.”
+                </p>
+
+
+                <p>
+                    “Idiot, why are you becoming a
+                    stranger?”
+                </p>
+
+
+                <p>
+                    “Tonight, we won’t leave till
+                    we’re drunk.”
+                </p>
+
+
+                <p>
+                    “I hope you’re drunk.”
+                </p>
+
+
+                <p>
+                    “Why?” he frowned.”
+                </p>
+
+
+                <p>
+                    “Then you’ll leave and won’t take
+                    my bed.”
+                </p>
+
+
+                <p>
+                    He chuckled. “So if I’m drunk,
+                    please lend me your ancient bed.”
+                </p>
+
+
+                <p>
+                    “Oh, do I sleep on the floor?”
+                </p>
+
+
+                <p>
+                    “I’m the spotlight.”
+                </p>
+
+
+                <p>
+                    “You’re so authoritative!”
+                </p>
+
+
+                <p>
+                    Then we lit some fags and drank
+                    some beers. He became serious and began to talk about life more. He also asked
+                    me about my red eyes, but I lied and said that it was because of the salty
+                    water. He apologised for dragging me in his fun, but I told him that I was very
+                    happy. There lay a fact that he was much happier than before. Even though we did
+                    not stand by each other often, he did give me something special to me, a thing
+                    that his wife did not have. This made me slightly proud.
+                </p>
+
+
+                <p>
+                    “Ant. I’ve read some of your
+                    books. Some are fairly strange to me, but my wife and I love the others.”
+                </p>
+
+
+                <p>
+                    “You’re my VIP, so I make an
+                    exception for you to read my publications first.”
+                </p>
+
+
+                <p>
+                    “I know that you’re hiding me
+                    something…”
+                </p>
+
+
+                <p>
+                    “I am not.”
+                </p>
+
+
+                <p>
+                    “You’re still stubborn.”
+                </p>
+
+
+                <p>
+                    “It’s my character.”
+                </p>
+
+
+                <p>
+                    “That’s why you’re still a virgin.”
+                </p>
+
+
+                <p>
+                    I stared at him and said: “Are
+                    you making fun of me?”
+                </p>
+
+
+                <p>
+                    He said nothing but came closer
+                    and brushed my hair aside. “You’re dressing too lightly.” Then he stroked my
+                    shoulder and took a deep sniff in those strands of hair, whispering: “You smell
+                    good.”
+                </p>
+
+
+                <p>
+                    “Are you drunk or
+                    something?” My body gradually grew hot and I pretended to walk to the window.
+                    “If you’re tired, you can rest first.”
+                </p>
+
+
+                <p>
+                    He hugged me from
+                    behind and murmured: “I’m sober, Ant”
+                </p>
+
+
+                <p>
+                    I turned to him and
+                    faced those eyes. They looked witchy as if they were some devil luring me to a
+                    trap. I, though acting tough, found myself enshrouded by the immanent passion
+                    over the years, hence the obliteration of my defense. I tried to push him away,
+                    but the tipsiness had already started to do its part. What lingered in my
+                    memory was his lips laden with fags slowly pressing against mine, so mild and sweet,
+                    that I could not help playing along with this star-crossed romance.
+                </p>
+
+
+                <p>
+                    I remembered that
+                    it was on 15 March 2002, that person and I exchanged a passionate kiss. It was
+                    our first time practising such a marital love, so it was still awkward. It,
+                    nevertheless, was short and boring. He then left and told me that he would come
+                    back the next day. That said, he did not show up as promised, but hung out with
+                    another girl instead. I looked at him with great disappointment. If there were anyone
+                    to blame, I would blame myself for being so dumb when trusting those fair lies.
+                    Since then, I had become outrightly distrustful of boys, men in this life.
+                </p>
+
+
+                <p>
+                    Sweets are sweet,
+                    but eternity does not exist in my dictionary. So was the kiss. Although I had
+                    been yearning for this intimacy and caresses from him, doing so was beyond
+                    rectitude. It made me a cheap prostitute, a toy letting others use. Worse yet, I
+                    became a homewrecker in his relationship, a person that people disdain and look
+                    down on. I was so evil.
+                </p>
+
+
+                <p>
+                    I tried to reassure
+                    myself and told him: “We should stop this.”
+                </p>
+
+
+                <p>
+                    “Did I hurt you?”
+                </p>
+
+
+                <p>
+                    “No, it’s just
+                    wrong. Caba, listen to me. All of this was just an accident. It’s because we’re
+                    drunk and did some stupid shit.”
+                </p>
+
+
+                <p>
+                    Then I ran to the loo and locked myself in there, hiding from the enormity I just caused, whilst he was calling my name outside. My tears fell, but I thought that his wife’s tears were far more moving than mine.
+                </p>
+
+
+            </div>
+
+
+            <div class="chapter-navigation">
+
+                <a class="navigation-link" href="story-01-chapter-13.html">
+                    ← Chapter Thirteen
+                </a>
+
+                <a class="navigation-link" href="story-01-chapter-15.html">
+                    Next chapter →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
