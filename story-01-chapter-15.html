@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>14 February 2019 — Hewwy Huynh</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111111;
+            color: #e8e8e3;
+            font-family: Georgia, serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        .story-container {
+            width: min(760px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            padding: 32px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #dddddd;
+            animation: fadeDown 0.9s ease both;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 1px;
+            background: #111111;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Chapter
+        ========================= */
+
+        article {
+            padding: 125px 0 110px;
+        }
+
+        .chapter-header {
+            animation: fadeUp 1s ease 0.1s both;
+        }
+
+        .chapter-title {
+            text-align: center;
+            font-family: "Cormorant Infant", Georgia, serif;
+            font-size: clamp(48px, 8vw, 82px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+            color: #e8e8e3;
+        }
+
+        .literature-link {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding-bottom: 6px;
+            position: relative;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #888884;
+            transition: color 0.3s ease;
+        }
+
+        .literature-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #e8e8e3;
+            transition: width 0.3s ease;
+        }
+
+        .literature-link:hover {
+            color: #e8e8e3;
+        }
+
+        .literature-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Story
+        ========================= */
+
+        .story {
+            padding-top: 75px;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        .story p {
+            font-family: "Courier Prime", "Courier New", monospace;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #d0d0cb;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           Chapter Navigation
+        ========================= */
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 105px;
+            padding-top: 35px;
+            border-top: 1px solid #292929;
+        }
+
+        .navigation-link {
+            position: relative;
+            padding-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #888884;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #e8e8e3;
+            transition: width 0.3s ease;
+        }
+
+        .navigation-link:hover {
+            color: #e8e8e3;
+        }
+
+        .navigation-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            padding: 50px 0;
+            background: #ffffff;
+            border-top: 1px solid #dddddd;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #111111;
+        }
+
+        /* =========================
+           Animations
+        ========================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: calc(100% - 40px);
+            }
+
+            .story-container {
+                width: calc(100% - 40px);
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 18px;
+                font-size: 11px;
+            }
+
+            article {
+                padding: 95px 0 90px;
+            }
+
+            .chapter-title {
+                font-size: clamp(45px, 14vw, 68px);
+                letter-spacing: -1px;
+            }
+
+            .story {
+                padding-top: 60px;
+            }
+
+            .story p {
+                font-size: 17px;
+                line-height: 1.85;
+            }
+
+            .chapter-navigation {
+                gap: 20px;
+                margin-top: 85px;
+            }
+
+            .navigation-link {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a class="logo" href="index.html">
+                Home
+            </a>
+
+            <div class="nav-links">
+
+                <a href="archive.html">
+                    Archive
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article>
+
+        <div class="story-container">
+
+
+            <div class="chapter-header">
+
+                <h1 class="chapter-title">
+                    14 February 2019
+                </h1>
+
+                <a class="literature-link" href="literature.html">
+                    Back to Literature
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+
+                <p>
+                    “Ant.”
+                </p>
+
+
+                <p>
+                    “What’s wrong?”
+                </p>
+
+
+                <p>
+                    “I’ve got something for you.” He
+                    took out a ring-like box and said: “Today is Valentine’s Day, so…”
+                </p>
+
+
+                <p>
+                    “Are you serious? We…”
+                </p>
+
+
+                <p>
+                    “I know you’ve not had any title
+                    yet, but I’ve always chosen you from the beginning. It’s just I don’t know that
+                    the person I’ve been looking for is right next to me.”
+                </p>
+
+
+                <p>
+                    I curtsied and
+                    said: “Thank you.”
+                </p>
+
+
+                <p>
+                    I inertly woke up
+                    after a long sleep. I wondered how long I slept, but the sun reached its zenith
+                    outside. I lit a fag for myself and agonised over the dream. “If it were so
+                    beautiful, why would I still awake?” I murmured. After all this time, I found
+                    myself haunted by him. Naturally, I had signed some intangible contract, which
+                    even though I tried to break, I would undergo great suffering. “Are you well,
+                    Caba?”
+                </p>
+
+
+                <p>
+                    After the
+                    imprudence, he and I had had a quite drawn-out separation. Even when we talked,
+                    it would be unrelieved quarrels. My inner self struggled with how to apologise
+                    to his wife as well as how to erase such a filthy trace. But he told me that it
+                    was his fault, and I should not feel guilty. I wondered what the difference was
+                    between his doing and mine? I meant that we both did things, and passing the
+                    buck had no meaning. Why not ending everything and parting ways?
+                </p>
+
+
+                <p>
+                    Last August, when I
+                    was packing for Ireland, he himself came to say goodbye. That feeling evoked
+                    some weird nostalgia within me. It was like the day he joined the navy, but I was
+                    not there to see him the last time. But this time was different. Perhaps it
+                    would be a one-way departure, for if I remained here for any longer, it would
+                    weigh on my conscience to death. And he might not live well for the rest of his
+                    life.
+                </p>
+
+
+                <p>
+                    Before leaving, I
+                    left a few presents he had given me. On further reflection, having them brought
+                    along would make no use, even probably making me come away with the past. He,
+                    on the other hand, was so determinedly said that they were but friend-like
+                    presents and were not worthy of being banished. Sensing his tone, I reluctantly
+                    carried them with me, but I was not sure if I would ever use them again.
+                </p>
+
+
+                <p>
+                    Fortunately, I had
+                    stopped writing for a year, or else the media might put me on the spot. Our
+                    relationship was not considered noticeable in general, so I seemed not to gain
+                    notoriety for being a homewrecker. Intentionally or unintentionally, I had
+                    stolen him from his wife. It was so pitifully tragic. If I had chosen Henry, my
+                    life might have been better than now.
+                </p>
+
+
+                <p>
+                    “Can you just
+                    stay?” he held my wrist, saying.
+                </p>
+
+
+                <p>
+                    “What’s the point
+                    of staying then?”
+                </p>
+
+
+                <p>
+                    “I…”
+                </p>
+
+
+                <p>
+                    “You don’t even
+                    know the answer, so why keep advising me?”
+                </p>
+
+
+                <p>
+                    “But I know that if
+                    you leave, I may not see you again.”
+                </p>
+
+
+                <p>
+                    “I have my life.
+                    You have yours. Don’t you see the good?”
+                </p>
+
+
+                <p>
+                    “Without you, I
+                    can’t carry on.”
+                </p>
+
+
+                <p>
+                    “What do you mean
+                    by that?”
+                </p>
+
+
+                <p>
+                    “Look, we’ve been
+                    together for more than ten long years. It’s been always you and only you by my
+                    side. It’s just I was so neglected, only caring about having a family and not
+                    knowing that you’ve been the one. It’s just my feelings. I thought that you’re
+                    just a friend. I was dumb. I should have realised sooner.”
+                </p>
+
+
+                <p>
+                    “…”
+                </p>
+
+
+                <p>
+                    “Do you remember,
+                    when you’re officiating, it may sound ridiculous, but looking at you, I felt
+                    like I did something horrible, so horrible that I hurt you. I saw you crying at
+                    that time, but you’re always good at hiding your emotions, not wanting me to be
+                    worried. But I saw through your tricks. And I decided not to let you be like
+                    that. My happy family is not a smokescreen of my love for you. I beg you
+                    please, just stay, not only because of me, but you yourself. You deserve good
+                    things and the happiness that you’ve always looked for.”
+                </p>
+
+
+                <p>
+                    “But don’t you see
+                    it makes me a third party in your relationship? I did love you from the
+                    beginning, but that doesn’t mean I have the right to destroy your family. It’s
+                    because I love you, so I decide to resign myself to leaving. So please, Pedro,
+                    let me go. Our pain will be healed by time…”
+                </p>
+
+
+                <p>
+                    “By time? Why are
+                    you so naive? You know, after that day, I’ve not been able to focus on
+                    everything, work or family. I’m like an empty shell. I underestimated your
+                    place in me. Losing you, I’m like a half-dead man.”
+                </p>
+
+
+                <p>
+                    “…”
+                </p>
+
+
+                <p>
+                    “Do you remember
+                    that I pissed you off when sneaking up on your novel? It was the first time
+                    that I found you cute and stubborn. And during that time when we’re not talking,
+                    I was in distress. I thought it’s because of the training, the new environment,
+                    but then I knew that it was because I underestimated my love for you.”
+                </p>
+
+
+                <p>
+                    “But after all,
+                    you’re not bold enough to choose me. I’m just your second choice.”
+                </p>
+
+
+                <p>
+                    “It’s because I was
+                    blind, so dumb that I didn’t realise that there’s always been a place for you
+                    in my heart. I thought it’s was a close friendship or some sort of soulmate.
+                    But when you’re touched by that fucking Sean, I just wanted to kill him. What I
+                    did was not only about revenge, but taking back your integrity, your honour.
+                    And…” he paused. “And showing him that you’re mine.”
+                </p>
+
+
+                <p>
+                    “I’m yours? Since
+                    when?” I frowned, questioning.
+                </p>
+
+
+                <p>
+                    “Since the first
+                    time I met you. Those small eyes, the mole under your right eye, or your coolness
+                    were what made me worried. At first, I thought you’re a strong, tough man, but
+                    when getting to know more about you, I thought that you’re childish and warm.
+                    But I didn’t think much. I simply thought that you’re green, so I decided to
+                    befriend you. And that association led us to the present.”
+                </p>
+
+
+                <p>
+                    “…”
+                </p>
+
+
+                <p>
+                    “I’m sorry, Ant.
+                    I’m really sorry. I know that I’m a dumb asshole. But please, trust me, my
+                    heart for you is real. I swear to God that what I’ve said to you so far
+                    contains no lie. My love for you is real. The feeling to be with you is real.
+                    So please, don’t you just leave?”
+                </p>
+
+
+                <p>
+                    Whilst I was
+                    soaking in the bath, I unconsciously stroked some strand of my hair. I, in
+                    fact, had already donated it. Shortly after arriving Ireland, I signed up for
+                    hair donation at a hospital in my area. The moment I saw my dear hair gradually
+                    falling, I realised that hoping for something that was not us to stay was no
+                    different from a gull. It was me who made the decision from the beginning, so keeping
+                    it meant nothing.
+                </p>
+
+
+                <p>
+                    What made me most
+                    emotional, however, was the girl wearing my hair, the jet-black hair with those
+                    ocean eyes of the girl stricken with acute cancer since she was born. She
+                    looked at me, happily smiling, and said: “Thank you so much. I’ve always wanted
+                    long hair like a princess and my wish has finally come true!” I hugged her,
+                    weeping, not only to show her my empathy, but to hug her dreams, her
+                    aspirations that would never be fulfilled.
+                </p>
+
+
+                <p>
+                    My phone rang, and
+                    I quickly pulled a towel around me to pick it up. The person on the end of the
+                    line belonged to a woman, or more precisely, it was her voice, Isabel, her wife.
+                    There, I also heard the cry of a baby, which must have been his son,
+                    Martín. I could sense her preoccupation and frustration in her voice. She told
+                    me that I should go to Southampton General Hospital to take stock of his
+                    well-being. I was stunned, not even minding to ask how he was but hurriedly coming
+                    there. I was fidgety, unable to think clearly. All I could do was praying, hoping
+                    that he might not get much harmed.
+                </p>
+
+
+                <p>
+                    Upon seeing him
+                    lying on the sickbed, covered in wounds, my heart stopped for a moment. Her
+                    wife said that it was because he was too drunk at some nightclub, and spoke
+                    coarsely and ended up inviting trouble. “Did he speak like that? I’ve known him
+                    for years, but…”
+                </p>
+
+
+                <p>
+                    “But don’t you
+                    think it’s because of you?”
+                </p>
+
+
+                <p>
+                    I frowned and
+                    replied: “What do you mean?”
+                </p>
+
+
+                <p>
+                    “Usually, he may
+                    smoke and drink. But after your absence, he not only throws himself into those
+                    things, but he also comes to some shitty nightclubs and makes trouble. The boy
+                    and I can’t stand him any more.”
+                </p>
+
+
+                <p>
+                    “I’m sorry…”
+                </p>
+
+
+                <p>
+                    “I know what
+                    happened between the two of you. I don’t care about homosexuality, but you made
+                    him mad. You should look at yourself.”
+                </p>
+
+
+                <p>
+                    “I just wanted the
+                    best for you two.”
+                </p>
+
+
+                <p>
+                    “’The best you
+                    wanted was not really good. Truth will out. You should talk to him.”
+                </p>
+
+
+                <p>
+                    “Talk? We have
+                    nothing to talk about.”
+                </p>
+
+
+                <p>
+                    “I think you two have
+                    more to talk about than I do.”
+                </p>
+
+
+                <p>
+                    “I’m sorry, Isabel.
+                    I thought my leaving was good for both sides. I didn’t think that this would
+                    happen.” I tried to catch what she said. Actually, I must thank him for
+                    inspiring me to study Spanish, so that I could listen to her lecturing on me.
+                    For shame!
+                </p>
+
+
+                <p>
+                    “Compared to you,
+                    he and I have not been together for too long, but my love for him is sincere.”
+                    She sobbed, continuing: “Sadly, I was just his idle fun. We met. Our lives
+                    intersected, but I forgot that you’ve been with him, side by side.”
+                </p>
+
+
+                <p>
+                    “…”
+                </p>
+
+
+                <p>
+                    “I read some of his
+                    letters writing to you when he was in the navy and when you felt low. I’m sorry
+                    to your accident, but that didn’t mean you had to push him away. He chose you,
+                    so no matter what I did, his heart was never for me.”
+                </p>
+
+
+                <p>
+                    “I’m really sorry.”
+                </p>
+
+
+                <p>
+                    “It’s sad that if
+                    you two had talked me through the dilemma, everything might not have been too
+                    bad.”
+                </p>
+
+
+                <p>
+                    She leaned on me
+                    and burst out crying, and so did I. What she said was not wholly absurd. What I
+                    meant good was not always good. Even though I did that behind her back, we
+                    should have dealt with the problem face-to-face, instead of turning her into a
+                    clown in this untitled relationship. It was a shame that life is unpredictable.
+                    I felt myself weak and spineless.
+                </p>
+
+
+            </div>
+
+
+            <div class="chapter-navigation">
+
+                <a class="navigation-link" href="story-01-chapter-14.html">
+                    ← Chapter Fourteen
+                </a>
+
+                <a class="navigation-link" href="story-01-chapter-16.html">
+                    Next chapter →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 A Human Prism · All rights reserved
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
